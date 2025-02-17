@@ -1,0 +1,110 @@
+.nav-link-custom {
+    position: relative;
+   
+    font-weight: bold;
+    text-decoration: none;
+    color: black; /* Adjust color if needed */
+    transition: color 0.3s ease-in-out;
+  }
+  .poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .nav-link-custom::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 4px;
+    background-color: #298CF3; /* Adjust color as needed */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  }
+  
+  .nav-link-custom:hover {
+    color: #298CF3; /* Change text color on hover */
+  }
+  
+  .nav-link-custom:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  .nav-icon {
+    display: none; /* Hide icons by default */
+    margin-right: 8px;
+  }
+  /* Extra small devices (phones, 320px - 480px) */
+@media only screen and (max-width: 425px) {
+  .home-img {
+   
+    height: 450px;
+  }
+  .ftfl-logo{
+    height: 25px;
+  }
+ .navbar-toggler.collapsed{
+  height: 30px;
+  border: none;
+ }
+ .navbar-toggler-icon{
+  height: 20px;
+ }
+ .nav-icon {
+  display: inline-block;
+  font-size: 18px;
+  vertical-align: middle;
+}
+.nav-link-custom{
+  color: grey;
+}
+.custom-offcanvas{
+  width: 250px !important;
+}
+}
+
+/* Small devices (tablets, 481px - 768px) */
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .ftfl-logo{
+    height: 25px;
+  }
+  .home-img {
+   
+    height: 450px;
+  }
+  .navbar-toggler.collapsed{
+    height: 30px;
+    border: none;
+    margin-right: 20px;
+   }
+  .nav-icon {
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: middle;
+  }
+  .nav-link-custom{
+    color: grey;
+  }
+  /* .custom-offcanvas{
+    background-color: #298CF3 !important;
+    
+  } */
+  /* .nav-link{
+    color: white !important;
+  } */
+}
+
+/* Medium devices (small laptops, 769px - 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+ 
+}
+
+/* Large devices (desktops, 1025px - 1200px) */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+
+}
+
+/* Extra large devices (large desktops, 1201px and above) */
+@media only screen and (min-width: 1201px) {
+  /* Your CSS styles here */
+}

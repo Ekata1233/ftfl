@@ -1,0 +1,23 @@
+.testiDiv{
+    border-radius: 25px;
+
+  }
+  .testi img{
+     
+     position: absolute;
+     /* left: 10%; */
+     
+  }
+  
+  
+  .testi-i{
+    color: #13357B;
+    line-height: 5px;
+  }
+  
+  .packCard1{
+    flex: 0 0 400px;
+    /* padding: 10px; */
+    height: 250px;
+  }
+ 

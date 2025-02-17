@@ -1,0 +1,87 @@
+.header-content{
+    top: 45%;
+    left: 50%;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .d-flex.flex-column {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .flex-grow-1 {
+    flex-grow: 1;
+  }
+  .vector-image{
+    margin-top: 250px !important;
+   
+}
+ .vision-img{
+    margin-top: -100px;
+ }
+ .vision-row{
+    margin-top: -35px;
+    
+ }
+  .vision-col{
+    display: none;
+  }
+@media only screen and (max-width: 425px){
+    .overlay-nav1{
+        margin-top: -75px;
+    }
+    .header-p{
+        width: 300px;
+    }
+    .vector-image{
+        margin-top: 300px;
+        margin-bottom: 730px;
+    }
+    /* .about{
+        height: 3000px !important;
+    } */
+    .vision-row{
+        margin-top: 50px;
+        
+     }
+     .vision-img{
+        margin-top: 0px;
+     }
+     .vision-col{
+        display: block;
+      }
+      .vision-col1{
+        display: none;
+      }
+}
+@media only screen and (min-width: 426px) and (max-width: 768px)
+{
+    .vector-image{
+        margin-top: 300px;
+        margin-bottom: 450px;
+    }
+    .vision-row{
+        margin-top: 50px;
+        
+     }
+     .vision-img{
+        margin-top: 40px;
+     }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+   .what{
+    min-height: 440px !important;
+   }
+   .vision-row{
+    margin-top: -27px;
+    
+ }
+ .mission{
+    margin-top: 30px;
+ }
+}

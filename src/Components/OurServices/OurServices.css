@@ -1,0 +1,65 @@
+.services-img{
+    height: 250px;
+}
+
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Ensures the overlay image is hidden initially */
+    justify-content: center;
+    justify-items: center;
+  }
+  
+  .services-img {
+    width: 100%; /* Adjust as needed */
+    display: block;
+  }
+  
+  .overlay-container {
+    position: absolute;
+    bottom: -53%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    overflow: hidden;
+    
+    transition: height 0.5s ease-in-out, bottom 0.5s ease-in-out; /* Smooth effect */  }
+  
+  .overlay-img {
+    width: 90%;
+    margin: auto;
+    height: auto;
+    display: block;
+  }
+  
+  /* Hover Effect */
+  .image-wrapper:hover .overlay-container {
+    bottom: -18%;
+    height: 100%; 
+  }
+  @media only screen and (min-width: 426px) and (max-width: 768px)
+  {
+    .image-wrapper:hover .overlay-container {
+        bottom: -47%;
+        height: 100%; 
+      }
+      .services-img{
+        height: 200px;
+    }
+    .overlay-container {
+        bottom: -43%;
+    }
+  }
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .image-wrapper:hover .overlay-container {
+        bottom: -26%;
+        height: 100%; 
+      }
+      .overlay-container {
+        bottom: -48%;
+    }
+  }
+  
+
+  

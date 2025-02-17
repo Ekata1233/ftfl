@@ -1,0 +1,27 @@
+.Carreers-wrapper{
+    position: relative;
+    }
+    .Carreers-Container{
+        position: absolute;
+        top: 0%;
+        left: 10%;
+        right: 10%;
+    }
+    
+    .custom-dropdown {
+        border: 1px solid rgb(224, 224, 224) !important;
+        background-color: white !important;
+        color:rgb(95, 95, 95) !important;
+      }
+      .custom-dropdown {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .custom-dropdown::after {
+        margin-left: auto; /* Pushes the arrow to the right */
+      }
+      .job-div{
+        background-color: #E5F2FF;
+      }

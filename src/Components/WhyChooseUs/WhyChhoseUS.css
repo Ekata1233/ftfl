@@ -1,0 +1,37 @@
+.whychoose-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  
+  
+  .whychoose-Container {
+    position: absolute;
+    top: 20% !important;
+    left: 10%;
+    right: 10%;
+   
+  }
+  .whyimg{
+    
+  }
+
+  @media only screen and (max-width: 425px){
+    .service-img{
+      margin-top: 800px;
+      height: 3200px !important;
+    }
+  
+  }
+  @media only screen and (min-width: 426px) and (max-width: 768px){
+    .service-img{
+      margin-top: 800px;
+      height: 2000px !important;
+    }
+  
+  }
+  @media only screen and (min-width: 769px) and (max-width: 1024px){
+    .whychoose-wrapper{
+      margin-bottom: 900px !important;
+          }
+  }

@@ -1,0 +1,28 @@
+.image-container {
+    position: relative;
+   
+  }
+  
+  .vector-image {
+    height: auto;
+    margin-top: 50px;
+  }
+  
+  .overlay-content {
+    position: absolute;
+   left: 15%;
+   right: 10%;
+  
+  }
+  /* .started{
+    height: 500px;
+  } */
+
+  @media only screen and (max-width: 425px){
+    
+  }
+  @media only screen and (min-width: 426px) and (max-width: 768px){
+    .about-man{
+        height: 400px; width: 500px;
+    }
+  }

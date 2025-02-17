@@ -1,0 +1,51 @@
+.OurServices-wrapper {
+    position: relative;
+}
+
+
+
+.bg-services{
+    
+}
+
+.OurServices-Container {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    right: 10%;
+    
+  
+   
+}
+.hide-col{
+    display: none;
+}
+@media only screen and (max-width: 425px){
+    .bg-services{
+        height: 4500px!important;
+        margin-bottom: 1250px !important;
+    }
+    .hide-col{
+        display: block;
+    }
+    .hide-col1{
+        display: none;
+    }
+}
+@media only screen and (min-width: 426px) and (max-width: 768px){
+    .bg-services{
+        height: 3500px!important;
+        margin-bottom: 150px !important;
+
+    }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    .bg-services{
+        height: 3600px!important;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width:1440px){
+    .bg-services{
+        height: 4050px!important;
+    }
+}

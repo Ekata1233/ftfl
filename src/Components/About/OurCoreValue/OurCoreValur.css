@@ -1,0 +1,48 @@
+.value-div {
+    position: relative;
+    
+  }
+  
+  .background-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .value-container {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+   
+  
+   
+  }
+  
+  .text-box {
+    background-color: rgba(82, 159, 239, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    height: 500px !important;
+  }
+  @media only screen and (max-width: 425px){
+    .background-img{
+        margin-bottom: 200px;
+    }
+    .text-box {
+       
+        height: 440px !important;
+      }
+  }
+  @media only screen and (min-width: 426px) and (max-width: 768px){
+    .text-box {
+       
+        height: 400px !important;
+      }
+  }
+  @media only screen and (min-width: 769px) and (max-width: 1024px){
+    .text-box {
+       
+        height: 450px !important;
+      }
+  }

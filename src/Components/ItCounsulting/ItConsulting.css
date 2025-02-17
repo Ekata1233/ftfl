@@ -1,0 +1,11 @@
+.it-blog{
+    
+}
+@media only screen and (max-width: 425px){
+    .consulting-img{
+        height: 300px !important;
+    }
+    .newsletter{
+        width: 200px !important;
+    }
+}
