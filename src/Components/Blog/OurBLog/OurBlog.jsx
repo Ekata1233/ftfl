@@ -18,8 +18,32 @@ import bussiness from '../../../assets/effective.png'
 import '../OurBLog/OurBlog.css'
 import ItConsulting from '../../ItCounsulting/ItConsulting'
 import NewsLetter from '../../Newletter/NewsLetter'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { useEffect, useRef } from 'react'
 
 function OurBlog() {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const latestTechTrendsRef = useRef(null);
+    const webMobileDevRef = useRef(null);
+    const itConsultingRef = useRef(null);
+
+    useEffect(() => {
+        if (location.state?.scrollTo) {
+            setTimeout(() => {
+                if (location.state.scrollTo === "latest-tech-trends" && latestTechTrendsRef.current) {
+                    latestTechTrendsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+                if (location.state.scrollTo === "web-mobile-development" && webMobileDevRef.current) {
+                    webMobileDevRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+                if (location.state.scrollTo === "it-consultation" && itConsultingRef.current) {
+                    itConsultingRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            }, 100);
+        }
+    }, [location]); // Runs when location changes
+
     return (
         <div>
             <div>
@@ -29,14 +53,14 @@ function OurBlog() {
                         <div>
                             <div className='ourblog-Container'>
                                 <div className='ourblog-Container1'>
-                                <div className="text-center my-5" >
+                                <div className="text-center mt-5" >
                                     <p>
                                         <span className='text-dark' style={{ fontWeight: "400", fontSize: "45px" }}>Our</span>
                                         <span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Blog</span>
                                     </p>
                                 </div>
-                               <div>
-                               <div>
+                               <div ref={latestTechTrendsRef} className='pt-5'>
+                               <div  >
                                     <p className=' mt-5 pt-5' style={{ fontSize: "32px ", fontWeight: "500" }}>Latest Tech Trends</p>
                                     <p className='text text-secondary mt-3 mb-5'>Explore insights on AI, cloud computing, and emerging technologies shaping the future, driving innovation and transformation across industries, and unlocking new possibilities for businesses and individuals alike.</p>
                                 </div >
@@ -44,8 +68,11 @@ function OurBlog() {
                                     <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4} className='my-4'>
                                         <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
+
+
                                             
-                                        }}>
+                                        }}
+                                        onClick={() => navigate("/blogs/latest-tech-trends/ai&machine")}>
                                             <div className='blog-div1'>
                                             <img src={ai} className='w-100 img-fluid' />
                                             <p className='mt-4 mb-2' style={{ fontSize: "22px ", fontWeight: "500" }}>AI & Machine Learning: The Next Big Leap</p>
@@ -58,7 +85,8 @@ function OurBlog() {
                                     <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
                                             
-                                        }}>
+                                        }}
+                                        onClick={() => navigate("/blogs/latest-tech-trends/cloudcomputing")}>
                                             <div className='blog-div1'>
                                             <img src={cloud} className='w-100' />
                                             <p className='mt-4 mb-2' style={{ fontSize: "22px ", fontWeight: "500" }}>Cloud Computing Trends in 2025</p>
@@ -70,18 +98,19 @@ function OurBlog() {
                                     <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
                                             
-                                        }}>
+                                        }}
+                                        onClick={() => navigate("/blogs/latest-tech-trends/web&mobile")}>
                                             <div className='blog-div1'>
                                             <img src={mobileweb} className='w-100' />
                                             <p className='mt-4 mb-2' style={{ fontSize: "22px ", fontWeight: "500" }}>The Future of Web & Mobile Apps</p>
-                                            <p className='text text-secondary'>Learn how businesses are leveraging cloud technology for scalability and efficiency.</p>
+                                            <p className='text text-secondary'>Cloud technology is driving the future of web and mobile apps with scalability and efficiency.</p>
                                             </div>
                                         </div>
                                     </Col>
                                 </Row>
                                </div>
-                               <div  className='mt-5 pt-5'>
-                               <div>
+                               <div  ref={webMobileDevRef} className='mt-5 pt-5'>
+                               <div className='pt-5'>
                                     <p className='' style={{ fontSize: "32px ", fontWeight: "500" }}>Web & Mobile Development</p>
                                     <p className='text text-secondary mt-3 mb-5'>Learn about the latest frameworks, coding techniques, and performance optimization tips.</p>
                                 </div>
@@ -90,7 +119,9 @@ function OurBlog() {
                                         <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
                                             
-                                        }}>
+                                        }}
+                                        onClick={() => navigate("/blogs/web-&-mobile-development/frontendVsbackend")}
+                                        >
                                             <div className='blog-div1'>
                                             <img src={fronted} className='w-100 img-fluid' />
                                             <p className='mt-4 mb-2' style={{ fontSize: "22px ", fontWeight: "500" }}>Frontend vs. Backend: What You Need to Know</p>
@@ -103,11 +134,12 @@ function OurBlog() {
                                     <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
                                             
-                                        }}>
+                                        }}
+                                        onClick={() => navigate("/blogs/web-&-mobile-development/reactvsangular")}>
                                             <div className='blog-div1'>
                                             <img src={react} className='w-100' />
-                                            <p className='mt-4 mb-2' style={{ fontSize: "22px ", fontWeight: "500" }}>Cloud Computing Trends in 2025</p>
-                                            <p className='text text-secondary'>Learn how businesses are leveraging cloud technology for scalability and efficiency.</p>
+                                            <p className='mt-4 mb-2' style={{ fontSize: "22px ", fontWeight: "500" }}>React vs. Vue vs. Angular: Which One Wins?</p>
+                                            <p className='text text-secondary'>React vs. Vue vs. Angular – React for scale, Vue for ease, Angular for enterprise.</p>
                                             </div>
                                         </div>
                                     </Col>
@@ -115,19 +147,20 @@ function OurBlog() {
                                     <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
                                             
-                                        }}>
+                                        }}
+                                        onClick={() => navigate("/blogs/web-&-mobile-development/mobileperformance")}>
                                             <div className='blog-div1'>
                                             <img src={mmbolie} className='w-100' />
-                                            <p className='mt-4 mb-2' style={{ fontSize: "22px ", fontWeight: "500" }}>The Future of Web & Mobile Apps</p>
-                                            <p className='text text-secondary'>Learn how businesses are leveraging cloud technology for scalability and efficiency.</p>
+                                            <p className='mt-4 mb-2' style={{ fontSize: "22px ", fontWeight: "500" }}>Mobile App Performance Optimization Tips</p>
+                                            <p className='text text-secondary'>Optimize your mobile app by compressing assets, minimizing API calls, and improving rendering.</p>
                                             </div>
                                         </div>
                                     </Col>
                                 </Row>
                                </div>
                                <ItConsulting/> 
-                               <div className='mt-5 pt-5'>
-                               <div>
+                               <div  ref={itConsultingRef} className='mt-5 pt-5'>
+                               <div className='pt-5'>
                                     <p className='' style={{ fontSize: "32px ", fontWeight: "500" }}>Some more on IT Consultation</p>
                                     <p className='text text-secondary mt-3 mb-5'>Learn about the latest frameworks, coding techniques, and performance optimization tips. Discover cutting-edge tools that enhance development efficiency and streamline workflows. Stay updated with real-world case studies and expert recommendations.</p>
                                 </div>
@@ -136,7 +169,9 @@ function OurBlog() {
                                         <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
                                             
-                                        }}>
+                                        }}
+                                        onClick={() => navigate("/blogs/itconsultation/digitaltransformation")}
+                                        >
                                             <div className='blog-div1'>
                                             <img src={thepower} className='w-100 img-fluid' />
                                             <p className='mt-4 mb-2' style={{ fontSize: "22px ", fontWeight: "500" }}>The Power of Digital Transformation</p>
@@ -149,7 +184,9 @@ function OurBlog() {
                                     <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
                                             
-                                        }}>
+                                        }}
+                                        onClick={() => navigate("/blogs/itconsultation/costeffectivestartup")}
+                                        >
                                             <div className='blog-div1'>
                                             <img src={costeffective} className='w-100' />
                                             <p className='mt-4 mb-2' style={{ fontSize: "22px ", fontWeight: "500" }}>Cost-Effective IT Solutions for Startups</p>
@@ -161,7 +198,10 @@ function OurBlog() {
                                     <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
                                             
-                                        }}>
+                                        }}
+                                        onClick={() => navigate("/blogs/itconsultation/businessroadmaps")}
+                                        >
+                                            
                                             <div className='blog-div1'>
                                             <img src={bussiness} className='w-100' />
                                             <p className='mt-4 mb-2' style={{ fontSize: "22px ", fontWeight: "500" }}>Why Businesses Need IT Roadmaps</p>

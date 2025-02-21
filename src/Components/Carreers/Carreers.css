@@ -24,4 +24,24 @@
       }
       .job-div{
         background-color: #E5F2FF;
+        height: 300px;
+       
+      }
+      @media only screen and (max-width: 425px){
+        .bg-carreer{
+          height: 6200px !important;
+          margin-bottom: 3400px !important;
+         }
+     }
+     @media only screen and (min-width: 426px) and (max-width: 768px){
+      .bg-carreer{
+        height: 3200px !important;
+        margin-bottom: 3000px !important;
+
+       }
+     }
+      @media only screen and (min-width: 769px) and (max-width: 1024px) {
+         .bg-carreer{
+          height: 4500px !important;
+         }
       }

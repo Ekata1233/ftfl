@@ -6,6 +6,9 @@ import f4 from '../../assets/F4 (1) 1 (1).png'
 import HederNav from '../HeaderNav/HederNav';
 import OurBusiness from '../OurBusiness/OurBusiness';
 import OurServices from '../OurServices/OurServices1';
+import WhyToChoose from './WhyToChoose/WhyToChoose';
+import ShapeTheFuture from '../ShapeTheFuture/ShapeTheFuture';
+import FAQs from '../FAQs/FAQs';
 function Home() {
     return (
         <div>
@@ -33,7 +36,9 @@ function Home() {
     </div>
     <OurBusiness/>
     <OurServices/>
-   
+    <WhyToChoose/>
+    <ShapeTheFuture/>
+    <FAQs/>
         </div>
     )
 }

@@ -74,7 +74,12 @@ function WhyChooseUS() {
     </Col>
   ))}
 </Row>
+  
 
+<div className='pt-5'>
+<h4 className="colorBlue pt-5 mt-5 pb-2 text-center">----- Testimonial -----</h4>
+<h1 className="text-center">Our Client Say!!!</h1>
+</div>
 <Testimonial/>
 
             </div>

@@ -1,4 +1,4 @@
-import { Button, Col,  Dropdown, Form, Row } from "react-bootstrap"
+import { Button, Col,   Row } from "react-bootstrap"
 import HeaderNav from "../HeaderNav/HederNav"
 import { MdArrowForwardIos } from "react-icons/md"
 import carrers from '../../assets/carrers.png'
@@ -10,12 +10,21 @@ import why3 from '../../assets/Frame 80.png'
 import why4 from '../../assets/Frame 81.png'
 import why5 from '../../assets/Frame 82.png'
 import why6 from '../../assets/Frame 83.png'
-
- 
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "framer-motion";
 import Positions from "../Positions/Positions"
 import CarreerOpportunities from "../CarreerOpportunities/CarreerOpportunities"
+import { useEffect, useRef } from "react"
 
 function Carreers() {
+  const content = [
+    { img: why1, title: "Innovative" },
+    { img: why2, title: "Expertise" },
+    { img: why3, title: "Partnership" },
+    { img: why4, title: "Scalability" },
+    { img: why5, title: "Success" },
+    { img: why6, title: "Support" },
+  ];
  
   return (
     <div>
@@ -46,70 +55,87 @@ function Carreers() {
           {/* Additional Content */}
           <div className='Carreers-wrapper'>
             <div className=" Carreers-div">
-              <img src={carrersbg} alt="Background" className="w-100 bg-contact " />
-              <div className='Carreers-Container'>
-                <div className="text-start my-5" >
+              <img src={carrersbg} alt="Background" className="w-100 bg-carreer " />
+              <div className='Carreers-Container pt-5'>
+                <div className="text-start my-5 py-5" >
                   <p>
                     <span className='text-dark' style={{ fontWeight: "400", fontSize: "40px" }}>Why</span>
                     <span className="blue" style={{ fontWeight: "600", fontSize: "40px" }}> Work With Us?</span>
                   </p>
                 </div>
                 <Row>
-                  <Col xs={12} sm={12} md={6} lg={4} xl={4} xxl={4} className="animated-col">
-                    <div className="col-content py-4 my-4 mx-3">
-                      <img src={why1} alt="Innovative" className="col-image" />
-                      <h3 className="col-title pt-3 pb-1">Innovative</h3>
-                      <p className="col-text text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                  </Col>
-                  <Col xs={12} sm={12} md={6} lg={4} xl={4} xxl={4} className="animated-col">
-                    <div className="col-content py-4 my-4 mx-3">
-                      <img src={why2} alt="Innovative" className="col-image" />
-                      <h3 className="col-title pt-3 pb-1">Expertise</h3>
-                      <p className="col-text text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                  </Col>
-                  <Col xs={12} sm={12} md={6} lg={4} xl={4} xxl={4} className="animated-col">
-                    <div className="col-content py-4 my-4 mx-3">
-                      <img src={why3} alt="Innovative" className="col-image" />
-                      <h3 className="col-title pt-3 pb-1">Partnership</h3>
-                      <p className="col-text text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                  </Col>
-                  <Col xs={12} sm={12} md={6} lg={4} xl={4} xxl={4} className="animated-col">
-                    <div className="col-content py-4 my-4 mx-3">
-                      <img src={why4} alt="Innovative" className="col-image" />
-                      <h3 className="col-title pt-3 pb-1">Scalability</h3>
-                      <p className="col-text text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                  </Col>
-                  <Col xs={12} sm={12} md={6} lg={4} xl={4} xxl={4} className="animated-col">
-                    <div className="col-content py-4 my-4 mx-3">
-                      <img src={why5} alt="Innovative" className="col-image" />
-                      <h3 className="col-title pt-3 pb-1">Success</h3>
-                      <p className="col-text text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                  </Col>
-                  <Col xs={12} sm={12} md={6} lg={4} xl={4} xxl={4} className="animated-col">
-                    <div className="col-content py-4 my-4 mx-3">
-                      <img src={why6} alt="Innovative" className="col-image" />
-                      <h3 className="col-title pt-3 pb-1">Support</h3>
-                      <p className="col-text text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                  </Col>
-                </Row>
+      {content.map((item, index) => {
+        const ref = useRef(null);
+        const controls = useAnimation();
+        const isInView = useInView(ref, { threshold: 0.3 });
+
+        useEffect(() => {
+          if (isInView) {
+            controls.start({ opacity: 1, y: 0 });
+          } else {
+            controls.start({ opacity: 0, y: 50 }); // Reset animation on scroll up
+          }
+        }, [isInView, controls]);
+
+        return (
+          <Col
+            key={index}
+            xs={12}
+            sm={12}
+            md={6}
+            lg={4}
+            xl={4}
+            xxl={4}
+            className="animated-col"
+          >
+            <motion.div
+              ref={ref}
+              className="col-content py-4 my-4 mx-3"
+              initial={{ opacity: 0, y: 50 }}
+              animate={controls}
+              transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+            >
+              <motion.img
+                src={item.img}
+                alt={item.title}
+                className="col-image"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={controls}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+              />
+              <motion.h3
+                className="col-title pt-3 pb-1"
+                initial={{ opacity: 0, y: -20 }}
+                animate={controls}
+                transition={{ duration: 0.5, delay: index * 0.3 }}
+              >
+                {item.title}
+              </motion.h3>
+              <motion.p
+                className="col-text text"
+                initial={{ opacity: 0, y: 10 }}
+                animate={controls}
+                transition={{ duration: 0.5, delay: index * 0.4 }}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </motion.p>
+            </motion.div>
+          </Col>
+        );
+      })}
+    </Row>
                 <div className="text-center my-5 pt-5" >
-                  <p>
+                  <p className="">
                     <span className='text-dark' style={{ fontWeight: "400", fontSize: "40px" }}>Open</span>
                     <span className="blue" style={{ fontWeight: "600", fontSize: "40px" }}> Positons</span>
                   </p>
-                  <p className="text text-center text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus obcaecati corrupti quam voluptatem id a error facere saepe temporibus odio illo, quos repudiandae, perspiciatis maiores dicta possimus earum ut provident quisquam voluptatum dignissimos eum alias amet autem. Corporis, iusto porro?</p>
+                  <p className="text text-center text-secondary pt-5 pb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus obcaecati corrupti quam voluptatem id a error facere saepe temporibus odio illo, quos repudiandae, perspiciatis maiores dicta possimus earum ut provident quisquam voluptatum dignissimos eum alias amet autem. Corporis, iusto porro?</p>
                 </div>
                 <div>
                   <Positions/>
                 </div>
                 <div className="my-5 py-5">
-                  <div className="text-start my-5" >
+                  <div className="text-start my-5 py-5" >
                     <p>
                       <span className='text-dark' style={{ fontWeight: "400", fontSize: "40px" }}>Explore</span>
                       <span className="blue" style={{ fontWeight: "600", fontSize: "40px" }}> Career Opportunities</span>

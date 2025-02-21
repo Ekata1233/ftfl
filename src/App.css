@@ -49,6 +49,35 @@
 .text{
   font-size: 20px;
 }
+.accor {
+  border: none;
+  border-bottom: 2px solid #298CF3 !important;
+}
+
+.accordion {
+  border: none !important;
+}
+
+
+/* blogs */
+.blue-text {
+  color: #298CF3;
+  border-left: 4px solid #298CF3;
+  padding-left: 15px;
+  font-weight: 500;
+}
+.animate-text {
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-text.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
 @media only screen and (max-width: 425px){
   .header-content .h1{
       font-size: 20px !important;

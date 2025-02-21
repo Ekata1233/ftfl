@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap"
-import footer from '../../assets/footer (1) 1.png'
+import footer from '../../assets/footer (1) 2 (2).png'
 import '../Footer/Footer.css'
 import { MdPlayArrow } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
@@ -38,28 +38,28 @@ function Footer() {
                                         <p>Our Socials</p>
                                         <div className="d-flex">
                                             <div className="touch rounded rounded-circle me-3" style={{ width: "40px", height: "40px" }}>
-                                                <a href="#" className="text-white text-decoration-none">
+                                                <a href="https://x.com/" className="text-white text-decoration-none">
                                                     <FaXTwitter className="p-2" style={{ width: "40px", height: "40px", color: "black" }} />
                                                 </a>
                                             </div>
 
                                             <div className="touch rounded rounded-circle me-3" style={{ width: "40px", height: "40px" }}>
-                                                <a href="#" className="text-white text-decoration-none">
+                                                <a href="https://www.facebook.com/FTFLTechnology" className="text-white text-decoration-none">
                                                     <FaFacebookF className="p-2" style={{ width: "40px", height: "40px", color: "#1877F2" }} />
                                                 </a>
                                             </div>
                                             <div className="touch rounded rounded-circle me-3" style={{ width: "40px", height: "40px" }}>
-                                                <a href="#" className="text-white text-decoration-none">
+                                                <a href="https://www.instagram.com/ftfltechnology?igsh=cG82ajFmeTE3aWZk" className="text-white text-decoration-none">
                                                     <GrInstagram className="p-2" style={{ width: "40px", height: "40px", color: "#E4405F" }} />
                                                 </a>
                                             </div>
                                             <div className="touch rounded rounded-circle me-3" style={{ width: "40px", height: "40px" }}>
-                                                <a href="#" className="text-white text-decoration-none">
+                                                <a href="https://www.linkedin.com/company/ftfl-technology-pvt-ltd/" className="text-white text-decoration-none">
                                                     <FaLinkedinIn className="p-2" style={{ width: "40px", height: "40px", color: "#0077B5" }} />
                                                 </a>
                                             </div>
                                             <div className="touch rounded rounded-circle me-3" style={{ width: "40px", height: "40px" }}>
-                                                <a href="#" className="text-white text-decoration-none">
+                                                <a href="https://wa.me/919272003735" className="text-white text-decoration-none">
                                                     <ImWhatsapp className="p-2" style={{ width: "40px", height: "40px", color: "#25D366" }} />
                                                 </a>
                                             </div>
@@ -154,7 +154,7 @@ function Footer() {
                 </Container>
                 <div>
                     <Row>
-                        <img src={footer} className="footer img-fluid w-100 h-auto" alt="Footer" />
+                        <img src={footer} className="footer img-fluid w-100" alt="Footer" />
 
                     </Row>
                 </div>

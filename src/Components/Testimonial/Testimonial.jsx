@@ -55,10 +55,9 @@ function Testimonial() {
   const centerIndex = (visibleIndex + 1) % testimonial.length;
 
   return (
-    <div className="testi" style={{ marginTop: "120px" }}>
+    <div className="testi" >
       <Container style={{ overflow: 'hidden' }}>
-        <h4 className="colorBlue pt-5 pb-2 text-center">----- Testimonial -----</h4>
-        <h1 className="text-center">Our Client Say!!!</h1>
+        
 
         <div className='d-flex justify-content-between align-items-center py-2'>
           <Button variant="" className={`destiBtn rounded-pill mx-2 ${activeButton === 'LeftArrow' ? 'active-btn' : ''}`} onClick={() => handleButtonClick('LeftArrow')}>
@@ -71,18 +70,26 @@ function Testimonial() {
         </div>
 
        <Row>
-        <Col>
-        <div className="card-container d-flex my-5" style={{ display: 'flex', transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none', transform: `translateX(-${visibleIndex * (100 / 3)}%)` }}>
+        <Col className="">
+        <div className="card-container d-flex my-5 " style={{ display: 'flex', transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none', transform: `translateX(-${visibleIndex * (100 / 3)}%)` }}>
           {extendedCards.map((testi, index) => (
-            <Card 
-              className={`packCard1 rounded rounded-4 mx-2 ${index % testimonial.length === centerIndex ? 'center-card' : ''}`} 
-              style={{ 
-                width: index % testimonial.length === centerIndex ? '620px' : '550px', 
-                border: "1px solid #298CF3", 
-                backgroundColor: index % testimonial.length === centerIndex ? '#98C8F9' : 'white',
-                boxShadow: index % testimonial.length === centerIndex ? '0px 4px 15px rgba(0, 0, 0, 0.2)' : 'none'
-              }} 
-              key={index}>
+          <Card 
+          className={`packCard1 rounded rounded-4 mx-3 ${index % testimonial.length === centerIndex ? 'center-card' : ''}`} 
+          style={{ 
+            width: index % testimonial.length === centerIndex ? '750px' : '550px', 
+            height: index % testimonial.length === centerIndex ? '300px' : '250px',
+            margin: index % testimonial.length === centerIndex ? '10px 0' : '30px 0', /* Adds top and bottom spacing */
+            border: "1px solid #298CF3", 
+            backgroundColor: index % testimonial.length === centerIndex ? '#98C8F9' : 'white',
+            boxShadow: index % testimonial.length === centerIndex ? '0px 4px 15px rgba(0, 0, 0, 0.2)' : 'none',
+            transition: 'all 0.5s ease-in-out',
+            display: 'flex', /* Ensure content stays centered */
+            alignItems: 'center', 
+            justifyContent: 'center'
+          }} 
+          key={index}>
+        
+         
 
               <Row>
                 <Col xs={3} sm={3} md={3}><Card.Img variant="top" src={Image} className="rounded-circle mx-auto d-block mt-3 ms-4 mt-4" style={{ border: '2px solid #298CF3', padding: '5px', width: '80px', height: '80px' }} /></Col>

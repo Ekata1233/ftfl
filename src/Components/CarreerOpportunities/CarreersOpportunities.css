@@ -1,0 +1,68 @@
+/* ContactForm.css */
+/* *******************JobConatct******************* */
+.contact-form-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .contact-form-bg {
+   
+   
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+   
+  }
+ 
+  
+  .contact-form-content {
+    position: relative;
+    
+  }
+  
+  @media only screen and (max-width: 425px){
+    .contact-form-bg{
+      height: 1500px !important;
+      
+     }
+     
+     
+  
+   }
+   @media only screen and (min-width: 426px) and (max-width: 768px){
+    .contact-form-bg {
+   
+   
+      
+      height: 1100px !important;
+     
+    }
+    .contact-form-content{
+      margin-bottom: 600px !important;
+    }
+    .contact-form-container {
+      margin-bottom: 4000px !important;
+
+    }
+   }
+   @media only screen and (min-width: 768px) and (max-width: 1024px){
+    .carrer-div{
+      margin-bottom: 6000px !important;
+    }
+    .contact-form-bg {
+      margin-bottom: 400px !important;
+    }
+   }
+  
+   @media only screen and (min-width: 1024px) and (max-width: 1440px){
+    .contact-form-bg{
+      height: 800px !important;
+    }
+    
+    .carrer-div{
+      margin-bottom: 1000px !important;
+    }
+   }
+   
+  
