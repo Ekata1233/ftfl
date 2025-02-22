@@ -27,7 +27,7 @@
   }
   @media only screen and (max-width: 425px){
     .background-img{
-        margin-bottom: 200px;
+        margin-bottom: 950px !important;
     }
     .text-box {
        

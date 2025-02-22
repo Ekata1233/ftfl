@@ -15,8 +15,17 @@ import { useInView } from "framer-motion";
 import Positions from "../Positions/Positions"
 import CarreerOpportunities from "../CarreerOpportunities/CarreerOpportunities"
 import { useEffect, useRef } from "react"
+import { useLocation } from "react-router-dom"
 
 function Carreers() {
+  const location = useLocation();
+  const jobListingsRef = useRef(null);
+
+  useEffect(() => {
+      if (location.state?.scrollTo === "job-listings") {
+          jobListingsRef.current?.scrollIntoView({ behavior: "smooth" });
+      }
+  }, [location]);
   const content = [
     { img: why1, title: "Innovative" },
     { img: why2, title: "Expertise" },
@@ -141,7 +150,8 @@ function Carreers() {
                       <span className="blue" style={{ fontWeight: "600", fontSize: "40px" }}> Career Opportunities</span>
                     </p>
                   </div>
-                 <CarreerOpportunities/>
+                  <div ref={jobListingsRef}>  <CarreerOpportunities/></div>
+               
                 </div>
               </div>
             </div>

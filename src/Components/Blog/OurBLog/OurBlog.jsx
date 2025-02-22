@@ -66,7 +66,7 @@ function OurBlog() {
                                 </div >
                                 <Row>
                                     <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4} className='my-4'>
-                                        <div className='p-4 rounded rounded-5 blog-div' style={{
+                                        <div className='p-4 rounded rounded-5 blog-div ' style={{
                                             border: "",
 
 

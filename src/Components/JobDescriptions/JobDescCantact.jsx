@@ -165,12 +165,9 @@ function JobDescContact() {
 
   return (
     <div className="carrer-div">
-      <div className="text-start mt-5 pt-5 mb-5">
-        <p>
-          <span style={{ fontWeight: "400", fontSize: "45px" }}>Apply</span>
-          <span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Here</span>
-        </p>
-        <p className="text text-secondary">Want to work with us? You’re in good company!</p>
+      <div className="text-start mt-5 pt-5 mb-5  pt-5">
+        <p><span style={{ fontWeight: "400", fontSize: "45px" }}>Apply</span><span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Here</span></p>
+        <p className="text text-secondary">Want to work with us? You&rsquo;re in good company!</p>
       </div>
       <Container fluid className="contact-form-container rounded rounded-5 mt-5">
         <img src={contactbg} alt="Background" className="contact-form-bg con-bg" />

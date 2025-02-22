@@ -1,6 +1,7 @@
 import { Button, Col,  Row } from "react-bootstrap"
 import newsletter from '../../assets/newletter.png'
 import Form from 'react-bootstrap/Form';
+import '../Blog/OurBLog/OurBlog.css'
 function NewsLetter() {
     return (
         <div className="pt-5 mt-5">

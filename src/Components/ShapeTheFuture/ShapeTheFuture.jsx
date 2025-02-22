@@ -2,18 +2,27 @@ import { Button, Col, Container, Row } from "react-bootstrap"
 import shape from '../../assets/shape.png'
 import { MdArrowForwardIos, MdKeyboardDoubleArrowRight } from "react-icons/md"
 import Positions from "../Positions/Positions"
-import { useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import stayhome from '../../assets/Rectangle 3849.png'
 import '../Blog/OurBLog/OurBlog.css'
 import Testimonial from "../Testimonial/Testimonial"
 import ai from '../../assets/ai.png'
 import fronted from '../../assets/fronted.png'
 import costeffective from '../../assets/costEffective.png'
+import { useEffect, useRef } from "react"
 
 
 
 function ShapeTheFuture() {
     const navigate = useNavigate()
+    const location = useLocation();
+    const shapeTheFutureRef = useRef(null);
+
+    useEffect(() => {
+        if (location.state?.scrollTo === "shape-the-future") {
+            shapeTheFutureRef.current?.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [location]);
     return (
         <div>
             <Container>
@@ -57,14 +66,24 @@ function ShapeTheFuture() {
                 <div className="d-flex justify-content-between my-5 pt-5">
                     <span className="text-start" style={{ fontSize: "34px", fontWeight: "500" }}>Current Openings</span>
                     <span className="text-end">
-                        <a href="" className="text-end">View All</a>
+                        <a
+                            href="#"
+                            className="text-end"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                navigate("/careers", { state: { scrollTo: "job-listings" } });
+                            }}
+                        >
+                            View All
+                        </a>
+
                     </span>
                 </div>
                 <Positions />
             </Container>
-            <div className="carousel-container about position-relative text-start w-100 py-5 my-5">
+            <div className="carousel-container about position-relative text-start w-100 py-5 my-5" >
                 <img src={stayhome} className="img-fluid w-100 about-img" alt="Slide 1" />
-                <div className="position-absolute translate-middle py-4 my-4 mx-3 header-content w-100 ps-3">
+                <div className="position-absolute translate-middle py-4 my-4 mx-3 header-content w-100 ps-3 " >
                     <p className="text-white text"></p>
                     <h1 className="text-white fw-bold my-4  h1">
                         Stay Updated with the Latest Insights
@@ -74,18 +93,18 @@ function ShapeTheFuture() {
                         How artificial intelligence is transforming industries.?
                     </p>
 
-                    <Button variant="" className="mt-4 blue-btn text-white">
+                    <Button variant="" className="mt-4 blue-btn text-white" ref={shapeTheFutureRef} onClick={() => navigate("/blogs/futureai/futureai")}>
                         Read More <MdArrowForwardIos />
                     </Button>
                 </div>
 
             </div>
             <Container>
-            <div className="text-start mt-5 pt-5 " >
-                  <p>
-                    <span className='text-dark' style={{ fontWeight: "400", fontSize: "40px" }}>Latest</span>
-                    <span className="blue" style={{ fontWeight: "600", fontSize: "40px" }}>  Blog</span>
-                  </p>
+                <div className="text-start mt-5 pt-5 " >
+                    <p>
+                        <span className='text-dark' style={{ fontWeight: "400", fontSize: "40px" }}>Latest</span>
+                        <span className="blue" style={{ fontWeight: "600", fontSize: "40px" }}>  Blog</span>
+                    </p>
                 </div>                <Row className="py-5">
                     <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4} className='my-4'>
                         <div className='p-4 rounded rounded-5 blog-div' style={{
