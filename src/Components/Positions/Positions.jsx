@@ -38,12 +38,14 @@ function Positions() {
       <Row>
         {jobs.map((job, index) => (
           <Col key={index} xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
-            <div className="blue-bg text-white rounded rounded-4 py-5 px-3 my-4">
+            <div className="blue-bg text-white rounded rounded-4 py-5 px-3 my-4" style={{height:"300px"}}>
               <p style={{ fontSize: "28px", fontWeight: "600" }}>{job.jobTitle}</p>
               <p>{job.jobDepartment || "Department not specified"}</p>
               <p><MdLocationOn /> {job.jobLocation || "Location not specified"}</p>
               <div className="d-flex justify-content-between align-items-center mt-3 w-100">
-                <Button className="text-dark bg-white border-0" onClick={() => navigate("/jobdescription")}> 
+                <Button className="text-dark bg-white border-0" 
+                state={{ scrollTo: "jobdesccontact" }}
+                onClick={() => navigate(`/jobdescription/${job._id}`)}> 
                   Apply <IoIosArrowForward />
                 </Button>
                 <a href="" className="text-white ms-auto">See More</a>

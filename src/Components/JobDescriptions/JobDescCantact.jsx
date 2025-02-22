@@ -4,49 +4,60 @@ import { useState, useEffect } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import '../../Components/CarreerOpportunities/CarreersOpportunities.css';
 import '../JobDescriptions/jobdescr.css'
+import { useParams } from "react-router-dom";
 
-function JobDescContact({ jobId }) {
-  const [file, setFile] = useState(null);
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    workplace: "",
-    fieldOfWork: "",
-    employmentType: "",
-    jobLocation: "",
-    message: ""
-  });
-  const [errors, setErrors] = useState({});
-  const [successMessage, setSuccessMessage] = useState("");
-  const [jobTitles, setJobTitles] = useState([]); // State to store job titles
+function JobDescContact() {
+    const [file, setFile] = useState(null);
+    const [formData, setFormData] = useState({
+      fullName: "",
+      email: "",
+      phone: "",
+      workplace: "",
+      fieldOfWork: "",
+      employmentType: "",
+      jobLocation: "",
+      message: ""
+    });
+    const [errors, setErrors] = useState({});
+    const [successMessage, setSuccessMessage] = useState("");
+    const { id } = useParams(); // Get job ID from URL
+    const [job, setJobs] = useState([]);
 
-  useEffect(() => {
-    // Fetch job titles from the API
-    const fetchJobTitles = async () => {
-      try {
-        const response = await fetch("https://ftfl-backend.vercel.app/api/jobs/all-jobs");
-        if (!response.ok) {
-          throw new Error("Failed to fetch job titles");
-        }
-        const data = await response.json();
-        console.log("API Response:", data); // Log the API response
-  
-        // Adjust the following code based on the actual structure of the API response
-        if (data && Array.isArray(data.jobs)) {
-          setJobTitles(data.jobs.map(job => job.jobTitle)); // Assuming the API returns an object with a 'jobs' array
-        } else if (Array.isArray(data)) {
-          setJobTitles(data.map(job => job.jobTitle)); // Fallback if the API directly returns an array
-        } else {
-          console.error("Unexpected API response structure:", data);
-        }
-      } catch (error) {
-        console.error("Error fetching job titles:", error);
-      }
-    };
-  
-    fetchJobTitles();
-  }, []);
+    useEffect(() => {
+        fetch("https://ftfl-backend.vercel.app/api/jobs/all-jobs")
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then((data) => {
+                console.log("API Response:", data); // Log the actual response
+
+                // Check if job listings are inside a key
+                const jobsArray = Array.isArray(data) ? data : data.jobs;
+
+                if (!Array.isArray(jobsArray)) {
+                    throw new Error("API response does not contain a job list");
+                }
+
+                const urgentJobs = jobsArray.filter((job) => job.openingType === "Urgent");
+                setJobs(urgentJobs);
+            })
+            .catch((error) => console.error("Error fetching jobs:", error.message));
+    }, []);
+
+    console.log("Job : ", job)
+    console.log("Id : ", id)
+
+    const xyz = job.find(j => j._id === id); // Find the job with the matching ID
+
+    if (!xyz) {
+        return <h2>Job not found</h2>;
+    }
+
+
+
 
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
@@ -104,13 +115,13 @@ function JobDescContact({ jobId }) {
       // Append form data to formPayload
   
       try {
-        const response = await fetch(`https://ftfl-backend.vercel.app/api/jobs/apply/${jobId}`, {
+        const response = await fetch(`https://ftfl-backend.vercel.app/api/jobs/apply/${id}`, {
           method: "POST",
           body: formPayload,
         });
   
         if (!response.ok) {
-          const errorData = await response.json(); // Parse error response
+          const errorData = await response.json(); 
           throw new Error(errorData.message || "Failed to submit application");
         }
   
@@ -119,7 +130,7 @@ function JobDescContact({ jobId }) {
       } catch (error) {
         console.error("Error submitting form:", error);
         setSuccessMessage(error.message || "Failed to submit form. Please try again.");
-        console.log("Job ID:", jobId);
+        console.log("Job ID:", id);
       }
     }
   };
@@ -179,9 +190,7 @@ function JobDescContact({ jobId }) {
                       <Form.Label>Field of Work<span className="blue"> *</span></Form.Label>
                       <Form.Select name="fieldOfWork" className="form-control custom-input border border-1 rounded rounded-5" onChange={handleChange} value={formData.fieldOfWork}>
                         <option value="">Select Field of Work</option>
-                        {jobTitles.map((title, index) => (
-                          <option key={index} value={title}>{title}</option>
-                        ))}
+                        <option value="aa">{xyz.jobTitle}</option>
                       </Form.Select>
                       {errors.fieldOfWork && <p style={{ color: "#298CF3" }}>{errors.fieldOfWork}</p>}
                     </Form.Group>

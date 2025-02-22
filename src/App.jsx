@@ -18,6 +18,7 @@ import DigitalTransformation from './Components/Blog/DigitalTransformation/Digit
 import CostEffectiveStartup from './Components/Blog/CostEffectiveStartup/CostEffectiveStartup';
 import BusinssRoadmaps from './Components/Blog/BusinessRoadmaps/BusinssRoadmaps';
 import JobDescriptions from './Components/JobDescriptions/JobDescriptions';
+import JobDescContact from './Components/JobDescriptions/JobDescCantact';
 function App() {
 
   return (
@@ -31,6 +32,8 @@ function App() {
             <Route path="/blogs" element={<Blog/>}/>
             <Route path="/careers" element={<Carreers/>}/>
             <Route path="/contact" element={<ConatctUS/>}/>
+           
+
             <Route path="/blogs/latest-tech-trends/ai&machine" element={<AiMLearning/>}/>
 
             <Route path="/blogs/latest-tech-trends/cloudcomputing" element={<CloudComputing/>}/>
@@ -41,7 +44,7 @@ function App() {
             <Route path="/blogs/itconsultation/digitaltransformation" element={<DigitalTransformation/>}/>
             <Route path="/blogs/itconsultation/costeffectivestartup" element={<CostEffectiveStartup/>}/>
             <Route path="/blogs/itconsultation/businessroadmaps" element={<BusinssRoadmaps/>}/>
-            <Route path="/jobdescription" element={<JobDescriptions/>}/>
+            <Route path="/jobdescription/:id" element={<JobDescriptions/>}/>
 
           </Routes>
           <Footer/>

@@ -51,11 +51,31 @@ position: relative;
         height: 4500px !important;
         margin-bottom: 2700px !important;
     }
+    .blog-div{
+        height: 350px;
+        box-shadow: 0px 0px 20px #00000040 !important;
+
+    }
+}
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+    .bg-blog{
+        height: 4500px !important;
+        margin-bottom: 2700px !important;
+    }
+    .blog-div{
+        height: 500px;
+        box-shadow: 0px 0px 20px #00000040 !important;
+
+    }
 }
  @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .blog-div{
         height: 400px;
         box-shadow: 0px 0px 20px #00000040 !important;
 
+    }
+    .bg-blog{
+        height: 1500px !important;
+        margin-bottom: 2700px !important;
     }
  }

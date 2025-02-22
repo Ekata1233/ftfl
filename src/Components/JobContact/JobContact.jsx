@@ -3,6 +3,7 @@ import { FiUpload } from "react-icons/fi";
 import { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import '../../Components/CarreerOpportunities/CarreersOpportunities.css';
+import '../JobContact/JobContact.css'
 
 function JobContact() {
   const [file, setFile] = useState(null);
