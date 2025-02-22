@@ -11,7 +11,7 @@ import '../OurServices/OurServices.css'
 
 function OurServices() {
     return (
-        <div className="my-5 py-3" style={{backgroundColor:" #EDF5FE"}}>
+        <div className="my-5 py-3" >
             <div className="text-center my-5" >
                 <p>
                     <span className='text-dark' style={{ fontWeight: "400", fontSize: "45px" }}>Our</span>

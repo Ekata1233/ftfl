@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {  useEffect, useRef, useState } from "react";
 import { Button, Col, Dropdown, Form, Row } from "react-bootstrap";
 import { IoIosArrowForward } from "react-icons/io";
 import { MdLocationOn } from "react-icons/md";
@@ -8,6 +8,8 @@ function CarreerOpportunities() {
   const [selectedDepartment, setSelectedDepartment] = useState("Department");
   const [selectedLocation, setSelectedLocation] = useState("Pune");
   const [searchQuery, setSearchQuery] = useState("");
+   const jobListingsRef = useRef(null);
+  
 
   const handleSelect = (department) => {
     setSelectedDepartment(department);
@@ -82,7 +84,7 @@ function CarreerOpportunities() {
   });
 
   return (
-    <div>
+    <div >
       <Row className="mb-5 mt-5 pb-5">
         <Col xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
           <p style={{ fontSize: "24px", fontWeight: "400" }}>Job/Intern Role</p>
@@ -139,7 +141,7 @@ function CarreerOpportunities() {
           </Dropdown>{" "}
         </Col>
       </Row>
-      <div>
+      <div ref={jobListingsRef}>
         <Row>
           {filteredJobs.map((job, index) => (
             <Col key={index} xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
