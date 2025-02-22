@@ -2,18 +2,27 @@ import { Button, Col, Container, Row } from "react-bootstrap"
 import shape from '../../assets/shape.png'
 import { MdArrowForwardIos, MdKeyboardDoubleArrowRight } from "react-icons/md"
 import Positions from "../Positions/Positions"
-import { useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import stayhome from '../../assets/Rectangle 3849.png'
 import '../Blog/OurBLog/OurBlog.css'
 import Testimonial from "../Testimonial/Testimonial"
 import ai from '../../assets/ai.png'
 import fronted from '../../assets/fronted.png'
 import costeffective from '../../assets/costEffective.png'
+import { useEffect, useRef } from "react"
 
 
 
 function ShapeTheFuture() {
     const navigate = useNavigate()
+    const location = useLocation();
+    const shapeTheFutureRef = useRef(null);
+
+    useEffect(() => {
+        if (location.state?.scrollTo === "shape-the-future") {
+            shapeTheFutureRef.current?.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [location]);
     return (
         <div>
             <Container>
@@ -62,7 +71,7 @@ function ShapeTheFuture() {
                 </div>
                 <Positions />
             </Container>
-            <div className="carousel-container about position-relative text-start w-100 py-5 my-5">
+            <div ref={shapeTheFutureRef} className="carousel-container about position-relative text-start w-100 py-5 my-5" >
                 <img src={stayhome} className="img-fluid w-100 about-img" alt="Slide 1" />
                 <div className="position-absolute translate-middle py-4 my-4 mx-3 header-content w-100 ps-3">
                     <p className="text-white text"></p>
@@ -74,7 +83,7 @@ function ShapeTheFuture() {
                         How artificial intelligence is transforming industries.?
                     </p>
 
-                    <Button variant="" className="mt-4 blue-btn text-white">
+                    <Button variant="" className="mt-4 blue-btn text-white"  onClick={() => navigate("/blogs/futureai/futureai")}>
                         Read More <MdArrowForwardIos />
                     </Button>
                 </div>

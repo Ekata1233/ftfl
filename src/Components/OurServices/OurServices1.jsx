@@ -3,9 +3,9 @@ import services1 from '../../assets/off.png'
 import services2 from '../../assets/off1.png'
 
 import services3 from '../../assets/off12.png'
-import serimg1 from '../../assets/Group 10140.png'
-import serimg2 from '../../assets/Group 10140 (1).png'
-import serimg3 from '../../assets/Group 10140 (2).png'
+import serimg1 from '../../assets/Group 10142 (1).png'
+import serimg2 from '../../assets/Group 10142 (2).png'
+import serimg3 from '../../assets/Group 10142.png'
 
 import '../OurServices/OurServices.css'
 

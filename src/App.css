@@ -76,6 +76,29 @@
   transform: translateY(0);
 }
 
+.shadow-effect {
+  box-shadow: 0px 0px 15px rgba(41, 140, 243, 0.6);
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.shadow-effect:hover {
+  box-shadow: 0px 0px 25px rgba(41, 140, 243, 0.9);
+}
+@keyframes glowingShadow {
+  0% {
+    box-shadow: 0px 0px 10px rgba(41, 140, 243, 0.5);
+  }
+  50% {
+    box-shadow: 0px 0px 20px rgba(41, 140, 243, 0.8);
+  }
+  100% {
+    box-shadow: 0px 0px 10px rgba(41, 140, 243, 0.5);
+  }
+}
+
+.shadow-animation {
+  animation: glowingShadow 1.5s infinite ease-in-out;
+}
 
 
 @media only screen and (max-width: 425px){

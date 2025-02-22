@@ -18,7 +18,7 @@ import DigitalTransformation from './Components/Blog/DigitalTransformation/Digit
 import CostEffectiveStartup from './Components/Blog/CostEffectiveStartup/CostEffectiveStartup';
 import BusinssRoadmaps from './Components/Blog/BusinessRoadmaps/BusinssRoadmaps';
 import JobDescriptions from './Components/JobDescriptions/JobDescriptions';
-import JobDescContact from './Components/JobDescriptions/JobDescCantact';
+import FutureAi from './Components/Blog/futureAi/FutureAi';
 function App() {
 
   return (
@@ -45,6 +45,7 @@ function App() {
             <Route path="/blogs/itconsultation/costeffectivestartup" element={<CostEffectiveStartup/>}/>
             <Route path="/blogs/itconsultation/businessroadmaps" element={<BusinssRoadmaps/>}/>
             <Route path="/jobdescription/:id" element={<JobDescriptions/>}/>
+            <Route path="/blogs/futureai/futureai" element={<FutureAi/>}/>
 
           </Routes>
           <Footer/>
