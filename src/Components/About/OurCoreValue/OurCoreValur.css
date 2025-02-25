@@ -37,12 +37,15 @@
   @media only screen and (min-width: 426px) and (max-width: 768px){
     .text-box {
        
-        height: 400px !important;
+        height: 530px !important;
       }
   }
   @media only screen and (min-width: 769px) and (max-width: 1024px){
     .text-box {
        
         height: 450px !important;
+      }
+      .value-container{
+        padding-top: 50px !important;
       }
   }

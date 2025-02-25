@@ -31,16 +31,33 @@ html, body {
   .vision-col{
     display: none;
   }
-@media only screen and (max-width: 425px){
+  @media only screen and (max-width: 375px){
+    .vector-image{
+      margin-top: 300px;
+      margin-bottom: 900px !important;
+  }
+  .vision-row{
+    margin-top: 50px;
+    
+ }
+ .vision-img{
+    margin-top: 0px;
+ }
+ .vision-col{
+    display: block;
+  }
+  .vision-col1{
+    display: none;
+  }
+  }
+@media only screen and (min-width: 376px) and (max-width: 425px){
     .overlay-nav1{
         margin-top: -75px;
     }
-    .header-p{
-        width: 300px;
-    }
+   
     .vector-image{
         margin-top: 300px;
-        margin-bottom: 730px;
+        margin-bottom: 650px;
     }
     /* .about{
         height: 3000px !important;
@@ -62,8 +79,8 @@ html, body {
 @media only screen and (min-width: 426px) and (max-width: 768px)
 {
     .vector-image{
-        margin-top: 300px;
-        margin-bottom: 450px;
+        margin-top: 400px;
+        margin-bottom: 550px;
     }
     .vision-row{
         margin-top: 50px;

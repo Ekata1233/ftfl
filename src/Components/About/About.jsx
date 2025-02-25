@@ -22,7 +22,7 @@ function About() {
       {/* Carousel Section */}
       <div className="carousel-container about position-relative text-center">
         <img src={about} className="img-fluid w-100 about-img" alt="Slide 1" />
-        <div className="position-absolute translate-middle p-3 header-content">
+        <div className="position-absolute translate-middle p-3 header-content w-100">
           <p className="text-white text">About</p>
           <h1 className="text-white fw-bold my-4 h1">
             Building Brands, Shaping Tech

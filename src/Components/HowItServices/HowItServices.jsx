@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap"
+import { Col,Row } from "react-bootstrap"
 import aboutman from '../../assets/aboutman.png'
 import '../HowItServices/HowItServics.css'
 
@@ -6,12 +6,12 @@ function HowItServices() {
   return (
     <div>
         <div>
-            <p className="blue heading-p"> How it Started</p>
+            <p className="blue heading-p pb-4"> How it Started</p>
             <div className="d-flex justify-content-center align-items-center ">
             
-            <Container className="d-flex justify-content-center mx-auto blue-bg text-white rounded rounded-5">
-      <Row className="full-width-row p-5 started">
-        <Col xs={12} sm={12} md={12} lg={8} xl={8}>
+            <div className="d-flex justify-content-center mx-auto blue-bg text-white rounded rounded-5 howstart">
+      <Row className="full-width-row  started">
+        <Col xs={12} sm={12} md={12} lg={8} xl={8} className="p-4">
             <div>
                 <h4>The Road to</h4>
                 <p className="" style={{fontWeight:"600",fontSize:"60px", lineHeight:"50px"}}>Today</p>
@@ -26,7 +26,7 @@ function HowItServices() {
          </div>
         </Col>
       </Row>
-    </Container>
+    </div>
    
             </div>
         </div>

@@ -41,13 +41,30 @@
 .header-content{
     font-size: 20px;
 }
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 375px){
     .social1{
         display: none;
     }
    
     .footer{
-        height: 980px !important;
+        height: 1070px !important;
+        width: 100% !important;
+    }
+    .social2{
+        display: block;
+    }
+    .get-touch{
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (min-width: 376px) and (max-width: 425px){
+    .social1{
+        display: none;
+    }
+   
+    .footer{
+        height: 1000px !important;
         width: 100% !important;
     }
     .social2{
@@ -81,5 +98,10 @@
         margin-top: 20px;
     }
 }
-
+@media only screen and (min-width: 1024px) and (max-width: 1440px){
+    .footer{
+        height: 550px !important;
+        width: 100% !important;
+    }
+}
 

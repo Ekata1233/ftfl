@@ -24,7 +24,7 @@ function OurVision() {
                             </div>
                         </Col>
                     </Row>
-                    <Row className=" mission">
+                    <Row className=" mission pt-5">
                         <Col xs={12} sm={12} md={8} lg={5} xl={6} className="px-4 mt-5 pt-5 vision-col">
 
                             <p className=""><span className="" style={{ fontWeight: "400", fontSize: "45px", }}>Our</span><span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Mission</span></p>
@@ -47,7 +47,7 @@ function OurVision() {
                         </Col>
 
                     </Row>
-                    <Row className="vision-row  mt-5">
+                    <Row className="vision-row  mt-5 pt-5">
                         <Col xs={12} sm={12} md={8} lg={5} xl={6} className="px-4">
                             <p className="pt-5"><span className="" style={{ fontWeight: "400", fontSize: "45px", }}>Our</span><span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Approach</span></p>
                             <p className="text-secondary text ">We focus on their special needs and, therefore, carry out customized IT, branding, and marketing services to serve our clients. Our agile approach ensures flexibility, scalability, and continuous growth, further helping businesses thrive under these ever-changing digital circumstances.
