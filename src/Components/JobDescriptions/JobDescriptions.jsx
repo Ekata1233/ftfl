@@ -12,8 +12,8 @@ import { PiBriefcase, PiPhoneCall } from "react-icons/pi";
 import contactman from '../../assets/aboutman11.png';
 import { MdOutlineMailOutline } from "react-icons/md";
 import { TbWorld } from "react-icons/tb";
-import { Reveal } from "react-awesome-reveal"; // Import Reveal component
-import { keyframes } from "@emotion/react"; // Import keyframes for custom animations
+import { Reveal } from "react-awesome-reveal";
+import { keyframes } from "@emotion/react";
 
 // Define a custom fade-up animation
 const customAnimation = keyframes`
@@ -49,7 +49,7 @@ function JobDescriptions() {
 
     useEffect(() => {
         setLoading(true);
-        fetch("https://ftfl-backend.vercel.app/api/jobs/all-jobs")
+        fetch("http://localhost:5000/api/jobs/all-jobs")
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -121,7 +121,18 @@ function JobDescriptions() {
                 <Reveal keyframes={customAnimation} triggerOnce>
                     <div className="my-5">
                         <p className="" style={{ fontSize: "28px", fontWeight: "600" }}>Requirements</p>
-                        <li className="text-secondary text">{xyz.requirements}</li>
+                        <p className="text-secondary text"><strong>Must Have:</strong></p>
+                        <ul>
+                            {xyz.requirements.mustHave.map((item, index) => (
+                                <li key={index} className="text-secondary text">{item}</li>
+                            ))}
+                        </ul>
+                        <p className="text-secondary text"><strong>Nice To Have:</strong></p>
+                        <ul>
+                            {xyz.requirements.niceToHave.map((item, index) => (
+                                <li key={index} className="text-secondary text">{item}</li>
+                            ))}
+                        </ul>
                         <hr />
                     </div>
                 </Reveal>
@@ -130,7 +141,11 @@ function JobDescriptions() {
                 <Reveal keyframes={customAnimation} triggerOnce>
                     <div className="my-5">
                         <p className="" style={{ fontSize: "28px", fontWeight: "600" }}>Work Environment & Expectations</p>
-                        <li className="text-secondary text">{xyz.workEnvironment}</li>
+                        <ul>
+                            {xyz.workEnvironment.map((item, index) => (
+                                <li key={index} className="text-secondary text">{item}</li>
+                            ))}
+                        </ul>
                         <hr />
                     </div>
                 </Reveal>
@@ -139,7 +154,11 @@ function JobDescriptions() {
                 <Reveal keyframes={customAnimation} triggerOnce>
                     <div ref={contactRef} className="my-5">
                         <p className="" style={{ fontSize: "28px", fontWeight: "600" }}>Benefits</p>
-                        <li className="text-secondary text">{xyz.benefits}</li>
+                        <ul>
+                            {xyz.benefits.map((item, index) => (
+                                <li key={index} className="text-secondary text">{item}</li>
+                            ))}
+                        </ul>
                         <hr />
                     </div>
                 </Reveal>
