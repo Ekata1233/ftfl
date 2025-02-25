@@ -10,40 +10,39 @@ function JobDescContact() {
   const [file, setFile] = useState(null);
   const [formData, setFormData] = useState({
     fullName: "",
-    mobileNumber: "", // Updated field name to match backend
+    mobileNumber: "",
     email: "",
-    workplaceType: "", // Updated field name to match backend
-    employmentType: "", // Updated field name to match backend
-    jobLocation: "", // Updated field name to match backend
-    backgroundDescription: "", // Updated field name to match backend
+    workplaceType: "",
+    employmentType: "",
+    jobLocation: "",
+    backgroundDescription: "",
   });
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
-  const { id } = useParams(); // Get job ID from URL
+  const { id } = useParams();
   const [job, setJobs] = useState([]);
   const [selectedJob, setSelectedJob] = useState(null);
-  const [isLoading, setIsLoading] = useState(false); // Loader state
+  const [isLoading, setIsLoading] = useState(false);
 
   // Fetch jobs on component mount
   useEffect(() => {
     const fetchJobs = async () => {
-      setIsLoading(true); // Start loading
+      setIsLoading(true);
       try {
         const response = await fetch("https://ftfl-backend.vercel.app/api/jobs/all-jobs");
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-        const jobsArray = Array.isArray(data) ? data : data.jobs;
+        const jobsArray = Array.isArray(data) ? data : data.jobs; // Handle nested response
         if (!Array.isArray(jobsArray)) {
           throw new Error("API response does not contain a job list");
         }
-        const urgentJobs = jobsArray.filter((job) => job.openingType === "Urgent");
-        setJobs(urgentJobs);
+        setJobs(jobsArray);
       } catch (error) {
         console.error("Error fetching jobs:", error.message);
       } finally {
-        setIsLoading(false); // Stop loading
+        setIsLoading(false);
       }
     };
 
@@ -53,7 +52,9 @@ function JobDescContact() {
   // Find the selected job based on the ID
   useEffect(() => {
     if (job.length > 0 && id) {
+      console.log("Fetched Jobs:", job);
       const foundJob = job.find((j) => j._id === id);
+      console.log("Selected Job:", foundJob);
       setSelectedJob(foundJob);
     }
   }, [job, id]);
@@ -116,7 +117,7 @@ function JobDescContact() {
     e.preventDefault();
     if (!validateForm()) return;
 
-    setIsLoading(true); // Start loading
+    setIsLoading(true);
     const formPayload = new FormData();
     formPayload.append("fullName", formData.fullName);
     formPayload.append("mobileNumber", formData.mobileNumber);
@@ -125,10 +126,10 @@ function JobDescContact() {
     formPayload.append("employmentType", formData.employmentType);
     formPayload.append("jobLocation", formData.jobLocation);
     formPayload.append("backgroundDescription", formData.backgroundDescription);
-    formPayload.append("resume", file); // Ensure the field name is "resume"
+    formPayload.append("resume", file);
 
     try {
-      const response = await fetch(`http://localhost:5000/api/jobs/apply/${id}`, {
+      const response = await fetch(`https://ftfl-backend.vercel.app/api/jobs/apply/${id}`, {
         method: "POST",
         body: formPayload,
       });
@@ -139,7 +140,6 @@ function JobDescContact() {
       }
 
       setSuccessMessage("Application submitted successfully!");
-      // Reset form and errors
       setFormData({
         fullName: "",
         mobileNumber: "",
@@ -155,12 +155,12 @@ function JobDescContact() {
       console.error("Error submitting form:", error);
       setSuccessMessage(error.message || "Failed to submit form. Please try again.");
     } finally {
-      setIsLoading(false); // Stop loading
+      setIsLoading(false);
     }
   };
 
   if (!selectedJob) {
-    return <h2>Job not found</h2>;
+    return <h2>No Such Job Exist</h2>;
   }
 
   return (
@@ -179,7 +179,7 @@ function JobDescContact() {
                 justifyContent: "center",
                 alignItems: "center",
                 height: "100%",
-                minHeight: "400px", // Adjust height as needed
+                minHeight: "400px",
               }}
             >
               <Spinner animation="border" role="status" style={{ width: "3rem", height: "3rem" }}>

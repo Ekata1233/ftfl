@@ -62,6 +62,7 @@ function JobDescriptions() {
                 if (!Array.isArray(jobsArray)) {
                     throw new Error("API response does not contain a job list");
                 }
+    
                 const urgentJobs = jobsArray.filter((job) => job.openingType === "Urgent");
                 setJobs(urgentJobs);
             })
@@ -70,6 +71,7 @@ function JobDescriptions() {
                 setLoading(false);
             });
     }, []);
+    
 
     const xyz = job.find(j => j._id === id);
 
@@ -171,13 +173,17 @@ function JobDescriptions() {
                                 </Col>
                                 <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4} className="my-5 text-center">
                                     <FaRegCalendarAlt className="blue" style={{ width: "70px", height: "70px" }} />
-                                    <p style={{ fontWeight: "500", fontSize: "22px" }} className="mt-3">Job Posted:</p>
-                                    <p className="text-secondary text">{xyz.postDate}</p>
+                                    <p style={{ fontWeight: "500", fontSize: "22px" }}
+                                        className="mt-3">Job Posted:</p>
+                                    <p className="text-secondary text">{xyz.postDate
+                                    }</p>
                                 </Col>
                                 <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4} className="my-5 text-center">
                                     <LuAlarmClock className="blue" style={{ width: "70px", height: "70px" }} />
-                                    <p style={{ fontWeight: "500", fontSize: "22px" }} className="mt-3">Job expire in:</p>
-                                    <p className="text-secondary text">{xyz.applyDeadline}</p>
+                                    <p style={{ fontWeight: "500", fontSize: "22px" }}
+                                        className="mt-3">Job expire in:</p>
+                                    <p className="text-secondary text">{xyz.applyDeadline
+                                    }</p>
                                 </Col>
                                 <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4} className="my-5 text-center">
                                     <PiBriefcase className="blue" style={{ width: "70px", height: "70px" }} />
