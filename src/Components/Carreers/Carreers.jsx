@@ -27,12 +27,12 @@ function Carreers() {
       }
   }, [location]);
   const content = [
-    { img: why1, title: "Innovative" },
-    { img: why2, title: "Expertise" },
-    { img: why3, title: "Partnership" },
-    { img: why4, title: "Scalability" },
-    { img: why5, title: "Success" },
-    { img: why6, title: "Support" },
+    { img: why1, title: "Innovative" , p:'Join FTFL Technology and innovate with us to shape the future of IT.'},
+    { img: why2, title: "Expertise", p:"FTFL Technology – Expertise that transforms ideas into reality." },
+    { img: why3, title: "Partnership", p:"FTFL Technology – Building strong partnerships for a smarter future." },
+    { img: why4, title: "Scalability", p:"Technology that grows as fast as your vision—powered by FTFL Technology." },
+    { img: why5, title: "Success", p:"Success isn’t a destination; with FTFL Technology, it’s a journey of growth." },
+    { img: why6, title: "Support", p:"Reliable solutions, dedicated support—FTFL Technology has your back." },
   ];
  
   return (
@@ -126,7 +126,7 @@ function Carreers() {
                 animate={controls}
                 transition={{ duration: 0.5, delay: index * 0.4 }}
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               {item.p}
               </motion.p>
             </motion.div>
           </Col>
@@ -138,7 +138,7 @@ function Carreers() {
                     <span className='text-dark' style={{ fontWeight: "400", fontSize: "40px" }}>Open</span>
                     <span className="blue" style={{ fontWeight: "600", fontSize: "40px" }}> Positons</span>
                   </p>
-                  <p className="text text-center text-secondary pt-5 pb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus obcaecati corrupti quam voluptatem id a error facere saepe temporibus odio illo, quos repudiandae, perspiciatis maiores dicta possimus earum ut provident quisquam voluptatum dignissimos eum alias amet autem. Corporis, iusto porro?</p>
+                  <p className="text text-center text-secondary pt-5 pb-5">FTFL Technology is looking for skilled professionals to join our growing team. Exciting opportunities await in a dynamic and innovative environment. Take the next step in your career and apply today! 🚀</p>
                 </div>
                 <div>
                   <Positions/>

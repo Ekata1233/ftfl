@@ -99,9 +99,12 @@
 .shadow-animation {
   animation: glowingShadow 1.5s infinite ease-in-out;
 }
+/* what is different */
+.what{
+  height: 400px !important;
+}
 
-
-@media only screen and (max-width: 425px){
+@media only screen and (min-width: 375px) and  (max-width: 425px){
   .header-content .h1{
       font-size: 20px !important;
   }
@@ -119,8 +122,10 @@
   }
   .text{
     font-size: 15px !important;
+   
 }
-.overlay-nav {
+.overlay-nav
+{
   position: absolute;
   top: 15%;
   width: 100%;

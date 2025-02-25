@@ -27,7 +27,7 @@ function OurBlog() {
     const latestTechTrendsRef = useRef(null);
     const webMobileDevRef = useRef(null);
     const itConsultingRef = useRef(null);
-
+const itAndBusinessRef=useRef(null);
     useEffect(() => {
         if (location.state?.scrollTo) {
             setTimeout(() => {
@@ -39,6 +39,9 @@ function OurBlog() {
                 }
                 if (location.state.scrollTo === "it-consultation" && itConsultingRef.current) {
                     itConsultingRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+                if (location.state.scrollTo === "it-bisiness" && itAndBusinessRef.current) {
+                    itAndBusinessRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
                 }
             }, 100);
         }
@@ -158,7 +161,11 @@ function OurBlog() {
                                     </Col>
                                 </Row>
                                </div>
-                               <ItConsulting/> 
+                              </div>
+                              <div ref={itAndBusinessRef}>
+                                    <ItConsulting />
+                                </div> 
+                              <div>
                                <div  ref={itConsultingRef} className='mt-5 pt-5'>
                                <div className='pt-5'>
                                     <p className='' style={{ fontSize: "32px ", fontWeight: "500" }}>Some more on IT Consultation</p>

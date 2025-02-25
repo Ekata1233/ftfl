@@ -28,9 +28,7 @@ function About() {
             Building Brands, Shaping Tech
           </h1>
           <p className="text-white header-p">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco
+          At FTFL Technology, we craft innovative digital solutions that elevate brands and drive technological excellence. From cutting-edge development to strategic branding, we empower businesses to thrive in the digital era.
           </p>
 
           <Button variant="" className="mt-4 blue-btn text-white">

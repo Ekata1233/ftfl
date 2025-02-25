@@ -7,8 +7,10 @@ import collabration from "../../../assets/rafiki.png";
 
 import "../OurCoreValue/OurCoreValur.css"; // Ensure you have a CSS file for styling
 import { MdArrowForwardIos } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 function OurCoreValue() {
+  const navigate=useNavigate()
   return (
     <div className="value-div">
       {/* Background Image */}
@@ -60,7 +62,7 @@ function OurCoreValue() {
     <p className="text-center pb-3"><span className="" style={{ fontWeight: "600", fontSize: "45px", }}>Grow Your</span><span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Future </span><span className="" style={{ fontWeight: "600", fontSize: "45px", }}>With Us</span></p>
     <p className="text-center text text-secondary">Join FTFL Technology and unlock endless opportunities to develop your skills, innovate, and shape the future of digital transformation.</p>
     <div className="d-flex justify-content-center">
-  <Button variant="" className="mt-4 blue-btn text-white">
+  <Button variant="" className="mt-4 blue-btn text-white"onClick={() => navigate("/careers")}>
     Careers in FTFL Technology <MdArrowForwardIos />
   </Button>
 </div>

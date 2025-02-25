@@ -33,7 +33,7 @@ function OurBusiness() {
       <div className="poppins-regular text-center my-5 text">
         <Container>
           <h2 className=''>Our Business in <span className="blue">Action</span></h2>
-          <p className='text-secondary my-4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam consequat sed do eiusmod.</p>
+          <p className='text-secondary my-4'>At FTFL Technology, we transform ideas into reality with cutting-edge solutions in software development, branding, and digital strategy. Our expertise ensures seamless innovation, empowering businesses to scale and succeed in the ever-evolving tech landscape.</p>
         </Container>
         <Container>
           <Row className="mt-5 py-5">
