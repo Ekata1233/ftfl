@@ -79,14 +79,14 @@ function JobDescriptions() {
                     throw new Error("API response does not contain a job list");
                 }
     
-                const urgentJobs = jobsArray.filter((job) => job.openingType === "Urgent");
-                setJobs(urgentJobs);
+                setJobs(jobsArray); // Set all jobs without filtering
             })
             .catch((error) => console.error("Error fetching jobs:", error.message))
             .finally(() => {
                 setLoading(false); // Ensure loading is turned off after fetch
             });
     }, []);
+    
 
     console.log("Job : ", job)
     console.log("Id : ", id)
@@ -196,15 +196,25 @@ function JobDescriptions() {
                                     <FaRegCalendarAlt className="blue" style={{ width: "70px", height: "70px" }} />
                                     <p style={{ fontWeight: "500", fontSize: "22px" }}
                                         className="mt-3">Job Posted:</p>
-                                    <p className="text-secondary text">{xyz.postDate
-                                    }</p>
+                                    <p className="text-secondary text">
+    {new Date(xyz.postDate).toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+    })}
+</p>
                                 </Col>
                                 <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4} className="my-5 text-center">
                                     <LuAlarmClock className="blue" style={{ width: "70px", height: "70px" }} />
                                     <p style={{ fontWeight: "500", fontSize: "22px" }}
-                                        className="mt-3">Job expire in:</p>
-                                    <p className="text-secondary text">{xyz.applyDeadline
-                                    }</p>
+                                        className="mt-3">Application Deadline:</p>
+                                  <p className="text-secondary text">
+    {new Date(xyz.applyDeadline).toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+    })}
+</p>
                                 </Col>
 
                                 {/* <Col>

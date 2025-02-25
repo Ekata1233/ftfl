@@ -1,15 +1,45 @@
-import {  useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Col, Dropdown, Form, Row } from "react-bootstrap";
 import { IoIosArrowForward } from "react-icons/io";
 import { MdLocationOn } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 import JobContact from "../JobContact/JobContact";
 
-function CarreerOpportunities() {
+function CareerOpportunities() {
+  const navigate = useNavigate();
   const [selectedDepartment, setSelectedDepartment] = useState("Department");
   const [selectedLocation, setSelectedLocation] = useState("Pune");
   const [searchQuery, setSearchQuery] = useState("");
-   const jobListingsRef = useRef(null);
-  
+  const [jobListings, setJobListings] = useState([]);
+
+  useEffect(() => {
+    // Fetch job listings from the API
+    const fetchJobs = async () => {
+        try {
+            const response = await fetch("https://ftfl-backend.vercel.app/api/jobs/all-jobs");
+            if (!response.ok) {
+                throw new Error("Failed to fetch jobs");
+            }
+            const data = await response.json();
+            console.log("API Response:", data);
+
+            // Extract and filter jobs
+            if (data.success && Array.isArray(data.jobs)) {
+                const regularJobs = data.jobs.filter(job => job.openingType === "Regular");
+                setJobListings(regularJobs);
+            } else {
+                console.error("API did not return a valid jobs array:", data);
+                setJobListings([]);
+            }
+        } catch (error) {
+            console.error("Error fetching jobs:", error);
+            setJobListings([]);
+        }
+    };
+
+    fetchJobs();
+}, []);
+
 
   const handleSelect = (department) => {
     setSelectedDepartment(department);
@@ -23,68 +53,24 @@ function CarreerOpportunities() {
     setSearchQuery(e.target.value);
   };
 
-  const jobListings = [
-    {
-      title: "UI/UX Developer",
-      department: "IT Department",
-      location: "Pune",
-    },
-    {
-      title: "MERN Stack Developer",
-      department: "IT Department",
-      location: "Pune",
-    },
-    {
-      title: "Flutter Developer",
-      department: "IT Department",
-      location: "Pune",
-    },
-    {
-      title: "Content Writer",
-      department: "Marketing & Lead Generation",
-      location: "Pune",
-    },
-    {
-      title: "Digital Marketing",
-      department: "Marketing & Branding",
-      location: "Pune",
-    },
-    {
-      title: "Sales Executive",
-      department: "Sales or Business Development department",
-      location: "Pune",
-    },
-    {
-      title: "Graphic Designer",
-      department: "Design",
-      location: "Pune",
-    },
-    {
-      title: "Video Editor",
-      department: "Marketing & Branding",
-      location: "Remote",
-    },
-    {
-      title: "Business Development Executive",
-      department: "Business Development",
-      location: "Pune",
-    },
-  ];
+  // Ensure jobListings is always an array before filtering
+  const filteredJobs = Array.isArray(jobListings)
+    ? jobListings.filter((job) => {
+        const matchesDepartment =
+          selectedDepartment === "Department" || job.jobDepartment?.includes(selectedDepartment);
+        const matchesLocation =
+          selectedLocation === "Location" || job.jobLocation === selectedLocation;
+        const matchesSearchQuery =
+          job.jobTitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          job.jobDepartment?.toLowerCase().includes(searchQuery.toLowerCase());
+        const matchesOpeningType = job.openingType === "Regular"; // Filter for Regular openingType
 
-  const filteredJobs = jobListings.filter((job) => {
-    const matchesDepartment =
-      selectedDepartment === "Department" || job.department.includes(selectedDepartment);
-    const matchesLocation =
-      selectedLocation === "Location" || job.location === selectedLocation;
-    const matchesSearchQuery =
-      job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      job.department.toLowerCase().includes(searchQuery.toLowerCase());
-
-    return matchesDepartment && matchesLocation && matchesSearchQuery;
-  });
+        return matchesDepartment && matchesLocation && matchesSearchQuery && matchesOpeningType;
+      })
+    : [];
 
   return (
-    <div >
+    <div>
       <Row className="mb-5 mt-5 pb-5">
         <Col xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
           <p style={{ fontSize: "24px", fontWeight: "400" }}>Job/Intern Role</p>
@@ -107,23 +93,15 @@ function CarreerOpportunities() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu className="w-100">
-              <Dropdown.Item onClick={() => handleSelect("IT")}>
-                IT
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => handleSelect("Design")}>
-                Design
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => handleSelect("Marketing")}>
-                Marketing
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => handleSelect("Sales")}>
-                Sales
-              </Dropdown.Item>
+              <Dropdown.Item onClick={() => handleSelect("IT")}>IT</Dropdown.Item>
+              <Dropdown.Item onClick={() => handleSelect("Design")}>Design</Dropdown.Item>
+              <Dropdown.Item onClick={() => handleSelect("Marketing")}>Marketing</Dropdown.Item>
+              <Dropdown.Item onClick={() => handleSelect("Sales")}>Sales</Dropdown.Item>
             </Dropdown.Menu>
-          </Dropdown>{" "}
+          </Dropdown>
         </Col>
         <Col xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
-          <p style={{ fontSize: "24px", fontWeight: "400" }}>Location </p>
+          <p style={{ fontSize: "24px", fontWeight: "400" }}>Location</p>
           <Dropdown>
             <Dropdown.Toggle
               variant="light"
@@ -133,15 +111,12 @@ function CarreerOpportunities() {
               {selectedLocation}
             </Dropdown.Toggle>
             <Dropdown.Menu className="w-100">
-              <Dropdown.Item onClick={() => handleSelectLocation("Pune")}>
-                Pune
-              </Dropdown.Item>
-              
+              <Dropdown.Item onClick={() => handleSelectLocation("Pune")}>Pune</Dropdown.Item>
             </Dropdown.Menu>
-          </Dropdown>{" "}
+          </Dropdown>
         </Col>
       </Row>
-      <div ref={jobListingsRef}>
+      <div>
         <Row>
           {filteredJobs.map((job, index) => (
             <Col key={index} xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
@@ -150,19 +125,27 @@ function CarreerOpportunities() {
                 style={{ border: "1px solid #298CF3" }}
               >
                 <p className="" style={{ fontSize: "23px", fontWeight: "600" }}>
-                  {job.title}
+                  {job.jobTitle}
                 </p>
-                <p className="text-secondary">{job.department}</p>
+                <p className="text-secondary">{job.jobDepartment}</p>
                 <p className="">
-                  {" "}
                   <MdLocationOn />
-                  {job.location}
+                  {job.jobLocation}
                 </p>
                 <div className="d-flex justify-content-between align-items-center mt-3 w-100">
-                  <Button className="text-white blue-bg border-0">
-                    Apply <IoIosArrowForward />
-                  </Button>
-                  <a href="" className="text-dark ms-auto">
+                  <Button
+                    className="text-white blue-bg border-0"
+                    onClick={() => navigate(`/jobdescription/${job._id}`, { state: { scrollTo: "jobdesccontact" } })}
+                  >
+                          Apply <IoIosArrowForward />
+                </Button>
+
+                <a href="#" onClick={(e) => {
+                  e.preventDefault();
+                  navigate(`/jobdescription/${job._id}`);
+                }}
+                    className="text-dark ms-auto"
+                  >
                     See More
                   </a>
                 </div>
@@ -177,4 +160,6 @@ function CarreerOpportunities() {
   );
 }
 
-export default CarreerOpportunities;
+export default CareerOpportunities;
+
+
