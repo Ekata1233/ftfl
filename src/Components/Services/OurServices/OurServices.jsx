@@ -25,7 +25,7 @@ function OurServices() {
                             <OurServices1 />
 
                           <div className='py-5'>
-                          <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-5'>
+                          <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-2'>
                                 <Row className='px-5 ' >
                                     
                                     <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6}>
@@ -54,7 +54,7 @@ function OurServices() {
                             </div>
                           </div>
                           <div className='py-5'>
-                            <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-5'>
+                            <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-2'>
                                 <Row className='px-5 ' >
                                 <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6} className='hide-col1 '>
                                         <div className='text-start'>
@@ -87,7 +87,7 @@ function OurServices() {
                             </div>
                             </div>
                             <div className='py-5'>
-                            <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-5'>
+                            <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-2'>
                                 <Row className='px-5 ' >
                                     
                                     <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6}>
@@ -116,7 +116,7 @@ function OurServices() {
                             </div>
                             </div>
                             <div className='py-5'>
-                            <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-5'>
+                            <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-2'>
                                 <Row className='px-5 ' >
                                 <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6} className='hide-col1'>
                                         <div className='text-start'>
@@ -149,7 +149,7 @@ function OurServices() {
                             </div>
                             </div>
                             <div className='py-5'>
-                            <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-5'>
+                            <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-2'>
                                 <Row className='px-5 ' >
                                     
                                     <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6}>
@@ -178,7 +178,7 @@ function OurServices() {
                             </div>
                             </div>
                             <div className='py-5'>
-                            <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-5'>
+                            <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-2'>
                                 <Row className='px-5 ' >
                                 <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6} className='hide-col1'>
                                         <div className='text-start'>

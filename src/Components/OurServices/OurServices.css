@@ -35,31 +35,54 @@
   
   /* Hover Effect */
   .image-wrapper:hover .overlay-container {
-    bottom: -18%;
+    bottom: -38%;
     height: 100%; 
+  }
+  @media only screen and  (max-width: 375px){
+    .image-wrapper:hover .overlay-container {
+      bottom: -50%;
+      height: 100%; 
+    }
+    .overlay-container{
+      bottom: -107px;
+  }
+}
+  @media only screen and (min-width: 376px) and (max-width: 425px){
+    .image-wrapper:hover .overlay-container {
+      bottom: -42%;
+      height: 100%; 
+    }
   }
   @media only screen and (min-width: 426px) and (max-width: 768px)
   {
     .image-wrapper:hover .overlay-container {
-        bottom: -47%;
+        bottom: -59%;
         height: 100%; 
       }
       .services-img{
         height: 200px;
     }
     .overlay-container {
-        bottom: -43%;
+        bottom: -74px;
     }
   }
   @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .image-wrapper:hover .overlay-container {
-        bottom: -26%;
+        bottom: -55%;
         height: 100%; 
       }
       .overlay-container {
-        bottom: -48%;
+        bottom: -40%;
     }
   }
-  
+  @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .image-wrapper:hover .overlay-container {
+        bottom: -40%;
+        height: 100%; 
+      }
+      .overlay-container {
+        bottom: -52%;
+    }
+  }
 
   
