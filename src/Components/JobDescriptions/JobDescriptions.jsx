@@ -63,8 +63,7 @@ function JobDescriptions() {
                     throw new Error("API response does not contain a job list");
                 }
     
-                const urgentJobs = jobsArray.filter((job) => job.openingType === "Urgent");
-                setJobs(urgentJobs);
+                setJobs(jobsArray);
             })
             .catch((error) => console.error("Error fetching jobs:", error.message))
             .finally(() => {
