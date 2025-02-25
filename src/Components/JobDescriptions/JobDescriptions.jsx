@@ -49,7 +49,7 @@ function JobDescriptions() {
 
     useEffect(() => {
         setLoading(true);
-        fetch("http://localhost:5000/api/jobs/all-jobs")
+        fetch("https://ftfl-backend.vercel.app/api/jobs/all-jobs")
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
