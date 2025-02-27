@@ -103,11 +103,11 @@ function JobContact() {
         <Container className="contact-form-content">
           <Form className="contact-form-box" onSubmit={handleSubmit}>
             <Row className="pt-4 my-5">
-              <Col xs={12} lg={3}>
-                <p style={{ fontSize: "25px", fontWeight: "500" }} className="pp">Join Us</p>
-                <li>Join our team of innovators and make an impact in the world of technology.</li>
-                <li>Apply now and be part of something great!</li>
-              </Col>
+            <Col xs={12} lg={3} className="text">
+                  <p style={{ fontSize: "25px", fontWeight: "500" }} className="pp">Join Us</p>
+                  <li className="py-3">Join our team of innovators and make an impact in the world of technology.</li>
+                  <li>Apply now and be part of something great!</li>
+                </Col>
               <Col xs={12} lg={9}>
                 <Row>
                   <Col xs={12} md={6} className="pb-3 my-3">

@@ -8,8 +8,10 @@ import HowItServices from "../HowItServices/HowItServices";
 import WhatDifferent from "./WhatDiffernt/WhatDifferent";
 import OurVision from "./OurVison/OurVision";
 import OurCoreValue from "./OurCoreValue/OurCoreValue";
+import { useNavigate } from "react-router-dom";
 
 function About() {
+  const navigate=useNavigate()
   return (
     <div className="d-flex flex-column min-vh-100">
     {/* Header Navigation Overlay */}
@@ -31,8 +33,8 @@ function About() {
           At FTFL Technology, we craft innovative digital solutions that elevate brands and drive technological excellence. From cutting-edge development to strategic branding, we empower businesses to thrive in the digital era.
           </p>
 
-          <Button variant="" className="mt-4 blue-btn text-white">
-            Join Our Team <MdArrowForwardIos />
+          <Button variant="" className="mt-4 blue-btn text-white" onClick={()=>navigate('/contact')}>
+            Contact Us <MdArrowForwardIos />
           </Button>
         </div>
       </div>

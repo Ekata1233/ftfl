@@ -83,13 +83,13 @@ function ShapeTheFuture() {
             </Container>
             <div className="carousel-container about position-relative text-start w-100 py-5 my-5" >
                 <img src={stayhome} className="img-fluid w-100 about-img" alt="Slide 1" />
-                <div className="position-absolute translate-middle py-4 my-4 mx-3 header-content w-100 ps-3 " >
-                    <p className="text-white text"></p>
+                <div ref={shapeTheFutureRef} className="position-absolute translate-middle py-4 my-4 mx-3 header-content w-100 ps-3 " >
+                    <p  className="text-white text"></p>
                     <h1 className="text-white fw-bold my-4  h1">
                         Stay Updated with the Latest Insights
                     </h1>
                     <p className="text-white header-p" style={{ fontSize: "30px", fontWeight: "600" }}>The Future of AI in Business </p>
-                    <p className="text-white header-p">
+                    <p  className="text-white header-p">
                         How artificial intelligence is transforming industries.?
                     </p>
 

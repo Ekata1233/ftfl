@@ -68,7 +68,14 @@ function FutureAi() {
               style={{ margin: "0 5px" }}
               className="text-secondary"
             />
-           
+            <NavLink
+                            to="/"
+                            className="text-secondary"
+                            state={{ scrollTo: "shape-the-future" }}  // Add this
+                        >
+                           Future Ai
+                        </NavLink>
+                        <MdArrowForwardIos style={{ margin: "0 5px" }} className="text-secondary" />
             <NavLink to="/blogs/futureai/futureai" className="blue">
               Future of AI in Business
             </NavLink>

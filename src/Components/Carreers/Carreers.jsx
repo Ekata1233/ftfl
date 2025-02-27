@@ -1,4 +1,4 @@
-import { Button, Col,   Row } from "react-bootstrap"
+import { Button, Col, Row } from "react-bootstrap"
 import HeaderNav from "../HeaderNav/HederNav"
 import { MdArrowForwardIos } from "react-icons/md"
 import carrers from '../../assets/carrers.png'
@@ -21,11 +21,17 @@ function Carreers() {
   const location = useLocation();
   const jobListingsRef = useRef(null);
 
+  // Function to scroll to the job listings section
+  const handleApplyNowClick = () => {
+    jobListingsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   useEffect(() => {
       if (location.state?.scrollTo === "job-listings") {
           jobListingsRef.current?.scrollIntoView({ behavior: "smooth" });
       }
   }, [location]);
+
   const content = [
     { img: why1, title: "Innovative" , p:'Join FTFL Technology and innovate with us to shape the future of IT.'},
     { img: why2, title: "Expertise", p:"FTFL Technology – Expertise that transforms ideas into reality." },
@@ -54,11 +60,15 @@ function Carreers() {
                 Be part of an innovative, dynamic, and forward-thinking team. At FTFL Technology, we foster creativity, collaboration, and growth, empowering you to make an impact in the world of technology.
               </p>
 
-              <Button variant="" className="mt-4 blue-btn text-white">
+              {/* Updated Button with onClick */}
+              <Button 
+                variant="" 
+                className="mt-4 blue-btn text-white"
+                onClick={handleApplyNowClick} // Scrolls to job listings
+              >
                 Apply Now <MdArrowForwardIos />
               </Button>
             </div>
-
           </div>
 
           {/* Additional Content */}
@@ -136,7 +146,7 @@ function Carreers() {
                 <div className="text-center my-5 pt-5" >
                   <p className="">
                     <span className='text-dark' style={{ fontWeight: "400", fontSize: "40px" }}>Open</span>
-                    <span className="blue" style={{ fontWeight: "600", fontSize: "40px" }}> Positons</span>
+                    <span className="blue" style={{ fontWeight: "600", fontSize: "40px" }}> Positions</span>
                   </p>
                   <p className="text text-center text-secondary pt-5 pb-5">FTFL Technology is looking for skilled professionals to join our growing team. Exciting opportunities await in a dynamic and innovative environment. Take the next step in your career and apply today! 🚀</p>
                 </div>
@@ -150,7 +160,11 @@ function Carreers() {
                       <span className="blue" style={{ fontWeight: "600", fontSize: "40px" }}> Career Opportunities</span>
                     </p>
                   </div>
-                  <div ref={jobListingsRef}>  <CarreerOpportunities/></div>
+
+                  {/* Scroll Target Section */}
+                  <div ref={jobListingsRef}>  
+                    <CarreerOpportunities/>
+                  </div>
                
                 </div>
               </div>
@@ -162,4 +176,4 @@ function Carreers() {
   )
 }
 
-export default Carreers
+export default Carreers;

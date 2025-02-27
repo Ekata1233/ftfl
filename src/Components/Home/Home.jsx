@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import Carousel from 'react-bootstrap/Carousel';
-import f1 from '../../assets/F1 (1) 1 (2).png';
-import f2 from '../../assets/F2 1 (3).png';
-import f3 from '../../assets/F3 (1) 1 (2).png';
-import f4 from '../../assets/F4 (1) 1 (1).png';
+import f1 from '../../assets/F2 (1).png';
+import f2 from '../../assets/1.png';
+import f3 from '../../assets/3.png';
+import f4 from '../../assets/4.png';
 import HederNav from '../HeaderNav/HederNav';
 import OurBusiness from '../OurBusiness/OurBusiness';
 import OurServices from '../OurServices/OurServices1';
@@ -29,10 +29,15 @@ function Home() {
                     <HederNav />
                 </div>
 
-                <Carousel fade>
-                    <Carousel.Item interval={1000}>
-                        <img src={f1} className="home-img" alt="Slide 1" />
-                    </Carousel.Item>
+                <Carousel >
+                <Carousel.Item interval={1000} className="w-100 position-relative">
+    <img src={f1} className="d-block w-100" alt="Slide 1" />
+    <Carousel.Caption className="custom-caption w-100">
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </Carousel.Caption>
+</Carousel.Item>
+                    
                     <Carousel.Item interval={1000}>
                         <img src={f2} className="home-img" alt="Slide 2" />
                     </Carousel.Item>
@@ -44,15 +49,15 @@ function Home() {
                     </Carousel.Item>
                 </Carousel>
             </div>
-            
+
             <OurBusiness />
             <OurServices />
             <WhyToChoose />
-            
+
             <div >
                 <ShapeTheFuture />
             </div>
-            
+
             <FAQs />
         </div>
     );

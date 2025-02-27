@@ -49,7 +49,7 @@ function JobDescriptions() {
 
     useEffect(() => {
         setLoading(true);
-        fetch("http://localhost:5000/api/jobs/all-jobs")
+        fetch("https://ftfl-backend.vercel.app/api/jobs/all-jobs")
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -165,7 +165,7 @@ function JobDescriptions() {
 
                 {/* Animated Job Overview */}
                 <Reveal keyframes={customAnimation} triggerOnce>
-                    <Row>
+                    <Row className="">
                         <Col lg={6}>
                             <div className="text-start mt-5 pt-5">
                                 <p>
@@ -173,37 +173,37 @@ function JobDescriptions() {
                                     <span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Overview</span>
                                 </p>
                             </div>
-                            <Row className="rounded rounded-4 mt-5 text-center" style={{ border: "1px solid #298CF3" }}>
-                                <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4} className="my-5 text-center">
+                            <Row className="rounded rounded-4 mt-5 text-center py-4" style={{ border: "1px solid #298CF3" }}>
+                                <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4} className="my-3 text-center">
                                     <GiTakeMyMoney className="blue" style={{ width: "70px", height: "70px" }} />
                                     <p style={{ fontWeight: "500", fontSize: "22px" }} className="mt-3">Salary (INR)</p>
                                     <p className="text text-success" style={{ fontWeight: "500" }}>{xyz.salary}</p>
                                 </Col>
-                                <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4} className="my-5 text-center">
+                                <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4} className="my-3 text-center">
                                     <GrMapLocation className="blue" style={{ width: "70px", height: "70px" }} />
                                     <p style={{ fontWeight: "500", fontSize: "22px" }} className="mt-3">Job Location</p>
                                     <p className="text-secondary text">{xyz.jobLocation}</p>
                                 </Col>
-                                <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4} className="my-5 text-center">
+                                <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4} className="my-3 text-center">
                                     <LuSquareTerminal className="blue" style={{ width: "70px", height: "70px" }} />
                                     <p style={{ fontWeight: "500", fontSize: "22px" }} className="mt-3">Experience</p>
                                     <p className="text-secondary text">{xyz.experience}</p>
                                 </Col>
-                                <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4} className="my-5 text-center">
+                                <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4} className="my-3 text-center">
                                     <FaRegCalendarAlt className="blue" style={{ width: "70px", height: "70px" }} />
                                     <p style={{ fontWeight: "500", fontSize: "22px" }}
                                         className="mt-3">Job Posted:</p>
                                     <p className="text-secondary text">{xyz.postDate
                                     }</p>
                                 </Col>
-                                <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4} className="my-5 text-center">
+                                <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4} className="my-3 text-center">
                                     <LuAlarmClock className="blue" style={{ width: "70px", height: "70px" }} />
                                     <p style={{ fontWeight: "500", fontSize: "22px" }}
                                         className="mt-3">Job expire in:</p>
                                     <p className="text-secondary text">{xyz.applyDeadline
                                     }</p>
                                 </Col>
-                                <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4} className="my-5 text-center">
+                                <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4} className="my-3 text-center">
                                     <PiBriefcase className="blue" style={{ width: "70px", height: "70px" }} />
                                     <p style={{ fontWeight: "500", fontSize: "22px" }} className="mt-3">Education</p>
                                     <p className="text-secondary text">{xyz.qualification}</p>
@@ -221,7 +221,7 @@ function JobDescriptions() {
                                 </div>
                             </Reveal>
                             <Reveal keyframes={customAnimation} triggerOnce>
-                                <p className="text text-secondary pt-4">Have a question or need assistance? Reach out to us via email, phone, or the contact form below. We’re always happy to assist you! Our support team is available to help with any inquiries.</p>
+                                <p className="text text-secondary pt-4">Have a question or need assistance? Reach out to us via email, phone, or the contact form below. </p>
                                 <p className="text blue">We&rsquo;re eager to assist you.</p>
                             </Reveal>
                             <Row>

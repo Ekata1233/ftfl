@@ -5,7 +5,7 @@ import '../Blog/OurBLog/OurBlog.css'
 function NewsLetter() {
     return (
         <div className="pt-5 mt-5">
-            <div className="rounded rounded-5 py-5 my-5" style={{ border: "1px solid #298CF3", boxShadow: "0px 0px 10px #00000040" }}>
+            <div className="rounded rounded-5 py-5 my-5 newslet" style={{ border: "1px solid #298CF3", boxShadow: "0px 0px 10px #00000040" }}>
                 <Row className="m-5 py-5">
                     <Col>
                         <div>
