@@ -8,38 +8,45 @@ import JobContact from "../JobContact/JobContact";
 function CareerOpportunities() {
   const navigate = useNavigate();
   const [selectedDepartment, setSelectedDepartment] = useState("Department");
-  const [selectedLocation, setSelectedLocation] = useState("Pune");
+  const [selectedLocation, setSelectedLocation] = useState("Location");
   const [searchQuery, setSearchQuery] = useState("");
   const [jobListings, setJobListings] = useState([]);
+  const [departments, setDepartments] = useState([]);
+  const [locations, setLocations] = useState([]);
 
   useEffect(() => {
     // Fetch job listings from the API
     const fetchJobs = async () => {
-        try {
-            const response = await fetch("https://ftfl-backend.vercel.app/api/jobs/all-jobs");
-            if (!response.ok) {
-                throw new Error("Failed to fetch jobs");
-            }
-            const data = await response.json();
-            console.log("API Response:", data);
-
-            // Extract and filter jobs
-            if (data.success && Array.isArray(data.jobs)) {
-                const regularJobs = data.jobs.filter(job => job.openingType === "Regular");
-                setJobListings(regularJobs);
-            } else {
-                console.error("API did not return a valid jobs array:", data);
-                setJobListings([]);
-            }
-        } catch (error) {
-            console.error("Error fetching jobs:", error);
-            setJobListings([]);
+      try {
+        const response = await fetch("https://ftfl-backend.vercel.app/api/jobs/all-jobs");
+        if (!response.ok) {
+          throw new Error("Failed to fetch jobs");
         }
+        const data = await response.json();
+        console.log("API Response:", data);
+
+        // Extract and filter jobs
+        if (data.success && Array.isArray(data.jobs)) {
+          const regularJobs = data.jobs.filter(job => job.openingType === "Regular");
+          setJobListings(regularJobs);
+
+          // Extract unique departments and locations
+          const uniqueDepartments = [...new Set(regularJobs.map(job => job.jobDepartment))];
+          const uniqueLocations = [...new Set(regularJobs.map(job => job.jobLocation))];
+          setDepartments(uniqueDepartments);
+          setLocations(uniqueLocations);
+        } else {
+          console.error("API did not return a valid jobs array:", data);
+          setJobListings([]);
+        }
+      } catch (error) {
+        console.error("Error fetching jobs:", error);
+        setJobListings([]);
+      }
     };
 
     fetchJobs();
-}, []);
-
+  }, []);
 
   const handleSelect = (department) => {
     setSelectedDepartment(department);
@@ -93,10 +100,12 @@ function CareerOpportunities() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu className="w-100">
-              <Dropdown.Item onClick={() => handleSelect("IT")}>IT</Dropdown.Item>
-              <Dropdown.Item onClick={() => handleSelect("Design")}>Design</Dropdown.Item>
-              <Dropdown.Item onClick={() => handleSelect("Marketing")}>Marketing</Dropdown.Item>
-              <Dropdown.Item onClick={() => handleSelect("Sales")}>Sales</Dropdown.Item>
+              <Dropdown.Item onClick={() => handleSelect("Department")}>All Departments</Dropdown.Item>
+              {departments.map((dept, index) => (
+                <Dropdown.Item key={index} onClick={() => handleSelect(dept)}>
+                  {dept}
+                </Dropdown.Item>
+              ))}
             </Dropdown.Menu>
           </Dropdown>
         </Col>
@@ -111,7 +120,12 @@ function CareerOpportunities() {
               {selectedLocation}
             </Dropdown.Toggle>
             <Dropdown.Menu className="w-100">
-              <Dropdown.Item onClick={() => handleSelectLocation("Pune")}>Pune</Dropdown.Item>
+              <Dropdown.Item onClick={() => handleSelectLocation("Location")}>All Locations</Dropdown.Item>
+              {locations.map((loc, index) => (
+                <Dropdown.Item key={index} onClick={() => handleSelectLocation(loc)}>
+                  {loc}
+                </Dropdown.Item>
+              ))}
             </Dropdown.Menu>
           </Dropdown>
         </Col>
@@ -137,13 +151,13 @@ function CareerOpportunities() {
                     className="text-white blue-bg border-0"
                     onClick={() => navigate(`/jobdescription/${job._id}`, { state: { scrollTo: "jobdesccontact" } })}
                   >
-                          Apply <IoIosArrowForward />
-                </Button>
+                    Apply <IoIosArrowForward />
+                  </Button>
 
-                <a href="#" onClick={(e) => {
-                  e.preventDefault();
-                  navigate(`/jobdescription/${job._id}`);
-                }}
+                  <a href="#" onClick={(e) => {
+                    e.preventDefault();
+                    navigate(`/jobdescription/${job._id}`);
+                  }}
                     className="text-dark ms-auto"
                   >
                     See More
@@ -161,5 +175,3 @@ function CareerOpportunities() {
 }
 
 export default CareerOpportunities;
-
-
