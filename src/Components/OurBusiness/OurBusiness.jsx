@@ -1,57 +1,110 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
-import { Col, Row, Container } from "react-bootstrap";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { Container, Row, Col } from "react-bootstrap";
 
+// Variants for smooth animations
+const textVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 1.5, ease: "easeInOut" } 
+  }
+};
+
+// Counter Component
 const Counter = ({ end }) => {
   const [count, setCount] = useState(0);
+  const intervalRef = useRef(null);
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const inView = useInView(ref, { threshold: 0.3 });
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCount((prevCount) => {
-        if (prevCount < end) {
-          return prevCount + 1;
-        } else {
-          clearInterval(interval);
-          return end;
-        }
-      });
-    }, 500);
-    
-    return () => clearInterval(interval);
-  }, [end]);
+    if (inView) {
+      controls.start("visible");
+      const duration = 2000; // Total animation duration in ms
+      const steps = end;
+      const intervalTime = duration / steps;
 
-  return <h2 className="blue">{count}+</h2>;
+      intervalRef.current = setInterval(() => {
+        setCount((prevCount) => {
+          if (prevCount < end) {
+            return prevCount + 1;
+          } else {
+            clearInterval(intervalRef.current);
+            return end;
+          }
+        });
+      }, intervalTime);
+    } else {
+      controls.start("hidden");
+      setCount(0);
+    }
+
+    return () => clearInterval(intervalRef.current);
+  }, [end, inView, controls]);
+
+  return (
+    <motion.h2 ref={ref} className="blue" variants={textVariants} initial="hidden" animate={controls}>
+      {count}+
+    </motion.h2>
+  );
 };
 
 Counter.propTypes = {
   end: PropTypes.number.isRequired,
 };
 
+// Our Business Section
 function OurBusiness() {
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const inView = useInView(ref, { threshold: 0.3 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [inView, controls]);
+
   return (
-    <div>
-      <div className="poppins-regular text-center my-5 text">
-        <Container>
-          <h2 className=''>Our Business in <span className="blue">Action</span></h2>
-          <p className='text-secondary my-4'>At FTFL Technology, we transform ideas into reality with cutting-edge solutions in software development, branding, and digital strategy. Our expertise ensures seamless innovation, empowering businesses to scale and succeed in the ever-evolving tech landscape.</p>
-        </Container>
-        <Container>
-          <Row className="mt-5 py-5">
-            <Col>
-              <Counter end={9} />
-              <p>Happy Clients</p>
+    <div ref={ref} className="poppins-regular text-center my-5 text">
+      <Container>
+        <motion.h2 variants={textVariants} initial="hidden" animate={controls}>
+          Our Business in <span className="blue">Action</span>
+        </motion.h2>
+        <motion.p
+          className="text-secondary my-4"
+          variants={textVariants}
+          initial="hidden"
+          animate={controls}
+        >
+          At FTFL Technology, we transform ideas into reality with cutting-edge
+          solutions in software development, branding, and digital strategy. Our
+          expertise ensures seamless innovation, empowering businesses to scale
+          and succeed in the ever-evolving tech landscape.
+        </motion.p>
+      </Container>
+      <Container>
+        <Row className="mt-5 py-5">
+          {[
+            { label: "Happy Clients", end: 15 },
+            { label: "Projects Completed", end: 9 },
+            { label: "Employees", end: 20 },
+          ].map((item, index) => (
+            <Col key={index}>
+              <motion.div variants={textVariants} initial="hidden" animate={controls}>
+                <Counter end={item.end} />
+                <p>{item.label}</p>
+              </motion.div>
             </Col>
-            <Col>
-              <Counter end={12} />
-              <p>Projects Completed</p>
-            </Col>
-            <Col>
-              <Counter end={15} />
-              <p>Employees</p>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+          ))}
+        </Row>
+      </Container>
     </div>
   );
 }

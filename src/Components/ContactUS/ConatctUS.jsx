@@ -96,14 +96,14 @@ function ContactUS() {
                     <div className='ConatactUS-wrapper'>
                         <div className="ConatactUS-div">
                             <img src={Blogbg} alt="Background" className="w-100 bg-contact" />
-                            <div className='Contact-Container bg-white p-5 rounded rounded-5 border border-1'>
+                            <div className='Contact-Container bg-white p-sm-4 p-md-4 p-lg-5  rounded rounded-5 border border-1 '>
                                 <Row>
                                     {/* Contact Information Column */}
                                     <Col sx={12} sm={12} md={12} lg={5} xl={4} xxl={4}>
                                         <div className="contact-container">
                                             <img src={frame} alt="Background" className="contact-image img-fluid" />
                                             <div className="contact-text">
-                                                <p className="contact-title pt-4">Contact Information</p>
+                                                <p className="contact-title pt-4 ">Contact Information</p>
                                                 <p className="text pb-4" style={{ lineHeight: "10px" }}>Get in touch with us!</p>
                                                 <p className="text">
                                                     <FaPhoneAlt className="icon" /> +91930995 17500

@@ -51,7 +51,7 @@ function Carreers() {
           {/* Carousel Section */}
           <div className="carousel-container about position-relative text-center">
             <img src={carrers} className="img-fluid w-100 about-img" alt="Slide 1" />
-            <div className="position-absolute translate-middle py-4 my-4 mx-3 header-content">
+            <div className="position-absolute translate-middle py-4 my-4  header-content w-100 px-3">
               <p className="text-white text">Carreers</p>
               <h1 className="text-white fw-bold my-4 mx-3 h1">
                 Shape the Future With Us
