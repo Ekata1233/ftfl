@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 
 function About() {
   const navigate=useNavigate()
+  
   return (
     <div className="d-flex flex-column min-vh-100">
     {/* Header Navigation Overlay */}

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import Carousel from 'react-bootstrap/Carousel';
-import f1 from '../../assets/F2 (1).png';
+import f1 from '../../assets/2.png';
 import f2 from '../../assets/1.png';
 import f3 from '../../assets/3.png';
 import f4 from '../../assets/4.png';
@@ -21,7 +21,32 @@ function Home() {
             shapeTheFutureRef.current?.scrollIntoView({ behavior: "smooth" });
         }
     }, [location]);
-
+ const carouselItems = [
+    {
+      id: 1,
+      image: f1,
+      title: "Welcome to the Future of Technology Innovation, Insights, and Ideas",
+      description: "At FTFL Technology, we create cutting-edge tech solutions that drive progress and redefine possibilities. Let’s build the future together.",
+    },
+    {
+      id: 2,
+      image: f2,
+      title: "Welcome to the Future of Technology Innovation, Insights, and Ideas",
+      description: "At FTFL Technology, we create cutting-edge tech solutions that drive progress and redefine possibilities. Let’s build the future together.",
+    },
+    {
+      id: 3,
+      image: f3,
+      title: "Welcome to the Future of Technology Innovation, Insights, and Ideas",
+      description: "At FTFL Technology, we create cutting-edge tech solutions that drive progress and redefine possibilities. Let’s build the future together.",
+    },
+    {
+        id: 3,
+        image: f4,
+        title: "Welcome to the Future of Technology Innovation, Insights, and Ideas",
+        description: "At FTFL Technology, we create cutting-edge tech solutions that drive progress and redefine possibilities. Let’s build the future together.",
+      },
+  ];
     return (
         <div>
             <div className="carousel-container">
@@ -29,25 +54,19 @@ function Home() {
                     <HederNav />
                 </div>
 
-                <Carousel >
-                <Carousel.Item interval={1000} className="w-100 position-relative">
-    <img src={f1} className="d-block w-100" alt="Slide 1" />
-    <Carousel.Caption className="custom-caption w-100">
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Carousel.Caption>
-</Carousel.Item>
-                    
-                    <Carousel.Item interval={1000}>
-                        <img src={f2} className="home-img" alt="Slide 2" />
-                    </Carousel.Item>
-                    <Carousel.Item interval={1000}>
-                        <img src={f3} className="home-img" alt="Slide 3" />
-                    </Carousel.Item>
-                    <Carousel.Item interval={1000}>
-                        <img src={f4} className="home-img" alt="Slide 4" />
-                    </Carousel.Item>
-                </Carousel>
+                <Carousel fade className="carousel-container about position-relative text-center">
+      {carouselItems.map((item) => (
+        <Carousel.Item key={item.id} interval={1000} >
+          <img src={item.image} className="img-fluid w-100 about-img" alt={`Slide ${item.id}`} />
+          <div className="position-absolute translate-middle p-3 header-content w-75">
+            <h1 className="text-white fw-bold my-4 h1">{item.title}</h1>
+            <p className="text-white header-p mb-5">{item.description}</p>
+           
+           <span className="py-2 px-5 rounded rounded-5 text-white scrash" style={{backgroundColor:" #FFFFFF57", border:"1px solid white", fontWeight:"500"}}>From Scratch to Success</span>
+          </div>
+        </Carousel.Item>
+      ))}
+    </Carousel>
             </div>
 
             <OurBusiness />
