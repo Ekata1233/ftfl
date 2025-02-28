@@ -10,7 +10,7 @@
   
   .overlay-content {
     position: absolute;
-   left: 16%;
+   left: 15%;
    right: 10%;
   
   }
@@ -55,16 +55,11 @@
     height: 500px;
   } */
   @media only screen and (min-width: 320px){
-    .howstart{
+.howstart{
       padding: 10px !important;
     }
-    .started{
-      width: 300px !important;
-    }
     .differ{
-      height: 280px !important;
-      width: 300px !important;
-      left: -12% !important;
+      height: 350px !important;
     }
     .whatdiffer{
       margin-bottom: 100px !important;
@@ -74,12 +69,8 @@
     .howstart{
       padding: 10px !important;
     }
-    .started{
-      width: 360px !important;
-    }
     .differ{
-      height: 250px !important;
-      width: 360px !important;
+      height: 350px !important;
     }
     .whatdiffer{
       margin-bottom: 100px !important;
@@ -87,12 +78,7 @@
   }
   @media only screen and (min-width: 376px) and (max-width: 425px){
     .differ{
-      height: 230px !important;
-      width: 400px !important;
-
-    }
-    .started{
-      width: 400px !important;
+      height: 300px !important;
     }
   }
   @media only screen and (min-width: 426px) and (max-width: 768px){
