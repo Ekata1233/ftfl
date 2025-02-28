@@ -77,7 +77,7 @@ function NewsLetter() {
                                 <Col xs={12} sm={12} md={4} className="text-md-start text-center">
                                     <Button
                                         type="submit"
-                                        className="text-white px-5 py-3 w-100"
+                                        className="text-white  py-3 w-100 text"
                                         style={{ backgroundColor: "#529FEF", border: "none" }}
                                         disabled={isLoading} // Disable button when loading
                                     >

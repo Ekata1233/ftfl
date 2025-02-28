@@ -64,7 +64,7 @@ function Home() {
             <h1 className="text-white fw-bold my-4 h1">{item.title}</h1>
             <p className="text-white header-p mb-5">{item.description}</p>
            
-           <span className="py-2 px-5 rounded rounded-5 text-white scrash" style={{backgroundColor:" #FFFFFF57", border:"1px solid white", fontWeight:"500"}}>From Scratch to Success</span>
+           <span className="py-2  px-md-5 px-lg-5 px-xl-5 rounded rounded-5 text-white scrash" style={{backgroundColor:" #FFFFFF57", border:"1px solid white", fontWeight:"500"}}>From Scratch to Success</span>
           </div>
         </Carousel.Item>
       ))}

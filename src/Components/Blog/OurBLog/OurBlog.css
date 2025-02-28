@@ -59,8 +59,8 @@ position: relative;
 }
 @media only screen and (min-width: 425px) and (max-width: 768px) {
     .bg-blog{
-        height: 4500px !important;
-        margin-bottom: 2700px !important;
+        height: 4800px !important;
+        margin-bottom: 2900px !important;
     }
     .blog-div{
         height: 500px;

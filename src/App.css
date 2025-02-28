@@ -119,7 +119,54 @@
 .bor1{
   display: block !important;
 }
-@media only screen and  (max-width: 375px){
+@media only screen  and  (max-width: 320px){
+  .header-content .h1{
+    font-size: 20px !important;
+}
+.header-p{
+  font-size: 14px !important;
+}
+.heading-p{
+  font-size: 20px;
+}
+.about-img{
+  height: 600px !important;
+}
+.blue-btn{
+  font-size: 10px !important;
+}
+.text{
+  font-size: 15px !important;
+ 
+}
+.overlay-nav
+{
+position: absolute;
+top: 5%;
+width: 100%;
+z-index: 10;
+padding: 10px; 
+}
+.scrash{
+  font-size: 10px;
+  padding: 10px !important;
+}
+.bor{
+  display: block;
+}
+.bor1{
+  display: none !important;
+}
+.overlay-nav1{
+  position: absolute;
+  top: 5%;
+  width: 100%;
+  z-index: 10;
+  padding: 10px; 
+}
+}
+
+@media only screen  and (min-width: 321px) and  (max-width: 375px){
   .header-content .h1{
     font-size: 20px !important;
 }
@@ -149,6 +196,7 @@ padding: 10px;
 }
 .scrash{
   font-size: 12px;
+  padding: 15px !important;
 }
 .bor{
   display: block;
@@ -202,6 +250,7 @@ padding: 10px;
 }
 .scrash{
   font-size: 12px;
+  padding: 20px !important;
 }
 .bor{
   display: block;
