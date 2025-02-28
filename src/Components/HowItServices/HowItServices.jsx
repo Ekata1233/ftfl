@@ -11,7 +11,7 @@ function HowItServices() {
             <p className="blue heading-p pb-4"> How it Started</p>
             <div className="d-flex justify-content-center align-items-center ">
             
-            <div className="d-flex justify-content-center mx-auto blue-bg text-white rounded rounded-5 howstart">
+            <div className="d-flex justify-content-center blue-bg text-white rounded rounded-5 howstart ">
       <Row className="full-width-row  started">
         <Col xs={12} sm={12} md={12} lg={8} xl={8} className="p-4">
             <div>

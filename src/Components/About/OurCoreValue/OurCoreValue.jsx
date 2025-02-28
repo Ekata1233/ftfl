@@ -24,11 +24,11 @@ function OurCoreValue() {
 
       {/* Overlay Content */}
       <div className="value-container mt-5">
-        <div className="pt-5">
+        <div className="pt-lg-5">
         <p className="text-center"><span className="" style={{ fontWeight: "400", fontSize: "45px", }}>Our</span><span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Core Value</span></p>
         </div>
-        <Container className="my-5 ">
-  <Row className="text-center text-white my-5">
+        
+  <Row className="text-center text-white my-lg-5 py-lg-5">
     <Col xs={12} sm={12} md={4} lg={4} xl={4} className="my-4">
       <div className="text-box text">
         <img src={innovation} alt="Innovation" className="img-fluid" />
@@ -61,19 +61,19 @@ function OurCoreValue() {
     </Col>
   </Row>
   <Row>
-   <div className="py-3">
-   <div style={{border:"2px solid #298CF3"}} className="rounded rounded-4 py-5 mt-5">
+   <div className="py-lg-3">
+   <div style={{border:"2px solid #298CF3"}} className="rounded rounded-4   py-lg-5 mt-5 futture ">
     <p className="text-center pb-3"><span className="" style={{ fontWeight: "600", fontSize: "45px", }}>Grow Your</span><span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Future </span><span className="" style={{ fontWeight: "600", fontSize: "45px", }}>With Us</span></p>
     <p className="text-center text text-secondary">Join FTFL Technology and unlock endless opportunities to develop your skills, innovate, and shape the future of digital transformation.</p>
     <div className="d-flex justify-content-center">
-  <Button variant="" className="mt-4 blue-btn text-white"onClick={() => navigate("/careers")}>
+  <Button variant="" className="mt-4 blue-btn text-white mb-3"onClick={() => navigate("/careers")}>
     Careers in FTFL Technology <MdArrowForwardIos />
   </Button>
 </div>
     </div>
    </div>
   </Row>
-</Container>
+
 
       </div>
     </div>

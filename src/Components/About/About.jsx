@@ -43,7 +43,7 @@ function About() {
       </div>
 
       {/* Additional Content */}
-      <Row className="w-100 mt-5">
+      <Row className="w-100 mt-lg-5">
         <div className="image-container position-relative">
           <div className="overlay-content">
             <HowItServices />

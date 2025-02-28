@@ -26,8 +26,8 @@ function OurVision() {
                             </div>
                         </Col>
                     </Row>
-                    <Row className=" mission pt-5">
-                        <Col xs={12} sm={12} md={8} lg={5} xl={6} className="px-4 mt-5 pt-5 vision-col">
+                    <Row className=" mission ">
+                        <Col xs={12} sm={12} md={8} lg={5} xl={6} className="px-4 mt-5  vision-col">
 
                             <p className=""><span className="" style={{ fontWeight: "400", fontSize: "45px", }}>Our</span><span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Mission</span></p>
                             <p className="text-secondary text">We strive to be a global leader in the delivery of innovative technologies that drive and support business growth and success. We combine the power of IT, branding, and marketing to help businesses adapt and thrive in a fast-evolving digital world.
