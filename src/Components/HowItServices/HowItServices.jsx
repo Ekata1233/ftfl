@@ -12,7 +12,7 @@ function HowItServices() {
             <div className="d-flex justify-content-center align-items-center ">
             
             <div className="d-flex justify-content-center mx-auto blue-bg text-white rounded rounded-5 howstart">
-      <Row className="full-width-row  started">
+      <Row className="full-width-row  started w-100">
         <Col xs={12} sm={12} md={12} lg={8} xl={8} className="p-4">
             <div>
                 <h4>The Road to</h4>

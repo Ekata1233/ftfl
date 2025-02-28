@@ -10,8 +10,8 @@
   
   .overlay-content {
     position: absolute;
-   left: 15%;
-   right: 10%;
+   left: 10%;
+   right: 7%;
   
   }
   .differ:hover{
@@ -64,6 +64,15 @@
     .whatdiffer{
       margin-bottom: 100px !important;
     }
+    .overlay-content {
+      position: absolute;
+     left: 8% !important;
+     right: 1% !important;
+    
+    }
+    .started{
+      width: 95% !important;
+    }
   }
   @media only screen and (min-width: 321px) and (min-width: 375px){
     .howstart{
@@ -84,10 +93,13 @@
   @media only screen and (min-width: 426px) and (max-width: 768px){
     .about-man{
         height: 400px !important; 
-        width: 600px !important;
+        width: 700px !important;
     }
     .differ{
       height: 250px !important;
+    }
+    .started{
+      width: 700px !important;
     }
   }
   @media only screen and (min-width: 769px) and (max-width: 1024px){
