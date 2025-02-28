@@ -34,13 +34,13 @@
       @media only screen and (max-width: 375px){
         .bg-carreer{
           height: 6500px !important;
-          margin-bottom: 2000px !important;
+          margin-bottom: 2400px !important;
          }
      }
       @media only screen and (min-width: 376px) and (max-width: 425px){
         .bg-carreer{
           height: 4750px !important;
-          margin-bottom: 3600px !important;
+          margin-bottom: 4000px !important;
          }
      }
      @media only screen and (min-width: 426px) and (max-width: 768px){
