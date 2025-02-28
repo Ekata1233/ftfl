@@ -1,8 +1,10 @@
 import { Col, Container, Row } from "react-bootstrap"
+import SEO from "../../SEO"
 
 function WhyToChoose() {
     return (
         <div>
+              <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
             <div>
                 <p className="text-center">
                     <span className='text-dark' style={{ fontWeight: "400", fontSize: "45px" }}>Why</span>

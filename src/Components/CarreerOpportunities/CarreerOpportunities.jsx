@@ -4,6 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { MdLocationOn } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import JobContact from "../JobContact/JobContact";
+import SEO from "../SEO";
 
 function CareerOpportunities() {
   const navigate = useNavigate();
@@ -78,6 +79,7 @@ function CareerOpportunities() {
 
   return (
     <div>
+        <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
       <Row className="mb-5 mt-5 pb-5">
         <Col xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
           <p style={{ fontSize: "24px", fontWeight: "400" }}>Job/Intern Role</p>

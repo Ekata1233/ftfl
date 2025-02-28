@@ -2,10 +2,12 @@ import { Button, Col, Container, Row } from "react-bootstrap"
 import HeaderNav from "../HeaderNav/HederNav"
 import { MdArrowForwardIos } from "react-icons/md"
 import carrers from '../../assets/Rectangle 3847.png'
+import SEO from "../../../SEO"
 
 function SeniorUiUx() {
   return (
     <div>
+        <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
          <div>
         <div className="overlay-nav overlay-nav1">
       <HeaderNav />

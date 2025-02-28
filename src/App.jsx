@@ -20,10 +20,12 @@ import BusinssRoadmaps from './Components/Blog/BusinessRoadmaps/BusinssRoadmaps'
 import JobDescriptions from './Components/JobDescriptions/JobDescriptions';
 import FutureAi from './Components/Blog/futureAi/FutureAi';
 import ItConsultingBuinessGrowth from './Components/Blog/ItConsulting &BusinessGrowth/ItConsultingBuinessGrowth';
+import { HelmetProvider } from 'react-helmet-async';
 function App() {
 
   return (
     <>
+    <HelmetProvider>
       <BrowserRouter>
           {/* <HederNav/> */}
           <Routes>
@@ -52,6 +54,7 @@ function App() {
           </Routes>
           <Footer/>
       </BrowserRouter>
+      </HelmetProvider>
     </>
   )
 }

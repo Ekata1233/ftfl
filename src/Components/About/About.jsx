@@ -9,12 +9,14 @@ import WhatDifferent from "./WhatDiffernt/WhatDifferent";
 import OurVision from "./OurVison/OurVision";
 import OurCoreValue from "./OurCoreValue/OurCoreValue";
 import { useNavigate } from "react-router-dom";
+import SEO from "../SEO";
 
 function About() {
   const navigate=useNavigate()
   
   return (
     <div className="d-flex flex-column min-vh-100">
+      <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
     {/* Header Navigation Overlay */}
     <div className="overlay-nav overlay-nav1">
       <HeaderNav />

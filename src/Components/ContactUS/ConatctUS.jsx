@@ -9,6 +9,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import girlboy from '../../assets/conatctgirl-boy.png';
 import frame from '../../assets/Frame 2.png';
+import SEO from "../SEO";
 
 function ContactUS() {
     // State to manage form inputs
@@ -73,6 +74,7 @@ function ContactUS() {
 
     return (
         <div>
+              <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
             <div className="overlay-nav overlay-nav1">
                 <HeaderNav />
             </div>

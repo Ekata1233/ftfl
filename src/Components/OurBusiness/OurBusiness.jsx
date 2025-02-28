@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Container, Row, Col } from "react-bootstrap";
+import SEO from "../SEO";
 
 // Variants for smooth animations
 const textVariants = {
@@ -73,6 +74,7 @@ function OurBusiness() {
 
   return (
     <div ref={ref} className="poppins-regular text-center my-5 text">
+      <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
       <Container>
         <motion.h2 variants={textVariants} initial="hidden" animate={controls}>
           Our Business in <span className="blue">Action</span>

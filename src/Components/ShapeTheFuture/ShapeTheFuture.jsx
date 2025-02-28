@@ -10,6 +10,7 @@ import ai from '../../assets/ai.png'
 import fronted from '../../assets/fronted.png'
 import costeffective from '../../assets/costEffective.png'
 import { useEffect, useRef } from "react"
+import SEO from "../SEO"
 
 
 
@@ -25,6 +26,7 @@ function ShapeTheFuture() {
     }, [location]);
     return (
         <div>
+            <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
             <Container>
                 <div>
                     <p className="text-center my-5 pt-5">

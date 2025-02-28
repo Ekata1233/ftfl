@@ -10,11 +10,13 @@ import { ImWhatsapp } from "react-icons/im";
 import { FaFacebookF } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { FaXTwitter } from "react-icons/fa6";
+import SEO from "../SEO";
 
 
 function Footer() {
     return (
         <div>
+              <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
             <div className="footer-container text">
                 <Container className="">
                     <div className="text-overlay d-flex justify-content-center align-items-center my-5">

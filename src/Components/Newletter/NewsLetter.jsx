@@ -3,6 +3,7 @@ import { Button, Col, Row, Spinner } from "react-bootstrap"; // Import Spinner
 import newsletter from '../../assets/newletter.png';
 import Form from 'react-bootstrap/Form';
 import '../Blog/OurBLog/OurBlog.css';
+import SEO from '../SEO';
 
 function NewsLetter() {
     const [email, setEmail] = useState('');
@@ -41,6 +42,7 @@ function NewsLetter() {
 
     return (
         <div className="pt-5 mt-5">
+            <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
             <div className="rounded rounded-5 py-5 my-5 newslet" style={{ border: "1px solid #298CF3", boxShadow: "0px 0px 10px #00000040" }}>
                 <Row className="m-5 py-5">
                     <Col>

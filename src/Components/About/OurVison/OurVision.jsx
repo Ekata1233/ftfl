@@ -3,11 +3,13 @@ import vision from '../../../assets/Group 1000001769.png'
 import vision1 from '../../../assets/mission.png'
 
 import vision2 from '../../../assets/Approch.png'
+import SEO from "../../SEO"
 
 
 function OurVision() {
     return (
         <div>
+            <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
             <Container style={{}} className="vision-container">
 
                 <div >

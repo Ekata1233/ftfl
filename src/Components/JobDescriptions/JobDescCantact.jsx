@@ -5,6 +5,7 @@ import { Button, Col, Container, Form, Row, Spinner } from "react-bootstrap";
 import "../../Components/CarreerOpportunities/CarreersOpportunities.css";
 import "../JobDescriptions/jobdescr.css";
 import { useParams } from "react-router-dom";
+import SEO from "../SEO";
 
 function JobDescContact() {
   const [file, setFile] = useState(null);
@@ -165,6 +166,7 @@ function JobDescContact() {
 
   return (
     <div className="carrer-div">
+      <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
       <div className="text-start mt-5 pt-5 mb-5  pt-5">
         <p><span style={{ fontWeight: "400", fontSize: "45px" }}>Apply</span><span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Here</span></p>
         <p className="text text-secondary">Want to work with us? You&rsquo;re in good company!</p>

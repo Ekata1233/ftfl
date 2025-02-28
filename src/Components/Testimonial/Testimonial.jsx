@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IoMdStar, IoMdStarHalf, IoMdStarOutline } from "react-icons/io";
 import Image from "../../assets/Ellipse 159.png";
+import SEO from "../SEO";
 
 // Star Rating Component
 const StarRating = ({ rating }) => {
@@ -42,6 +43,7 @@ const CardSlider = () => {
 
   return (
     <Container className="py-4 text-center">
+      <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={20}

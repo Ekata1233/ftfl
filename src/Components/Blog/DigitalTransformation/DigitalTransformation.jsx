@@ -10,6 +10,7 @@ import ai from '../../../assets/ai.png'
 import fronted from '../../../assets/fronted.png'
 import costeffective from '../../../assets/costEffective.png'
 import { useEffect } from "react"
+import SEO from "../../SEO"
 function DigitalTransformation() {
     useEffect(() => {
         const scrollAnimation = () => {
@@ -44,6 +45,7 @@ function DigitalTransformation() {
 
     return (
         <div style={{ backgroundColor: "#FAFAFA" }} >
+             <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
             <div className="overlay-nav overlay-nav1">
                 <HeaderNav />
             </div>

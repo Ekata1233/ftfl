@@ -16,6 +16,7 @@ import Positions from "../Positions/Positions"
 import CarreerOpportunities from "../CarreerOpportunities/CarreerOpportunities"
 import { useEffect, useRef } from "react"
 import { useLocation } from "react-router-dom"
+import SEO from "../SEO"
 
 function Carreers() {
   const location = useLocation();
@@ -43,6 +44,7 @@ function Carreers() {
  
   return (
     <div>
+        <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
       <div className="overlay-nav overlay-nav1">
         <HeaderNav />
       </div>

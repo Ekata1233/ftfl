@@ -4,6 +4,7 @@ import { FaInfoCircle, FaBriefcase, FaUsers, FaBlog, FaEnvelope } from "react-ic
 import logo from "../../assets/Group.png"; // Adjust the path if needed
 import "../HeaderNav/HwaderNav.css";
 import { useEffect, useState } from "react";
+import SEO from "../SEO";
 
 const HeaderNav = () => {
   const navigate = useNavigate();
@@ -31,6 +32,7 @@ const HeaderNav = () => {
 
   return (
     <Container className="navbar-container">
+        <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
       <Navbar 
         expand="lg" 
         className={`bg-body-tertiary rounded rounded-pill navbar-custom ${isFixed ? 'fixed-top navbar-fixed' : ''}`} 

@@ -1,10 +1,12 @@
 import { Col,Row } from "react-bootstrap"
 import aboutman from '../../assets/aboutman.png'
 import '../HowItServices/HowItServics.css'
+import SEO from "../SEO"
 
 function HowItServices() {
   return (
     <div>
+        <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
         <div>
             <p className="blue heading-p pb-4"> How it Started</p>
             <div className="d-flex justify-content-center align-items-center ">

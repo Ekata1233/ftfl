@@ -2,11 +2,13 @@ import HeaderNav from "../HeaderNav/HederNav"
 import ServicesHeader from '../../assets/Services Hero Section.png'
 import OurServices from "../Services/OurServices/OurServices.jsx"
 import WhyChooseUS from "../WhyChooseUs/WhyChooseUS.jsx"
+import SEO from "../SEO.jsx"
 
 
 function Services() {
   return (
     <div className="d-flex flex-column min-vh-100">
+      <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
        <div className="overlay-nav overlay-nav1">
       <HeaderNav />
     </div>

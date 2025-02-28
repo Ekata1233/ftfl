@@ -14,6 +14,7 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { TbWorld } from "react-icons/tb";
 import { Reveal } from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
+import SEO from "../SEO";
 
 // Define a custom fade-up animation
 const customAnimation = keyframes`
@@ -89,6 +90,7 @@ function JobDescriptions() {
 
     return (
         <div style={{ backgroundColor: "#FAFAFA" }}>
+            <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
             <div className="overlay-nav overlay-nav1">
                 <HeaderNav />
             </div>

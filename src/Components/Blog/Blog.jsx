@@ -1,11 +1,12 @@
 import HeaderNav from "../HeaderNav/HederNav"
 import BlogHeader from '../../assets/Blog.png'
 import OurBlog from "./OurBLog/OurBlog"
+import SEO from "../SEO"
 
 function Blog() {
   return (
     <div className="d-flex flex-column min-vh-100">
-       
+        <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
        <div className="overlay-nav overlay-nav1">
       <HeaderNav />
     </div>

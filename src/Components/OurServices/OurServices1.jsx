@@ -8,10 +8,12 @@ import serimg2 from '../../assets/Group 10142 (2).png'
 import serimg3 from '../../assets/Group 10142.png'
 
 import '../OurServices/OurServices.css'
+import SEO from "../SEO";
 
 function OurServices() {
     return (
         <div className="my-5 py-3" >
+            <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
             <div className="text-center my-5" >
                 <p>
                     <span className='text-dark' style={{ fontWeight: "400", fontSize: "45px" }}>Our</span>

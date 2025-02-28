@@ -4,12 +4,14 @@ import Whychoose from '../../assets/Group 10197.png'
 
 import '../WhyChooseUs/WhyChhoseUS.css'
 import Testimonial from '../Testimonial/Testimonial'
+import SEO from '../SEO'
 function WhyChooseUS() {
   return (
     <div>
 
 
       <div className='whychoose-wrapper'>
+        <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
         <img src={servicesBg1} alt="Background" className="w-100  service-img" />
         <Container>
           <div className='whychoose-Container'>

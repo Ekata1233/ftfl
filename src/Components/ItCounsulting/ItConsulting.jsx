@@ -2,7 +2,8 @@ import { Button } from 'react-bootstrap'
 import BlogHeader from '../../assets/IT 1.png'
 import '../ItCounsulting/ItConsulting.css'
 import { useNavigate } from 'react-router-dom'
-import { useRef, forwardRef } from 'react'
+import {  forwardRef } from 'react'
+import SEO from '../SEO'
 
 // Forwarding ref to allow scrolling from parent (OurBlog.js)
 const ItConsulting = forwardRef((props, ref) => {
@@ -10,6 +11,8 @@ const ItConsulting = forwardRef((props, ref) => {
 
   return (
     <div ref={ref} className='pt-5'>
+      <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
+
       <div className="flex-grow-1 my-5 py-5">
         <div className="carousel-container about position-relative text-start it-blog">
           <img src={BlogHeader} className="img-fluid w-100 consulting-img" alt="Slide 1" />
@@ -33,5 +36,7 @@ const ItConsulting = forwardRef((props, ref) => {
     </div>
   );
 });
+
+
 
 export default ItConsulting;

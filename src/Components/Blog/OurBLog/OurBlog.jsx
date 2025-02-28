@@ -20,6 +20,7 @@ import ItConsulting from '../../ItCounsulting/ItConsulting'
 import NewsLetter from '../../Newletter/NewsLetter'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
+import SEO from '../../SEO'
 
 function OurBlog() {
     const navigate = useNavigate();
@@ -49,6 +50,7 @@ const itAndBusinessRef=useRef(null);
 
     return (
         <div>
+             <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
             <div>
                 <div className='ourblog-wrapper'>
                     <div className=" ourblog-div">

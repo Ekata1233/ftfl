@@ -11,6 +11,7 @@ import OurServices from '../OurServices/OurServices1';
 import WhyToChoose from './WhyToChoose/WhyToChoose';
 import ShapeTheFuture from '../ShapeTheFuture/ShapeTheFuture';
 import FAQs from '../FAQs/FAQs';
+import SEO from "../SEO";
 
 function Home() {
     const location = useLocation();
@@ -49,6 +50,7 @@ function Home() {
   ];
     return (
         <div>
+            <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
             <div className="carousel-container">
                 <div className="overlay-nav1">
                     <HederNav />

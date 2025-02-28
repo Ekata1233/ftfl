@@ -3,6 +3,7 @@ import { MdLocationOn } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
 import { Button, Col, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import SEO from "../SEO";
 
 function Positions() {
   const navigate = useNavigate();
@@ -30,6 +31,7 @@ function Positions() {
 
   return (
     <div>
+      <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
       <Row>
         {jobs.map((job, index) => (
         <Col key={index} xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>

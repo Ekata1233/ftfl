@@ -8,11 +8,15 @@ import collabration from "../../../assets/rafiki.png";
 import "../OurCoreValue/OurCoreValur.css"; // Ensure you have a CSS file for styling
 import { MdArrowForwardIos } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import SEO from "../../SEO";
 
 function OurCoreValue() {
   const navigate=useNavigate()
   return (
+
     <div className="value-div">
+      <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
+
       {/* Background Image */}
       <div className="background-image">
         <img src={valuebg} alt="Background" className="background-img" />

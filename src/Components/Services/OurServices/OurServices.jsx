@@ -11,12 +11,14 @@ import graphic from '../../../assets/itsale.png'
 import itSale from '../../../assets/mobile-app.png'
 
 import itConsulting from '../../../assets/itconsulting.png'
+import SEO from '../../SEO'
 
 
 
 function OurServices() {
     return (
         <div>
+            <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
             <div className='OurServices-wrapper'>
                 <div className=" OurServices-div">
                     <img src={servicesBg} alt="Background" className="w-100 bg-services" />

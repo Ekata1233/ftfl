@@ -1,8 +1,10 @@
 import { Col, Row } from "react-bootstrap"
 import '../../HowItServices/HowItServics.css'
+import SEO from "../../SEO"
 function WhatDifferent() {
     return (
         <div>
+            <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
             <div>
                 <p className="blue heading-p  text-end mb-5" style={{ fontWeight: "400px" }}>
                     What Makes Us Different?

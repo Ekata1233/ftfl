@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Button, Col, Container, Form, Row, Spinner } from "react-bootstrap";
 import '../../Components/CarreerOpportunities/CarreersOpportunities.css';
 import '../JobContact/JobContact.css';
+import SEO from "../SEO";
 
 function JobContact() {
   const [file, setFile] = useState(null);
@@ -177,6 +178,7 @@ function JobContact() {
 
   return (
     <div className="carrer-div">
+      <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
       <div className="text-center mt-5 pt-5 mb-5 pb-5 pt-5">
         <p>
           <span style={{ fontWeight: "400", fontSize: "45px" }}>Take the </span>

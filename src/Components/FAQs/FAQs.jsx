@@ -1,9 +1,11 @@
 import { Accordion, Col, Container, Row } from "react-bootstrap"
 import shape from '../../assets/amico.png'
 import '../FAQs/FAQs.css'
+import SEO from "../SEO"
 function FAQs() {
   return (
     <div>
+        <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
        <Container className="my-5">
         <Row>
             <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4}>
