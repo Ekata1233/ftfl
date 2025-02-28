@@ -23,7 +23,7 @@
   
   @media only screen and (max-width: 425px){
     .contact-form-bg{
-      height: 1500px !important;
+      height: 1400px !important;
       
      }
      
@@ -38,13 +38,13 @@
       height: 1100px !important;
      
     }
-    .contact-form-content{
+    /* .contact-form-content{
       margin-bottom: 600px !important;
     }
     .contact-form-container {
       margin-bottom: 4000px !important;
 
-    }
+    } */
    }
    @media only screen and (min-width: 768px) and (max-width: 1024px){
     .carrer-div{

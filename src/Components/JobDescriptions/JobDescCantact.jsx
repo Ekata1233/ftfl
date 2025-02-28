@@ -165,13 +165,13 @@ function JobDescContact() {
   }
 
   return (
-    <div className="carrer-div">
+    <div className="">
       <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
       <div className="text-start mt-5 pt-5 mb-5  pt-5">
         <p><span style={{ fontWeight: "400", fontSize: "45px" }}>Apply</span><span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Here</span></p>
         <p className="text text-secondary">Want to work with us? You&rsquo;re in good company!</p>
       </div>
-      <Container fluid className="contact-form-container rounded rounded-5 mt-5">
+      <Container fluid className="rounded rounded-5 mt-5">
         <img src={contactbg} alt="Background" className="contact-form-bg con-bg" />
         <Container className="contact-form-content">
           {isLoading ? (
