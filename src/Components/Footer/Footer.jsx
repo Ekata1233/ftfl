@@ -76,31 +76,31 @@ function Footer() {
                                 <div className="text-start ms-lg-5 mt-3">
                                     <h5 className="mb-4">Quick Links</h5>
                                     <p>
-                                        <a href="#" className="text-white text-decoration-none">
+                                        <a href="/about" className="text-white text-decoration-none">
                                             <MdPlayArrow />
                                             <span>About Company</span>
                                         </a>
                                     </p>
                                     <p>
-                                        <a href="#" className="text-white text-decoration-none">
+                                        <a href="/blogs" className="text-white text-decoration-none">
                                             <MdPlayArrow />
                                             <span>Blogs</span>
                                         </a>
                                     </p>
                                     <p>
-                                        <a href="#" className="text-white text-decoration-none">
+                                        <a href="/services" className="text-white text-decoration-none">
                                             <MdPlayArrow />
                                             <span>Our Services</span>
                                         </a>
                                     </p>
                                     <p>
-                                        <a href="#" className="text-white text-decoration-none">
+                                        <a href="/careers" className="text-white text-decoration-none">
                                             <MdPlayArrow />
                                             <span>Careers</span>
                                         </a>
                                     </p>
                                     <p>
-                                        <a href="#" className="text-white text-decoration-none">
+                                        <a href="/contact" className="text-white text-decoration-none">
                                             <MdPlayArrow />
                                             <span>Contact</span>
                                         </a>
