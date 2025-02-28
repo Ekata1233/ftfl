@@ -27,42 +27,45 @@
         height: 300px;
        
       }
+      .bg-carreer{
+        height: 5000px !important;
+        margin-bottom: 3000px !important;
+      }
       @media only screen and (max-width: 375px){
         .bg-carreer{
-          height: 4900px !important;
+          height: 6500px !important;
           margin-bottom: 2000px !important;
          }
      }
       @media only screen and (min-width: 376px) and (max-width: 425px){
         .bg-carreer{
           height: 4750px !important;
-          margin-bottom: 2000px !important;
+          margin-bottom: 3600px !important;
          }
      }
      @media only screen and (min-width: 426px) and (max-width: 768px){
       .bg-carreer{
-        height: 3400px !important;
-        margin-bottom: 1600px !important;
+        height: 2800px !important;
+        /* margin-bottom: 2000px !important; */
 
        }
      }
       @media only screen and (min-width: 769px) and (max-width: 1024px) {
-         .bg-carreer{
-          height: 4550px !important;
+         /* .bg-carreer{
+          height: 5550px !important;
           margin-bottom: 100px !important;
-         }
+         } */
       }
       @media only screen and (min-width: 1024px) and (max-width:1440px){
         .bg-carreer{
-          height: 3750px !important;
-          margin-bottom: 100px !important;
+          height: 1250px !important;
          }
          
       }
       @media only screen and (min-width: 1441px) and (max-width:2650px){
         .bg-carreer{
           height: 3800px !important;
-          margin-bottom: 200px !important;
+          margin-bottom: 600px !important;
          }
          
       }

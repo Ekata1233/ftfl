@@ -53,8 +53,9 @@ const HeaderNav = () => {
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel">
-              <img src={logo} alt="Artisticify Logo" className="ftfl-logo w-100 " />
-            </Offcanvas.Title>
+            <Navbar.Brand href="/">
+          <img src={logo} alt="Artisticify Logo" className="ftfl-logo ms-4"/>
+        </Navbar.Brand>            </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body className="offcanvas-custom-bg">
             <Nav className="justify-content-end flex-grow-1 pe-2 me-4">

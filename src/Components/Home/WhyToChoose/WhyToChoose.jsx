@@ -25,25 +25,25 @@ function WhyToChoose() {
                             }}
                         >
                             <p style={{ fontSize: '25px', fontWeight: '500' }}>Proven Expertise</p>
-                            <p className="text-secondary text">Our team combines deep industry knowledge with advanced technology to provide unmatched results.</p>
+                            <p className="text-secondary text">Our team combines deep industry knowledge with advanced technology to provide truly exceptional unmatched results.</p>
                             <div 
                                 style={{
                                     position: 'absolute',
                                     bottom: '0',
                                     right: '12.5%',
                                     width: '75%',
-                                    height: '1px',
-                                    backgroundColor: '#298CF3',
+                                    height: '3px',
+                                    backgroundColor: 'rgba(41, 139, 243, 0.49)',
                                 }}
                             />
-                            <div className="boreder-r"
+                            <div className="bor1"
                                 style={{
                                     position: 'absolute',
                                     bottom: '12.5%',
                                     right: '0',
                                     height: '75%',
-                                    width: '1px',
-                                    backgroundColor: '#298CF3',
+                                    width: '3px',
+                                    backgroundColor: 'rgba(41, 139, 243, 0.49)',
                                 }}
                             />
                         </Col>
@@ -68,18 +68,18 @@ function WhyToChoose() {
                                     bottom: '0',
                                     right: '12.5%',
                                     width: '75%',
-                                    height: '1px',
-                                    backgroundColor: '#298CF3',
+                                    height: '3px',
+                                    backgroundColor: 'rgba(41, 139, 243, 0.49)',
                                 }}
                             />
-                            <div className="boreder-r"
+                            <div className="bor1"
                                 style={{
                                     position: 'absolute',
                                     bottom: '12.5%',
                                     right: '0',
                                     height: '75%',
-                                    width: '1px',
-                                    backgroundColor: '#298CF3',
+                                    width: '3px',
+                                    backgroundColor: 'rgba(41, 139, 243, 0.49)',
                                 }}
                             />
                         </Col>
@@ -104,8 +104,8 @@ function WhyToChoose() {
                                     bottom: '0',
                                     right: '12.5%',
                                     width: '75%',
-                                    height: '1px',
-                                    backgroundColor: '#298CF3',
+                                    height: '3px',
+                                    backgroundColor: 'rgba(41, 139, 243, 0.49)',
                                 }}
                             />
                             <div
@@ -126,28 +126,28 @@ function WhyToChoose() {
                             }}
                         >
                             <p style={{ fontSize: '25px', fontWeight: '500' }}>Secure & Reliable</p>
-                            <p className="text-secondary text">Years of experience in cutting-edge IT solutions, ensuring robust protection, consistent performance.</p>
+                            <p className="text-secondary text">Years of experience in cutting-edge IT solutions, ensuring robust security, protection, and consistent performance.</p>
                             <div
                               
                             />
-                            <div className="boreder-r"
+                            <div className="bor1"
                                 style={{
                                     position: 'absolute',
                                     bottom: '12.5%',
                                     right: '0',
                                     height: '75%',
-                                    width: '1px',
-                                    backgroundColor: '#298CF3',
+                                    width: '3px',
+                                    backgroundColor: 'rgba(41, 139, 243, 0.49)',
                                 }}
                             />
-                             <div className="boreder-b boreder-b1"
+                             <div className="boreder-b boreder-b1 bor  "
                                 style={{
                                     position: 'absolute',
                                     bottom: '0',
                                     right: '12.5%',
                                     width: '75%',
-                                    height: '1px',
-                                    backgroundColor: '#298CF3',
+                                    height: '3px',
+                                    backgroundColor: 'rgba(41, 139, 243, 0.49)',
                                 }}
                             />
                         </Col>
@@ -169,24 +169,24 @@ function WhyToChoose() {
                             <div
                                
                             />
-                            <div className="boreder-r"
+                            <div className="bor1"
                                 style={{
                                     position: 'absolute',
                                     bottom: '12.5%',
                                     right: '0',
                                     height: '75%',
-                                    width: '1px',
-                                    backgroundColor: '#298CF3',
+                                    width: '3px',
+                                    backgroundColor: 'rgba(41, 139, 243, 0.49)',
                                 }}
                             />
-                             <div className="boreder-b boreder-b1"
+                             <div className="boreder-b boreder-b1 bor  "
                                 style={{
                                     position: 'absolute',
                                     bottom: '0',
                                     right: '12.5%',
                                     width: '75%',
-                                    height: '1px',
-                                    backgroundColor: '#298CF3',
+                                    height: '3px',
+                                    backgroundColor: 'rgba(41, 139, 243, 0.49)',
                                 }}
                             />
                         </Col>
@@ -205,14 +205,14 @@ function WhyToChoose() {
                         >
                             <p style={{ fontSize: '25px', fontWeight: '500' }}>Future-Ready Tech</p>
                             <p className="text-secondary text">Scalable solutions built for tomorrow’s needs, leveraging the latest innovations to drive long-term growth.</p>
-                            <div className="boreder-b boreder-b1"
+                            <div className="boreder-b boreder-b1  bor         "
                                 style={{
                                     position: 'absolute',
                                     bottom: '0',
                                     right: '12.5%',
                                     width: '75%',
-                                    height: '1px',
-                                    backgroundColor: '#298CF3',
+                                    height: '3px',
+                                    backgroundColor: 'rgba(41, 139, 243, 0.49)',
                                 }}
                             />
                             <div

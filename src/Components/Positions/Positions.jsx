@@ -32,26 +32,50 @@ function Positions() {
     <div>
       <Row>
         {jobs.map((job, index) => (
-          <Col key={index} xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
-            <div className="blue-bg text-white rounded rounded-4 py-5 px-3 my-4" style={{ height: "300px" }}>
-              <p style={{ fontSize: "28px", fontWeight: "600" }}>{job.jobTitle}</p>
-              <p>{job.jobDepartment || "Department not specified"}</p>
-              <p><MdLocationOn /> {job.jobLocation || "Location not specified"}</p>
-              <div className="d-flex justify-content-between align-items-center mt-3 w-100">
-                <Button
-                  className="text-dark bg-white border-0"
-                  onClick={() => navigate(`/jobdescription/${job._id}`, { state: { scrollTo: "jobdesccontact" } })}
-                >
-                  Apply <IoIosArrowForward />
-                </Button>
+        <Col key={index} xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
+  <div
+    className="blue-bg text-white rounded rounded-4 py-5 px-3 my-4 position-relative"
+    style={{ height: "300px" }}
+  >
+    <div>
+      <p style={{ fontSize: "28px", fontWeight: "600" }}>{job.jobTitle}</p>
+      <p>{job.jobDepartment || "Department not specified"}</p>
+      <p>
+        <MdLocationOn /> {job.jobLocation || "Location not specified"}
+      </p>
+    </div>
 
-                <a href="#" onClick={(e) => {
-                  e.preventDefault();
-                  navigate(`/jobdescription/${job._id}`);
-                }} className="text-white ms-auto">See More</a>
-              </div>
-            </div>
-          </Col>
+    {/* Apply Button fixed to the bottom */}
+    <div
+  className="w-100 position-absolute d-flex justify-content-between align-items-center px-3"
+  style={{ bottom: "30px", left: "0" }}
+>
+  <Button
+    className="text-dark bg-white border-0"
+    onClick={() =>
+      navigate(`/jobdescription/${job._id}`, {
+        state: { scrollTo: "jobdesccontact" },
+      })
+    }
+  >
+    Apply <IoIosArrowForward />
+  </Button>
+
+  <a
+    href="#"
+    onClick={(e) => {
+      e.preventDefault();
+      navigate(`/jobdescription/${job._id}`);
+    }}
+    className="text-white"
+  >
+    See More
+  </a>
+</div>
+
+  </div>
+</Col>
+
         ))}
       </Row>
     </div>

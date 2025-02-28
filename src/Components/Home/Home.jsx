@@ -50,7 +50,7 @@ function Home() {
     return (
         <div>
             <div className="carousel-container">
-                <div className="overlay-nav">
+                <div className="overlay-nav1">
                     <HederNav />
                 </div>
 

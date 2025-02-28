@@ -113,8 +113,12 @@
 
 /* Our Business */
 
-
-
+.bor{
+  display: none;
+}  
+.bor1{
+  display: block !important;
+}
 @media only screen and  (max-width: 375px){
   .header-content .h1{
     font-size: 20px !important;
@@ -146,6 +150,19 @@ padding: 10px;
 .scrash{
   font-size: 12px;
 }
+.bor{
+  display: block;
+}
+.bor1{
+  display: none !important;
+}
+.overlay-nav1{
+  position: absolute;
+  top: 5%;
+  width: 100%;
+  z-index: 10;
+  padding: 10px; 
+}
 }
 
 @media only screen and (min-width: 376px) and  (max-width: 425px){
@@ -171,13 +188,23 @@ padding: 10px;
 .overlay-nav
 {
   position: absolute;
-  top: 5%;
+  top: 15%;
+  width: 100%;
+  z-index: 10;
+  padding: 10px; 
+}
+.overlay-nav1{
+  position: absolute;
+  top: 12%;
   width: 100%;
   z-index: 10;
   padding: 10px; 
 }
 .scrash{
   font-size: 12px;
+}
+.bor{
+  display: block;
 }
 }
 @media only screen and (min-width: 426px) and (max-width: 768px)
