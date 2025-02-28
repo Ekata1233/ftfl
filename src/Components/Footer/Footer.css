@@ -41,7 +41,25 @@
 .header-content{
     font-size: 20px;
 }
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 320px){
+    .social1{
+        display: none;
+    }
+   
+    .footer{
+        height: 1130px !important;
+        width: 100% !important;
+    }
+    .social2{
+        display: block;
+    }
+    .get-touch{
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 375px){
     .social1{
         display: none;
     }
