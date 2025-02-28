@@ -33,7 +33,7 @@ function Footer() {
                                     </h4>
                                 </div>
                                 <p className="text-start pe-5 mb-md-3">
-                                    We work with a passion of taking challenges and creating new ones in the advertising sector. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                We thrive on challenges and innovation, redefining possibilities in the advertising sector. Our team is driven by creativity, passion, and a commitment to delivering exceptional results. Let’s collaborate and bring your vision to life!
                                 </p>
                                 <Row className="text-start social1 pb-5">
                                     <Col className="pb-5">
