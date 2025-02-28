@@ -127,7 +127,7 @@ function Footer() {
                                     </div>
                                     
                                 </div>
-                                <p className="text-white footer-text text-center pt-3"> FTFL Technology Pvt.Ltd | All rights resereved</p>
+                               
                             </Col>
                             
                              <Row className="text-start social2">
