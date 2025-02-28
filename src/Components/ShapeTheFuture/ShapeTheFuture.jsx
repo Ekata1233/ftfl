@@ -86,12 +86,12 @@ function ShapeTheFuture() {
             <div className="carousel-container about position-relative text-start w-100 py-5 my-5" >
                 <img src={stayhome} className="img-fluid w-100 about-img" alt="Slide 1" />
                 <div ref={shapeTheFutureRef} className="position-absolute translate-middle py-4 my-4 mx-3 header-content w-100 ps-3 " >
-                    <p  className="text-white text"></p>
+                    <p className="text-white text"></p>
                     <h1 className="text-white fw-bold my-4  h1">
                         Stay Updated with the Latest Insights
                     </h1>
                     <p className="text-white header-p" style={{ fontSize: "30px", fontWeight: "600" }}>The Future of AI in Business </p>
-                    <p  className="text-white header-p">
+                    <p className="text-white header-p">
                         How artificial intelligence is transforming industries.?
                     </p>
 
@@ -109,20 +109,25 @@ function ShapeTheFuture() {
                     </p>
                 </div>                <Row className="py-5">
                     <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4} className='my-4'>
-                        <div className='p-4 rounded rounded-5 blog-div' style={{
-                            border: "",
-
-                        }}>
+                        <div className='p-4 rounded rounded-5 blog-div'
+                            onClick={() => navigate("/blogs", { state: { scrollTo: "latest-tech-trends" } })}
+                            style={{ border: "" }}>
                             <div className='blog-div1'>
                                 <img src={ai} className='w-100 img-fluid' />
-                                <p className='mt-4 mb-2' style={{ fontSize: "22px ", fontWeight: "500" }}>AI & Machine Learning: The Next Big Leap</p>
-                                <p className='text text-secondary'>Discover how AI is transforming industries and what’s next in automation.</p>
+                                <p className='mt-4 mb-2' style={{ fontSize: "22px ", fontWeight: "500" }}>
+                                    AI & Machine Learning: The Next Big Leap
+                                </p>
+                                <p className='text text-secondary'>
+                                    Discover how AI is transforming industries and what’s next in automation.
+                                </p>
                             </div>
-
                         </div>
                     </Col>
+
                     <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4} className='my-4'>
-                        <div className='p-4 rounded rounded-5 blog-div' style={{
+                        <div className='p-4 rounded rounded-5 blog-div' 
+                         onClick={() => navigate("/blogs", { state: { scrollTo: "web-mobile-development" } })}
+                         style={{
                             border: "",
 
                         }}>
@@ -135,7 +140,10 @@ function ShapeTheFuture() {
                         </div>
                     </Col>
                     <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4} className='my-4'>
-                        <div className='p-4 rounded rounded-5 blog-div' style={{
+                        <div className='p-4 rounded rounded-5 blog-div' 
+                        
+                        onClick={() => navigate("/blogs", { state: { scrollTo: "it-consultation" } })}
+                        style={{
                             border: "",
 
                         }}>

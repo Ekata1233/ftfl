@@ -54,6 +54,7 @@ const CardSlider = () => {
         navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         breakpoints={{
+          320: { slidesPerView: 1 },
           375: { slidesPerView: 1 },
           425: { slidesPerView: 1 },
           768: { slidesPerView: 3 },
@@ -62,7 +63,7 @@ const CardSlider = () => {
         className="py-3"
       >
         {cards.map((card, index) => (
-          <SwiperSlide key={card.id}>
+          <SwiperSlide key={card.id} className="">
             <div className={`card shadow-sm text-center ${window.innerWidth < 768 ? 'py-4' : 'py-md-3'} p-lg-4  ${index === activeIndex+1 ? "active-card" : ""}`}
               style={{ border: "1px solid #298CF3" }}>
               <div className="d-flex mb-3">

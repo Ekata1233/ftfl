@@ -47,7 +47,22 @@ const itAndBusinessRef=useRef(null);
             }, 100);
         }
     }, [location]); // Runs when location changes
-
+    useEffect(() => {
+        if (location.state?.scrollTo) {
+            setTimeout(() => {
+                if (location.state.scrollTo === "latest-tech-trends" && latestTechTrendsRef.current) {
+                    latestTechTrendsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+                if (location.state.scrollTo === "web-mobile-development" && webMobileDevRef.current) {
+                    webMobileDevRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+                if (location.state.scrollTo === "it-consultation" && itConsultingRef.current) {
+                    itConsultingRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            }, 100);
+        }
+    }, [location]);
+    
     return (
         <div>
              <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />

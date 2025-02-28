@@ -19,7 +19,7 @@ function Footer() {
               <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
             <div className="footer-container text">
                 <Container className="">
-                    <div className="text-overlay d-flex justify-content-center align-items-center my-5">
+                    <div className="text-overlay d-flex justify-content-center align-items-center pt-5">
                         <Row className="text-white text-center overlay-row">
                             <Col xs={12} sm={12} md={12} lg={4} xl={4}>
                                 <div>
@@ -66,8 +66,11 @@ function Footer() {
                                                 </a>
                                             </div>
                                         </div>
+                                        
                                     </Col>
+                                   
                                 </Row>
+                                
                             </Col>
                             <Col xs={12} sm={12} md={4} lg={3} xl={3}>
                                 <div className="text-start ms-lg-5 mt-3">
@@ -120,10 +123,14 @@ function Footer() {
                                         <p>
                                             <IoLocationSharp className="dark-blue" /> 3rd Floor, C307, Amanora Chamber, Mall, Amanora Park Town, Hadapsar, Pune, Maharashtra 411002
                                         </p>
+
                                     </div>
+                                    
                                 </div>
+                                <p className="text-white footer-text text-center pt-3"> FTFL Technology Pvt.Ltd | All rights resereved</p>
                             </Col>
-                            <Row className="text-start social2">
+                            
+                             <Row className="text-start social2">
                                 <Col>
                                     <p>Our Socials</p>
                                     <div className="d-flex">
@@ -148,11 +155,15 @@ function Footer() {
                                                 <ImWhatsapp className="p-2" style={{ width: "40px", height: "40px", color: "#25D366" }} />
                                             </a>
                                         </div>
+                                        
                                     </div>
                                 </Col>
-                            </Row>
+                                
+                            </Row> 
+                            
                         </Row>
                     </div>
+                    
                 </Container>
                 <div>
                     <Row>

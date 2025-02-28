@@ -1,5 +1,5 @@
 .footer{
-    height: 480px !important;
+    height: 520px !important;
     width: 100% !important;
 }
 .footer-container {
@@ -47,8 +47,11 @@
     }
    
     .footer{
-        height: 1130px !important;
+        height: 1150px !important;
         width: 100% !important;
+    }
+    .footer-text{
+        font-size: 10px;
     }
     .social2{
         display: block;
@@ -65,7 +68,7 @@
     }
    
     .footer{
-        height: 1070px !important;
+        height: 1090px !important;
         width: 100% !important;
     }
     .social2{
@@ -82,7 +85,7 @@
     }
    
     .footer{
-        height: 1000px !important;
+        height: 1030px !important;
         width: 100% !important;
     }
     .social2{
@@ -96,7 +99,7 @@
 @media only screen and (min-width: 426px) and (max-width: 768px)
 {
     .footer{
-        height: 700px !important;
+        height: 800px !important;
         width: 100% !important;
     }
     .social1{
@@ -108,7 +111,7 @@
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .footer{
-        height: 550px !important;
+        height: 700px !important;
         width: 100% !important;
     }
     .get-touch{
