@@ -24,8 +24,26 @@
     padding: 20px;
     border-radius: 10px;
     height: 500px !important;
+  } @media only screen and (max-width: 320px){
+    .background-img{
+      margin-bottom: 1150px !important;
+      
   }
-  @media only screen and (max-width: 425px){
+  .text-box {
+     
+      height: 440px !important;
+    }
+  }
+  @media only screen and (min-width: 321px) and (max-width: 425px){
+    .background-img{
+        margin-bottom: 950px !important;
+    }
+    .text-box {
+       
+        height: 440px !important;
+      }
+  }
+  @media only screen and (min-width: 376px) and (max-width: 425px){
     .background-img{
         margin-bottom: 950px !important;
     }

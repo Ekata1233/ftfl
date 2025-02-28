@@ -31,7 +31,27 @@ html, body {
   .vision-col{
     display: none;
   }
-  @media only screen and (max-width: 375px){
+  @media only screen  and (max-width: 320px){
+ .vector-image{
+      margin-top: 300px;
+      margin-bottom: 900px !important;
+  }
+  .vision-row{
+    margin-top: 50px;
+    
+ }
+ .vision-img{
+    margin-top: 0px;
+ }
+ .vision-col{
+    display: block;
+  }
+  .vision-col1{
+    display: none;
+  }
+  }
+  
+  @media only screen and (min-width: 321px) and (max-width: 375px){
     .vector-image{
       margin-top: 300px;
       margin-bottom: 900px !important;

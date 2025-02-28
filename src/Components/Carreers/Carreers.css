@@ -31,7 +31,13 @@
         height: 5000px !important;
         margin-bottom: 3000px !important;
       }
-      @media only screen and (max-width: 375px){
+      @media only screen and (max-width: 320px){
+        .bg-carreer{
+          height: 6500px !important;
+          margin-bottom: 2600px !important;
+         }
+      }
+      @media only screen and (min-width: 321px) and (max-width: 375px){
         .bg-carreer{
           height: 6500px !important;
           margin-bottom: 2400px !important;

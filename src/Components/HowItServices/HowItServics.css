@@ -54,7 +54,18 @@
   /* .started{
     height: 500px;
   } */
-  @media only screen and (min-width: 375px){
+  @media only screen and (min-width: 320px){
+    .howstart{
+      padding: 10px !important;
+    }
+    .differ{
+      height: 350px !important;
+    }
+    .whatdiffer{
+      margin-bottom: 100px !important;
+    }
+  }
+  @media only screen and (min-width: 321px) and (min-width: 375px){
     .howstart{
       padding: 10px !important;
     }
