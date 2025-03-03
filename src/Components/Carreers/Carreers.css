@@ -45,19 +45,19 @@
       @media only screen and (max-width: 320px){
         .bg-carreer{
           height: 6500px !important;
-          margin-bottom: 2100px !important;
+          margin-bottom: 2150px !important;
          }
       }
       @media only screen and (min-width: 321px) and (max-width: 375px){
         .bg-carreer{
           height: 6500px !important;
-          margin-bottom: 1800px !important;
+          margin-bottom: 1850px !important;
          }
      }
       @media only screen and (min-width: 376px) and (max-width: 425px){
         .bg-carreer{
           height: 4750px !important;
-          margin-bottom: 3400px !important;
+          margin-bottom: 3450px !important;
          }
      }
      @media only screen and (min-width: 426px) and (max-width: 768px){

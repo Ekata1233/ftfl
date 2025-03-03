@@ -32,7 +32,7 @@
     }
     .contact-form-bg {
       width: 320px !important;
-      height: 1500px !important;
+      height: 1600px !important;
     }
   }
   @media only screen and (min-width: 321px) and (max-width: 375px){
@@ -43,13 +43,13 @@
     }
     .contact-form-bg {
       width: 320px !important;
-      height: 1500px !important;
+      height: 1550px !important;
     }
   }
 
   @media only screen and (min-width: 376px) and (max-width: 425px){
     .contact-form-bg{
-      height: 1400px !important;
+      height: 1500px !important;
       
      }
      
