@@ -13,7 +13,7 @@ function OurVision() {
             <Container style={{}} className="vision-container">
 
                 <div >
-                    <Row className="vision-row ">
+                    <Row className="vision-row pt-sm-5">
                         <Col xs={12} sm={12} md={8} lg={5} xl={6} className="px-4">
                             <p><span className="" style={{ fontWeight: "400", fontSize: "45px", }}>Our</span><span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Vision</span></p>
                             <p className="text-secondary text ">We strive to be a global leader in the delivery of innovative technologies that drive and support business growth and success. We combine the power of IT, branding, and marketing to help businesses adapt and thrive in a fast-evolving digital world.
