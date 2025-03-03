@@ -31,6 +31,17 @@
         height: 5000px !important;
         margin-bottom: 3000px !important;
       }
+      .shadow-box {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        border-radius: 8px; /* Optional for rounded corners */
+        background-color: #fff; /* Ensure the background is visible */
+        transition: box-shadow 0.3s ease-in-out;
+      }
+      
+      .shadow-box:hover {
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+      }
+      
       @media only screen and (max-width: 320px){
         .bg-carreer{
           height: 6500px !important;

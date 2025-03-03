@@ -35,8 +35,8 @@ function Carreers() {
 
   const content = [
     { img: why1, title: "Innovative", p: 'Join FTFL Technology and innovate with us to shape the future of IT.' },
-    { img: why2, title: "Expertise", p: "FTFL Technology – Expertise that transforms ideas into reality." },
-    { img: why3, title: "Partnership", p: "FTFL Technology – Building strong partnerships for a smarter future." },
+    { img: why2, title: "Expertise", p: "FTFL Technology – Unmatched expertise that transforms ideas into reality." },
+    { img: why3, title: "Partnership", p: "FTFL Technology – Building strong partnerships for a smarter future together." },
     { img: why4, title: "Scalability", p: "Technology that grows as fast as your vision—powered by FTFL Technology." },
     { img: why5, title: "Success", p: "Success isn’t a destination; with FTFL Technology, it’s a journey of growth." },
     { img: why6, title: "Support", p: "Reliable solutions, dedicated support—FTFL Technology has your back." },
@@ -84,7 +84,7 @@ function Carreers() {
                     <span className="blue" style={{ fontWeight: "600", fontSize: "40px" }}> Work With Us?</span>
                   </p>
                 </div>
-                <Row>
+                <Row className="" >
                   {content.map((item, index) => {
                     const ref = useRef(null);
                     const controls = useAnimation();
@@ -111,7 +111,7 @@ function Carreers() {
                       >
                         <motion.div
                           ref={ref}
-                          className="col-content py-lg-4 my-lg-4 mx-3"
+                          className="col-content py-lg-4 my-lg-4 mx-3 shadow-box p-3"
                           initial={{ opacity: 0, y: 50 }}
                           animate={controls}
                           transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
