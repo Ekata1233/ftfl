@@ -40,11 +40,11 @@
   }
   @media only screen and  (max-width: 375px){
     .image-wrapper:hover .overlay-container {
-      bottom: -50%;
+      bottom: -40%;
       height: 100%; 
     }
     .overlay-container{
-      bottom: -107px;
+      bottom: -130px;
   }
 }
   @media only screen and (min-width: 376px) and (max-width: 425px){

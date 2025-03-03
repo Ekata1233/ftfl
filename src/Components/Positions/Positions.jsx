@@ -4,6 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { Button, Col, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import SEO from "../SEO";
+import { motion } from "framer-motion";
 
 function Positions() {
   const navigate = useNavigate();
@@ -28,55 +29,63 @@ function Positions() {
       })
       .catch((error) => console.error("Error fetching jobs:", error.message));
   }, []);
-
+  const scrollVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <div>
       <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
       <Row>
+
         {jobs.map((job, index) => (
-        <Col key={index} xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
-  <div
-    className="blue-bg text-white rounded rounded-4 py-5 px-3 my-4 position-relative"
-    style={{ height: "300px" }}
-  >
-    <div>
-      <p style={{ fontSize: "28px", fontWeight: "600" }}>{job.jobTitle}</p>
-      <p>{job.jobDepartment || "Department not specified"}</p>
-      <p>
-        <MdLocationOn /> {job.jobLocation || "Location not specified"}
-      </p>
-    </div>
+          <Col key={index} xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
+            <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
+              <div
+                className="blue-bg text-white rounded rounded-4 py-5 px-3 my-4 position-relative"
+                style={{ height: "300px" }}
+              >
+                <div>
+                  <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
+                    <p style={{ fontSize: "28px", fontWeight: "600" }}>{job.jobTitle}</p>
+                    <p>{job.jobDepartment || "Department not specified"}</p>
+                    <p>
+                      <MdLocationOn /> {job.jobLocation || "Location not specified"}
+                    </p>
+                  </motion.div>
+                </div>
 
-    {/* Apply Button fixed to the bottom */}
-    <div
-  className="w-100 position-absolute d-flex justify-content-between align-items-center px-3"
-  style={{ bottom: "30px", left: "0" }}
->
-  <Button
-    className="text-dark bg-white border-0"
-    onClick={() =>
-      navigate(`/jobdescription/${job._id}`, {
-        state: { scrollTo: "jobdesccontact" },
-      })
-    }
-  >
-    Apply <IoIosArrowForward />
-  </Button>
+                {/* Apply Button fixed to the bottom */}
+                <div
+                  className="w-100 position-absolute d-flex justify-content-between align-items-center px-3"
+                  style={{ bottom: "30px", left: "0" }}
+                >
+                  <Button
+                    className="text-dark bg-white border-0"
+                    onClick={() =>
+                      navigate(`/jobdescription/${job._id}`, {
+                        state: { scrollTo: "jobdesccontact" },
+                      })
+                    }
+                  >
+                    Apply <IoIosArrowForward />
+                  </Button>
 
-  <a
-    href="#"
-    onClick={(e) => {
-      e.preventDefault();
-      navigate(`/jobdescription/${job._id}`);
-    }}
-    className="text-white"
-  >
-    See More
-  </a>
-</div>
+                  <a
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate(`/jobdescription/${job._id}`);
+                    }}
+                    className="text-white"
+                  >
+                    See More
+                  </a>
+                </div>
 
-  </div>
-</Col>
+              </div>
+            </motion.div>
+          </Col>
 
         ))}
       </Row>

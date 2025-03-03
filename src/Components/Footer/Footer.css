@@ -1,5 +1,5 @@
 .footer{
-    height: 520px !important;
+    height: 580px !important;
     width: 100% !important;
 }
 .footer-container {
@@ -111,7 +111,7 @@
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .footer{
-        height: 700px !important;
+        height: 650px !important;
         width: 100% !important;
     }
     .get-touch{
@@ -119,9 +119,9 @@
         margin-top: 20px;
     }
 }
-@media only screen and (min-width: 1024px) and (max-width: 1440px){
+@media only screen and (min-width: 1025px) and (max-width: 1440px){
     .footer{
-        height: 550px !important;
+        height: 600px !important;
         width: 100% !important;
     }
 }

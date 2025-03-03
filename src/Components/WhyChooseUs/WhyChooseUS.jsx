@@ -1,6 +1,7 @@
 import { Col, Container, Row } from 'react-bootstrap'
 import servicesBg1 from '../../assets/bg services 2.png'
 import Whychoose from '../../assets/Group 10197.png'
+import Whychoose1 from '../../assets/Group 1000001776.png'
 
 import '../WhyChooseUs/WhyChhoseUS.css'
 import Testimonial from '../Testimonial/Testimonial'
@@ -16,14 +17,16 @@ function WhyChooseUS() {
         <Container>
           <div className='whychoose-Container'>
             <div className="d-flex justify-content-center text-center  ">
-              <p className="mt-5 pt-5">
+              <p className="mt-lg-5 pt-lg-5">
                 <span className="text-dark " style={{ fontWeight: "400", fontSize: "45px" }}>Why</span>
                 <span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Choose Us?</span>
               </p>
             </div>
 
-            <div className='my-5 pt-5'>
-              <img src={Whychoose} className='img-fluid' />
+            <div className='my-lg-5 pt-5'>
+              <img src={Whychoose} className='img-fluid whychoose1 ' />
+              <img src={Whychoose1} className='img-fluid whychoose2 ' />
+
             </div>
             <div className=' text-center pt-5'>
               <p className="mt-5 pt-5 ">
@@ -78,7 +81,7 @@ function WhyChooseUS() {
 </Row>
   
 
-<div className='pt-5'>
+<div className='pt-lg-5'>
 <h4 className="colorBlue pt-5 mt-5 pb-2 text-center">----- Testimonial -----</h4>
 <h1 className="text-center">Our Client Say!!!</h1>
 </div>
@@ -87,6 +90,7 @@ function WhyChooseUS() {
             </div>
           </div>
         </Container>
+        
       </div>
 
     </div>

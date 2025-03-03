@@ -28,23 +28,23 @@ function Carreers() {
   };
 
   useEffect(() => {
-      if (location.state?.scrollTo === "job-listings") {
-          jobListingsRef.current?.scrollIntoView({ behavior: "smooth" });
-      }
+    if (location.state?.scrollTo === "job-listings") {
+      jobListingsRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
   }, [location]);
 
   const content = [
-    { img: why1, title: "Innovative" , p:'Join FTFL Technology and innovate with us to shape the future of IT.'},
-    { img: why2, title: "Expertise", p:"FTFL Technology – Expertise that transforms ideas into reality." },
-    { img: why3, title: "Partnership", p:"FTFL Technology – Building strong partnerships for a smarter future." },
-    { img: why4, title: "Scalability", p:"Technology that grows as fast as your vision—powered by FTFL Technology." },
-    { img: why5, title: "Success", p:"Success isn’t a destination; with FTFL Technology, it’s a journey of growth." },
-    { img: why6, title: "Support", p:"Reliable solutions, dedicated support—FTFL Technology has your back." },
+    { img: why1, title: "Innovative", p: 'Join FTFL Technology and innovate with us to shape the future of IT.' },
+    { img: why2, title: "Expertise", p: "FTFL Technology – Expertise that transforms ideas into reality." },
+    { img: why3, title: "Partnership", p: "FTFL Technology – Building strong partnerships for a smarter future." },
+    { img: why4, title: "Scalability", p: "Technology that grows as fast as your vision—powered by FTFL Technology." },
+    { img: why5, title: "Success", p: "Success isn’t a destination; with FTFL Technology, it’s a journey of growth." },
+    { img: why6, title: "Support", p: "Reliable solutions, dedicated support—FTFL Technology has your back." },
   ];
- 
+
   return (
     <div>
-        <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
+      <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
       <div className="overlay-nav overlay-nav1">
         <HeaderNav />
       </div>
@@ -63,8 +63,8 @@ function Carreers() {
               </p>
 
               {/* Updated Button with onClick */}
-              <Button 
-                variant="" 
+              <Button
+                variant=""
                 className="mt-4 blue-btn text-white"
                 onClick={handleApplyNowClick} // Scrolls to job listings
               >
@@ -78,74 +78,74 @@ function Carreers() {
             <div className=" Carreers-div">
               <img src={carrersbg} alt="Background" className="w-100 bg-carreer " />
               <div className='Carreers-Container pt-5'>
-                <div className="text-start my-5 py-5" >
+                <div className="text-start my-lg-5 py-lg-5" >
                   <p>
                     <span className='text-dark' style={{ fontWeight: "400", fontSize: "40px" }}>Why</span>
                     <span className="blue" style={{ fontWeight: "600", fontSize: "40px" }}> Work With Us?</span>
                   </p>
                 </div>
                 <Row>
-      {content.map((item, index) => {
-        const ref = useRef(null);
-        const controls = useAnimation();
-        const isInView = useInView(ref, { threshold: 0.3 });
+                  {content.map((item, index) => {
+                    const ref = useRef(null);
+                    const controls = useAnimation();
+                    const isInView = useInView(ref, { threshold: 0.3 });
 
-        useEffect(() => {
-          if (isInView) {
-            controls.start({ opacity: 1, y: 0 });
-          } else {
-            controls.start({ opacity: 0, y: 50 }); // Reset animation on scroll up
-          }
-        }, [isInView, controls]);
+                    useEffect(() => {
+                      if (isInView) {
+                        controls.start({ opacity: 1, y: 0 });
+                      } else {
+                        controls.start({ opacity: 0, y: 50 }); // Reset animation on scroll up
+                      }
+                    }, [isInView, controls]);
 
-        return (
-          <Col
-            key={index}
-            xs={12}
-            sm={12}
-            md={6}
-            lg={4}
-            xl={4}
-            xxl={4}
-            className="animated-col"
-          >
-            <motion.div
-              ref={ref}
-              className="col-content py-4 my-4 mx-3"
-              initial={{ opacity: 0, y: 50 }}
-              animate={controls}
-              transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
-            >
-              <motion.img
-                src={item.img}
-                alt={item.title}
-                className="col-image"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={controls}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-              />
-              <motion.h3
-                className="col-title pt-3 pb-1"
-                initial={{ opacity: 0, y: -20 }}
-                animate={controls}
-                transition={{ duration: 0.5, delay: index * 0.3 }}
-              >
-                {item.title}
-              </motion.h3>
-              <motion.p
-                className="col-text text"
-                initial={{ opacity: 0, y: 10 }}
-                animate={controls}
-                transition={{ duration: 0.5, delay: index * 0.4 }}
-              >
-               {item.p}
-              </motion.p>
-            </motion.div>
-          </Col>
-        );
-      })}
-    </Row>
-                <div className="text-center my-5 pt-5" >
+                    return (
+                      <Col
+                        key={index}
+                        xs={12}
+                        sm={12}
+                        md={6}
+                        lg={4}
+                        xl={4}
+                        xxl={4}
+                        className="animated-col pt-4"
+                      >
+                        <motion.div
+                          ref={ref}
+                          className="col-content py-lg-4 my-lg-4 mx-3"
+                          initial={{ opacity: 0, y: 50 }}
+                          animate={controls}
+                          transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+                        >
+                          <motion.img
+                            src={item.img}
+                            alt={item.title}
+                            className="col-image"
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={controls}
+                            transition={{ duration: 0.5, delay: index * 0.2 }}
+                          />
+                          <motion.h3
+                            className="col-title pt-3 pb-1"
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={controls}
+                            transition={{ duration: 0.5, delay: index * 0.3 }}
+                          >
+                            {item.title}
+                          </motion.h3>
+                          <motion.p
+                            className="col-text text"
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={controls}
+                            transition={{ duration: 0.5, delay: index * 0.4 }}
+                          >
+                            {item.p}
+                          </motion.p>
+                        </motion.div>
+                      </Col>
+                    );
+                  })}
+                </Row>
+                <div className="text-center my-lg-5 pt-5" >
                   <p className="">
                     <span className='text-dark' style={{ fontWeight: "400", fontSize: "40px" }}>Open</span>
                     <span className="blue" style={{ fontWeight: "600", fontSize: "40px" }}> Positions</span>
@@ -153,10 +153,10 @@ function Carreers() {
                   <p className="text text-center text-secondary pt-5 pb-5">FTFL Technology is looking for skilled professionals to join our growing team. Exciting opportunities await in a dynamic and innovative environment. Take the next step in your career and apply today! 🚀</p>
                 </div>
                 <div>
-                  <Positions/>
+                  <Positions />
                 </div>
-                <div className="my-5 py-5">
-                  <div className="text-start my-5 py-5" >
+                <div className="my-lg-5 py-lg-5">
+                  <div className="text-start my-lg-5 py-5" >
                     <p>
                       <span className='text-dark' style={{ fontWeight: "400", fontSize: "40px" }}>Explore</span>
                       <span className="blue" style={{ fontWeight: "600", fontSize: "40px" }}> Career Opportunities</span>
@@ -164,10 +164,10 @@ function Carreers() {
                   </div>
 
                   {/* Scroll Target Section */}
-                  <div ref={jobListingsRef}>  
-                    <CarreerOpportunities/>
+                  <div ref={jobListingsRef}>
+                    <CarreerOpportunities />
                   </div>
-               
+
                 </div>
               </div>
             </div>

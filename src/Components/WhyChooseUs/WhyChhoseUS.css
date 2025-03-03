@@ -7,27 +7,76 @@
   
   .whychoose-Container {
     position: absolute;
-    top: 20% !important;
+    top: 9% !important;
     left: 10%;
     right: 10%;
+      
    
   }
   .whyimg{
     
   }
+  .whychoose2{
+    display: none;
+  }
   @media only screen and (max-width: 320px){
     .service-img{
       margin-top: 900px;
-      height: 3200px !important;
+      height: 2950px !important;
     }
-  
+    .whychoose-Container {
+      position: absolute;
+      top:8% !important;
+      left: 10%;
+      right: 10%;
+    
+     
+    }
+    .whychoose1{
+      display: none;
+    }
+    .whychoose2{
+      display: block;
+    }
   }
-  @media only screen and (min-width: 321px) and (max-width: 425px){
+   @media only screen and (min-width: 321px) and (max-width: 375px){
     .service-img{
       margin-top: 800px;
-      height: 3200px !important;
+      height: 3000px !important;
     }
-  
+    .whychoose-Container {
+      position: absolute;
+      top:9% !important;
+      left: 10%;
+      right: 10%;
+       
+    }
+    .whychoose1{
+      display: none;
+    }
+    .whychoose2{
+      display: block;
+    }
+  }
+  @media only screen and (min-width: 376px) and (max-width: 425px){
+    .service-img{
+      margin-top: 800px;
+      height: 3300px !important;
+    }
+    .whychoose-Container {
+      position: absolute;
+      top:14% !important;
+      left: 10%;
+      right: 10%;
+    
+     
+    }
+    .whychoose1{
+      display: none;
+    }
+    .whychoose2{
+      display: block;
+    }
   }
   @media only screen and (min-width: 426px) and (max-width: 768px){
     .service-img{

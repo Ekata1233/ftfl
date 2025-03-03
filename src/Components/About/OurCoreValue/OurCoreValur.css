@@ -32,44 +32,16 @@
   .text-box {
      
       height: 440px !important;
-      width: 300px !important;
-    }
-    .value-container {
-      position: absolute;
-      top: 0;
-      left: 3%;
-      right: 10%;
-     
     
-     
     }
-    .futture{
-      width: 300px !important;
-      padding: 10px !important;
-    }
+    
+   
   }
-  @media only screen and (min-width: 321px) and (max-width: 425px){
+  @media only screen and (min-width: 321px) and (max-width: 375px){
     .background-img{
-        margin-bottom: 720px !important;
+        margin-bottom: 870px !important;
     }
-    .text-box {
-       
-        height: 440px !important;
-        width: 350px !important;
-      }
-      .value-container {
-        position: absolute;
-        top: 0;
-        left: 3%;
-        right: 10%;
-       
-      
-       
-      }
-      .futture{
-        width: 350px !important;
-        padding: 10px !important;
-      }
+ 
   }
   @media only screen and (min-width: 376px) and (max-width: 425px){
     .background-img{
@@ -78,11 +50,20 @@
     .text-box {
        
         height: 440px !important;
-        width: 400px !important;
+        width: 97% !important;
       }
       .futture{
         width: 400px !important;
         padding: 10px !important;
+      }
+      .value-container {
+        position: absolute;
+        top: 0;
+        left: 3%;
+        right: 1% !important;
+       
+      
+       
       }
   }
   @media only screen and (min-width: 426px) and (max-width: 768px){

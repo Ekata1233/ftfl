@@ -19,7 +19,8 @@ function HowItServices() {
                 <p className="" style={{fontWeight:"600",fontSize:"60px", lineHeight:"50px"}}>Today</p>
             </div>
           <p className="mt-5 header-p text-justify text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione delectus provident a non qui quisquam porro tempore inventore quo! Delectus vero laudantium expedita modi sapiente eveniet error veritatis soluta aliquid ducimus nesciunt veniam, magni deserunt. Nihil, illo! Earum, unde! Vel suscipit ipsum ab sed dolorem voluptatibus quos repudiandae omnis blanditiis.
+          Founded on October 21, 2024, FTFL Technology Private Limited provides specialised IT services, branding, and marketing solutions. Headquartered in Pune, Maharashtra, our expertise spans custom software development, digital branding, and high-performance marketing solutions. 
+          Committed to innovation and excellence, we equip businesses with the right tools to enhance efficiency, optimise operations, and drive overall growth. At FTFL Technology, we ensure that our clients stay ahead in today’s highly competitive and ever-evolving digital landscape.
           </p>
         </Col>
         <Col xs={12} sm={12} md={12} lg={4} xl={4} >

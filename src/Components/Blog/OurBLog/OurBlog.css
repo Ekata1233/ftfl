@@ -46,9 +46,16 @@ position: relative;
 .blog-div{
     height: 450px;
 }
-@media only screen and (max-width: 425px){
+.copy-hide{
+    display: none;
+}
+.copy-hide1{
+    display: block;
+    font-size: 14px;
+}
+@media only screen and (max-width: 320px){
     .bg-blog{
-        height: 4500px !important;
+        height: 3400px !important;
         margin-bottom: 3000px !important;
     }
     .blog-div{
@@ -56,16 +63,70 @@ position: relative;
         box-shadow: 0px 0px 20px #00000040 !important;
 
     }
+    .copy-hide{
+        display: block;
+        font-size: 10px;
+    }
 }
-@media only screen and (min-width: 425px) and (max-width: 768px) {
+
+@media only screen and (min-width: 321px) and (max-width: 375px){
     .bg-blog{
-        height: 4800px !important;
+        height: 3350px !important;
+        margin-bottom: 3000px !important;
+    }
+    .blog-div{
+        height: 400px !important;
+        box-shadow: 0px 0px 20px #00000040 !important;
+
+    }
+    .copy-hide{
+        display: block;
+        font-size: 10px;
+
+    }
+    .copy-hide1{
+        display: none;
+        font-size: 14px;
+    }
+}
+@media only screen and (min-width: 376px) and (max-width: 425px){
+    .bg-blog{
+        height: 3200px !important;
+        margin-bottom: 3000px !important;
+    }
+    .blog-div{
+        height: 400px !important;
+        box-shadow: 0px 0px 20px #00000040 !important;
+
+    }
+    .copy-hide{
+        display: block;
+        font-size: 10px;
+
+    }
+    .copy-hide1{
+        display: none;
+        font-size: 14px;
+    }
+}
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .bg-blog{
+        height: 4100px !important;
         margin-bottom: 2900px !important;
     }
     .blog-div{
         height: 500px;
         box-shadow: 0px 0px 20px #00000040 !important;
 
+    }
+    .copy-hide{
+        display: block;
+        font-size: 12px;
+
+    }
+    .copy-hide1{
+        display: none;
+        font-size: 14px;
     }
 }
  @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -78,10 +139,23 @@ position: relative;
         height: 1500px !important;
         margin-bottom: 2700px !important;
     }
+    .copy-hide{
+        display: block;
+        font-size: 12px;
+
+    }
+    .copy-hide1{
+        display: block;
+        font-size: 14px;
+    }
  }
  @media only screen and (min-width: 1024px) and (max-width:1440px ) {
     .bg-blog{
         height: 1500px !important;
         margin-bottom: 2700px !important;
+    }
+    .copy-hide1{
+        display: block;
+        font-size: 14px;
     }
  }

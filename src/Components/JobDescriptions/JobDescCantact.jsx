@@ -173,15 +173,15 @@ function JobDescContact() {
       </div>
       <Container fluid className="rounded rounded-5 mt-5">
         <img src={contactbg} alt="Background" className="contact-form-bg con-bg" />
-        <Container className="contact-form-content">
+        <div className="contact-form-content">
           {isLoading ? (
             <div
               style={{
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                height: "100%",
-                minHeight: "400px",
+                // height: "100%",
+                // minHeight: "400px",
               }}
             >
               <Spinner animation="border" role="status" style={{ width: "3rem", height: "3rem" }}>
@@ -190,7 +190,7 @@ function JobDescContact() {
             </div>
           ) : (
             <Form className="contact-form-box" onSubmit={handleSubmit}>
-              <Row className="pt-4 my-5">
+               <Row className="pt-4 ">
                 <Col xs={12} lg={3} className="text">
                   <p style={{ fontSize: "25px", fontWeight: "500" }} className="pp">Join Us</p>
                   <li className="py-3">Join our team of innovators and make an impact in the world of technology.</li>
@@ -346,7 +346,7 @@ function JobDescContact() {
                     )}
                   </Button>
                 </Col>
-              </Row>
+              </Row> 
             </Form>
           )}
           {successMessage && (
@@ -354,7 +354,7 @@ function JobDescContact() {
               {successMessage}
             </p>
           )}
-        </Container>
+        </div>
       </Container>
     </div>
   );

@@ -54,12 +54,13 @@
   /* .started{
     height: 500px;
   } */
+ 
   @media only screen and (min-width: 320px){
 .howstart{
       padding: 10px !important;
     }
     .differ{
-      height: 350px !important;
+      height: 300px !important;
     }
     .whatdiffer{
       margin-bottom: 100px !important;
@@ -79,7 +80,7 @@
       padding: 10px !important;
     }
     .differ{
-      height: 350px !important;
+      height: 280px !important;
     }
     .whatdiffer{
       margin-bottom: 100px !important;
@@ -87,7 +88,7 @@
   }
   @media only screen and (min-width: 376px) and (max-width: 425px){
     .differ{
-      height: 300px !important;
+      height: 250px !important;
     }
   }
   @media only screen and (min-width: 426px) and (max-width: 768px){
@@ -125,7 +126,7 @@
       height: 400px !important; 
 
     }
-    .differ{
+    /* .differ{
       height: 450px !important;
-    }
+    } */
   }

@@ -73,7 +73,7 @@ function OurBusiness() {
   }, [inView, controls]);
 
   return (
-    <div ref={ref} className="poppins-regular text-center my-5 text">
+    <div ref={ref} className="poppins-regular text-center pt-2 my-lg-5 text">
       <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
       <Container>
         <motion.h2 variants={textVariants} initial="hidden" animate={controls}>

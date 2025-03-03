@@ -5,6 +5,11 @@ import f1 from '../../assets/2.png';
 import f2 from '../../assets/1.png';
 import f3 from '../../assets/3.png';
 import f4 from '../../assets/4.png';
+
+import f11 from '../../assets/F1.png';
+import f21 from '../../assets/F2 (1).png';
+import f31 from '../../assets/F3 (1).png';
+import f41 from '../../assets/F4 (1).png';
 import HederNav from '../HeaderNav/HederNav';
 import OurBusiness from '../OurBusiness/OurBusiness';
 import OurServices from '../OurServices/OurServices1';
@@ -23,27 +28,25 @@ function Home() {
         }
     }, [location]);
  const carouselItems = [
-    {
-      id: 1,
-      image: f1,
-      title: "Welcome to the Future of Technology Innovation, Insights, and Ideas",
-      description: "At FTFL Technology, we create cutting-edge tech solutions that drive progress and redefine possibilities. Let’s build the future together.",
-    },
+  
     {
       id: 2,
       image: f2,
+      images: f21,
       title: "Welcome to the Future of Technology Innovation, Insights, and Ideas",
       description: "At FTFL Technology, we create cutting-edge tech solutions that drive progress and redefine possibilities. Let’s build the future together.",
     },
     {
       id: 3,
       image: f3,
+      images: f31,
       title: "Welcome to the Future of Technology Innovation, Insights, and Ideas",
       description: "At FTFL Technology, we create cutting-edge tech solutions that drive progress and redefine possibilities. Let’s build the future together.",
     },
     {
         id: 3,
         image: f4,
+        images: f41,
         title: "Welcome to the Future of Technology Innovation, Insights, and Ideas",
         description: "At FTFL Technology, we create cutting-edge tech solutions that drive progress and redefine possibilities. Let’s build the future together.",
       },
@@ -56,10 +59,25 @@ function Home() {
                     <HederNav />
                 </div>
 
-                <Carousel fade className="carousel-container about position-relative text-center">
+                <Carousel fade className="carousel-container about position-relative text-center home-cara1">
       {carouselItems.map((item) => (
         <Carousel.Item key={item.id} interval={1000} >
           <img src={item.image} className="img-fluid w-100 about-img" alt={`Slide ${item.id}`} />
+          
+          <div className="position-absolute translate-middle p-3 header-content w-75">
+            <h1 className="text-white fw-bold my-4 h1">{item.title}</h1>
+            <p className="text-white header-p mb-5">{item.description}</p>
+           
+           <span className="py-2  px-md-5 px-lg-5 px-xl-5 rounded rounded-5 text-white scrash" style={{backgroundColor:" #FFFFFF57", border:"1px solid white", fontWeight:"500"}}>From Scratch to Success</span>
+          </div>
+        </Carousel.Item>
+      ))}
+    </Carousel>
+                <Carousel fade className="carousel-container about position-relative text-center home-cara2">
+      {carouselItems.map((item) => (
+        <Carousel.Item key={item.id} interval={1000} >
+          <img src={item.images} className="img-fluid w-100 about-img" alt={`Slide ${item.id}`} />
+          
           <div className="position-absolute translate-middle p-3 header-content w-75">
             <h1 className="text-white fw-bold my-4 h1">{item.title}</h1>
             <p className="text-white header-p mb-5">{item.description}</p>

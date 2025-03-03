@@ -10,7 +10,7 @@ const ItConsulting = forwardRef((props, ref) => {
   const navigate = useNavigate();
 
   return (
-    <div ref={ref} className='pt-5'>
+    <div ref={ref} className='pt-lg-5'>
       <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
 
       <div className="flex-grow-1 my-5 py-5">

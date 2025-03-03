@@ -61,7 +61,7 @@
   color: #298CF3;
   border-left: 4px solid #298CF3;
   padding-left: 15px;
-  font-weight: 500;
+  font-weight: 500;         
 }
 .animate-text {
   transform: translateY(30px);
@@ -119,9 +119,12 @@
 .bor1{
   display: block !important;
 }
+.home-cara2{
+  display: none;
+}
 @media only screen  and  (max-width: 320px){
   .header-content .h1{
-    font-size: 20px !important;
+    font-size: 17px !important;
 }
 .header-p{
   font-size: 14px !important;
@@ -159,10 +162,16 @@ padding: 10px;
 }
 .overlay-nav1{
   position: absolute;
-  top: 5%;
+  top: 0%;
   width: 100%;
   z-index: 10;
   padding: 10px; 
+}
+.home-cara1{
+  display: none;
+}
+.home-cara2{
+  display:block;
 }
 }
 
@@ -206,10 +215,16 @@ padding: 10px;
 }
 .overlay-nav1{
   position: absolute;
-  top: 5%;
+  top: 3%;
   width: 100%;
   z-index: 10;
   padding: 10px; 
+}
+.home-cara1{
+  display: none;
+}
+.home-cara2{
+  display:block;
 }
 }
 
@@ -236,7 +251,7 @@ padding: 10px;
 .overlay-nav
 {
   position: absolute;
-  top: 15%;
+  top: 10%;
   width: 100%;
   z-index: 10;
   padding: 10px; 
@@ -254,6 +269,12 @@ padding: 10px;
 }
 .bor{
   display: block;
+}
+.home-cara1{
+  display: none;
+}
+.home-cara2{
+  display:block;
 }
 }
 @media only screen and (min-width: 426px) and (max-width: 768px)

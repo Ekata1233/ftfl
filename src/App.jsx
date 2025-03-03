@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Components/Home/Home';
@@ -21,42 +21,40 @@ import JobDescriptions from './Components/JobDescriptions/JobDescriptions';
 import FutureAi from './Components/Blog/futureAi/FutureAi';
 import ItConsultingBuinessGrowth from './Components/Blog/ItConsulting &BusinessGrowth/ItConsultingBuinessGrowth';
 import { HelmetProvider } from 'react-helmet-async';
-function App() {
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
+import './Components/ScrollToTop/ScrollToTop.css'
 
+function App() {
   return (
     <>
-    <HelmetProvider>
-      <BrowserRouter>
-          {/* <HederNav/> */}
+      <HelmetProvider>
+        <BrowserRouter>
+          <ScrollToTop />
           <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/about" element={<About/>}/>
-            <Route path="/services" element={<Services/>}/>
-            <Route path="/blogs" element={<Blog/>}/>
-            <Route path="/careers" element={<Carreers/>}/>
-            <Route path="/contact" element={<ConatctUS/>}/>
-           
-
-            <Route path="/blogs/latest-tech-trends/ai&machine" element={<AiMLearning/>}/>
-
-            <Route path="/blogs/latest-tech-trends/cloudcomputing" element={<CloudComputing/>}/>
-            <Route path="/blogs/latest-tech-trends/web&mobile" element={<FutureWebMobile/>}/>
-            <Route path="/blogs/web-&-mobile-development/frontendVsbackend" element={<FrontendVSBackend/>}/>
-            <Route path="/blogs/web-&-mobile-development/reactvsangular" element={<ReactVSAngulr/>}/>
-            <Route path="/blogs/web-&-mobile-development/mobileperformance" element={<MobilePerformance/>}/>
-            <Route path="/blogs/itconsultation/digitaltransformation" element={<DigitalTransformation/>}/>
-            <Route path="/blogs/itconsultation/costeffectivestartup" element={<CostEffectiveStartup/>}/>
-            <Route path="/blogs/itconsultation/businessroadmaps" element={<BusinssRoadmaps/>}/>
-            <Route path="/jobdescription/:id" element={<JobDescriptions/>}/>
-            <Route path="/blogs/futureai/futureai" element={<FutureAi/>}/>
-            <Route path="/blogs/it-consulting" element={<ItConsultingBuinessGrowth/>}/>
-
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/blogs" element={<Blog />} />
+            <Route path="/careers" element={<Carreers />} />
+            <Route path="/contact" element={<ConatctUS />} />
+            <Route path="/blogs/latest-tech-trends/ai&machine" element={<AiMLearning />} />
+            <Route path="/blogs/latest-tech-trends/cloudcomputing" element={<CloudComputing />} />
+            <Route path="/blogs/latest-tech-trends/web&mobile" element={<FutureWebMobile />} />
+            <Route path="/blogs/web-&-mobile-development/frontendVsbackend" element={<FrontendVSBackend />} />
+            <Route path="/blogs/web-&-mobile-development/reactvsangular" element={<ReactVSAngulr />} />
+            <Route path="/blogs/web-&-mobile-development/mobileperformance" element={<MobilePerformance />} />
+            <Route path="/blogs/itconsultation/digitaltransformation" element={<DigitalTransformation />} />
+            <Route path="/blogs/itconsultation/costeffectivestartup" element={<CostEffectiveStartup />} />
+            <Route path="/blogs/itconsultation/businessroadmaps" element={<BusinssRoadmaps />} />
+            <Route path="/jobdescription/:id" element={<JobDescriptions />} />
+            <Route path="/blogs/futureai/futureai" element={<FutureAi />} />
+            <Route path="/blogs/it-consulting" element={<ItConsultingBuinessGrowth />} />
           </Routes>
-          <Footer/>
-      </BrowserRouter>
+          <Footer />
+        </BrowserRouter>
       </HelmetProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

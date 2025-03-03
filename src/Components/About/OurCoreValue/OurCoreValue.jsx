@@ -1,4 +1,4 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Col,  Row } from "react-bootstrap";
 import valuebg from "../../../assets/bg.png";
 import innovation from "../../../assets/light-bulb (1).png";
 import coustmer from "../../../assets/bro.png";
@@ -62,7 +62,7 @@ function OurCoreValue() {
   </Row>
   <Row>
    <div className="py-lg-3">
-   <div style={{border:"2px solid #298CF3"}} className="rounded rounded-4   py-lg-5 mt-5 futture ">
+   <div style={{border:"2px solid #298CF3"}} className="rounded rounded-4   py-lg-5 mt-5  ">
     <p className="text-center pb-3"><span className="" style={{ fontWeight: "600", fontSize: "45px", }}>Grow Your</span><span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Future </span><span className="" style={{ fontWeight: "600", fontSize: "45px", }}>With Us</span></p>
     <p className="text-center text text-secondary">Join FTFL Technology and unlock endless opportunities to develop your skills, innovate, and shape the future of digital transformation.</p>
     <div className="d-flex justify-content-center">

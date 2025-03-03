@@ -58,4 +58,7 @@
         position: static;
         margin: 0 auto;
     }
+    .card{
+      height: 500px !important;
+    }
 }

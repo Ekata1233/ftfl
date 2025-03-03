@@ -10,13 +10,14 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IoMdStar, IoMdStarHalf, IoMdStarOutline } from "react-icons/io";
 import Image from "../../assets/Ellipse 159.png";
 import SEO from "../SEO";
+import { motion } from "framer-motion";
 
 // Star Rating Component
 const StarRating = ({ rating }) => {
   const fullStars = Math.floor(rating);
   const halfStar = rating % 1 !== 0;
   const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
-
+ 
   return (
     <div style={{ color: "#298CF3", display: "flex" }}>
       {[...Array(fullStars)].map((_, i) => (
@@ -40,15 +41,18 @@ const CardSlider = () => {
     { id: 4, title: "Card 4", name: "Name Name", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", rating: 3.5 },
     { id: 5, title: "Card 5", name: "Name Name", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", rating: 4 },
   ];
-
+  const scrollVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
-    <Container className="py-4 text-center">
+    <div className="py-4 text-center">
       <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={20}
         slidesPerView={3}
-        pagination={{ clickable: true }}
+        pagination={false} // Disables pagination
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         loop={true}
         navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
@@ -63,27 +67,39 @@ const CardSlider = () => {
         className="py-3"
       >
         {cards.map((card, index) => (
-          <SwiperSlide key={card.id} className="">
-            <div className={`card shadow-sm text-center ${window.innerWidth < 768 ? 'py-4' : 'py-md-3'} p-lg-4  ${index === activeIndex+1 ? "active-card" : ""}`}
-              style={{ border: "1px solid #298CF3" }}>
-              <div className="d-flex mb-3">
-                <img
-                  src={Image}
-                  alt="Profile"
-                  className="rounded-circle me-4 d-block ms-2"
-                  style={{ border: "2px solid #298CF3", padding: "5px", width: "80px", height: "80px" }}
-                />
-                <div className="text-start mt-2">
-                  <h2 className="h5">{card.title}</h2>
-                  <p>{card.name}</p>
-                </div>
-              </div>
-              <div className="ms-2">
-                <StarRating rating={card.rating} />
-                <p className="mt-3 text-start">{card.description}</p>
-              </div>
-            </div>
-          </SwiperSlide>
+             <SwiperSlide key={card.id} className="">
+             <div
+               className={`card shadow-sm text-center ${
+                 window.innerWidth < 768 ? "py-4" : "py-md-3"
+               } p-lg-4 ${index === activeIndex + 1 ? "active-card" : ""}`}
+               style={{ border: "1px solid #298CF3" }}
+             >
+               <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
+               <div className="d-flex mb-3">
+                 <img
+                   src={Image}
+                   alt="Profile"
+                   className="rounded-circle me-4 d-block ms-2"
+                   style={{
+                     border: "2px solid #298CF3",
+                     padding: "5px",
+                     width: "80px",
+                     height: "80px",
+                   }}
+                 />
+                 <div className="text-start mt-2">
+                   <h2 className="h5">{card.title}</h2>
+                   <p>{card.name}</p>
+                 </div>
+               </div>
+               <div className="ms-2">
+                 <StarRating rating={card.rating} />
+                 <p className="mt-3 text-start">{card.description}</p>
+               </div>
+               {/* Pagination inside card */}
+               </motion.div>
+             </div>
+           </SwiperSlide>
         ))}
       </Swiper>
 
@@ -114,7 +130,7 @@ const CardSlider = () => {
           box-shadow: 0px 10px 20px rgba(41, 140, 243, 0.3);
         }
       `}</style>
-    </Container>
+    </div>
   );
 };
 
