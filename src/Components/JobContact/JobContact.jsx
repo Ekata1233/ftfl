@@ -185,7 +185,7 @@ function JobContact() {
           <span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Next Step in Your Career</span>
         </p>
       </div>
-      <Container fluid className="contact-form-container rounded rounded-5 mt-5">
+      <div className="contact-form-container rounded rounded-5 mt-5">
         <img src={contactbg} alt="Background" className="contact-form-bg con-bg" />
         <Container className="contact-form-content">
           <Form className="contact-form-box" onSubmit={handleSubmit}>
@@ -305,7 +305,7 @@ function JobContact() {
           </Form>
           {successMessage && <p style={{ color: "#28a745", fontWeight: "bold" }} className="text-center">{successMessage}</p>}
         </Container>
-      </Container>
+      </div>
     </div>
   );
 }
