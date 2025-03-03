@@ -21,7 +21,7 @@ import NewsLetter from '../../Newletter/NewsLetter'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 import SEO from '../../SEO'
-
+import { motion } from "framer-motion";
 function OurBlog() {
     const navigate = useNavigate();
     const location = useLocation();
@@ -62,7 +62,10 @@ const itAndBusinessRef=useRef(null);
             }, 100);
         }
     }, [location]);
-    
+    const scrollVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      };
     return (
         <div>
              <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
@@ -74,18 +77,25 @@ const itAndBusinessRef=useRef(null);
                             <div className='ourblog-Container'>
                                 <div className='ourblog-Container1'>
                                 <div className="text-center mt-lg-5" >
+                                <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                     <p>
                                         <span className='text-dark' style={{ fontWeight: "400", fontSize: "45px" }}>Our</span>
                                         <span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Blog</span>
                                     </p>
+                                    </motion.div>
                                 </div>
                                <div ref={latestTechTrendsRef} className='pt-3 pt-lg-5'>
                                <div  >
+                               <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                     <p className=' mt-lg-5 pt-lg-5' style={{ fontSize: "32px ", fontWeight: "500" }}>Latest Tech Trends</p>
                                     <p className='text text-secondary mt-3 mb-5'>Explore insights on AI, cloud computing, and emerging technologies shaping the future, driving innovation and transformation across industries, and unlocking new possibilities for businesses and individuals alike.</p>
+                                    </motion.div>
                                 </div >
                                 <Row>
-                                    <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4} className='my-4'>
+                                    <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4} 
+                                    
+                                    className='my-4'>
+                                          <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                         <div className='p-4 rounded rounded-5 blog-div ' style={{
                                             border: "",
 
@@ -100,8 +110,10 @@ const itAndBusinessRef=useRef(null);
                                             </div>
                                            
                                         </div>
+                                        </motion.div>
                                     </Col>
                                     <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4} className='my-4'>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                     <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
                                             
@@ -113,8 +125,10 @@ const itAndBusinessRef=useRef(null);
                                             <p className='text text-secondary'>Learn how businesses are leveraging cloud technology for scalability and efficiency.</p>
                                             </div>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                     <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4} className='my-4'>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                     <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
                                             
@@ -126,16 +140,20 @@ const itAndBusinessRef=useRef(null);
                                             <p className='text text-secondary'>Cloud technology is driving the future of web and mobile apps with scalability and efficiency.</p>
                                             </div>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                 </Row>
                                </div>
                                <div  ref={webMobileDevRef} className='mt-lg-5 pt-lg-5'>
                                <div className='pt-5'>
+                               <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                     <p className='' style={{ fontSize: "32px ", fontWeight: "500" }}>Web & Mobile Development</p>
                                     <p className='text text-secondary mt-3 mb-5'>Learn about the latest frameworks, coding techniques, and performance optimization tips.</p>
+                                    </motion.div>
                                 </div>
                                 <Row>
                                     <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4} className='my-4'>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                         <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
                                             
@@ -149,8 +167,10 @@ const itAndBusinessRef=useRef(null);
                                             </div>
                                            
                                         </div>
+                                        </motion.div>
                                     </Col>
                                     <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4} className='my-4'>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                     <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
                                             
@@ -162,8 +182,10 @@ const itAndBusinessRef=useRef(null);
                                             <p className='text text-secondary'>React vs. Vue vs. Angular – React for scale, Vue for ease, Angular for enterprise.</p>
                                             </div>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                     <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4} className='my-lg-4'>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                     <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
                                             
@@ -175,6 +197,7 @@ const itAndBusinessRef=useRef(null);
                                             <p className='text text-secondary'>Optimize your mobile app by compressing assets, minimizing API calls, and improving rendering.</p>
                                             </div>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                 </Row>
                                </div>
@@ -185,11 +208,14 @@ const itAndBusinessRef=useRef(null);
                               <div>
                                <div  ref={itConsultingRef} className='mt-lg-5 pt-lg-5'>
                                <div className='pt-lg-5'>
+                               <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                     <p className='' style={{ fontSize: "32px ", fontWeight: "500" }}>Some more on IT Consultation</p>
                                     <p className='text text-secondary mt-3 mb-5'>Learn about the latest frameworks, coding techniques, and performance optimization tips. Discover cutting-edge tools that enhance development efficiency and streamline workflows. Stay updated with real-world case studies and expert recommendations.</p>
+                                    </motion.div>
                                 </div>
                                 <Row>
                                     <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4} className='my-4'>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                         <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
                                             
@@ -203,8 +229,10 @@ const itAndBusinessRef=useRef(null);
                                             </div>
                                            
                                         </div>
+                                        </motion.div>
                                     </Col>
                                     <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4} className='my-4'>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                     <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
                                             
@@ -217,8 +245,10 @@ const itAndBusinessRef=useRef(null);
                                             <p className='text text-secondary'> Discover smart IT investments to grow your business on a budget.</p>
                                             </div>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                     <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4} className='my-4'>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                     <div className='p-4 rounded rounded-5 blog-div' style={{
                                             border: "",
                                             
@@ -232,6 +262,7 @@ const itAndBusinessRef=useRef(null);
                                             <p className='text text-secondary'> Learn how strategic IT planning helps companies stay ahead of tech changes.</p>
                                             </div>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                 </Row>
                                </div>

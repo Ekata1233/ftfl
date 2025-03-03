@@ -10,10 +10,14 @@ import OurVision from "./OurVison/OurVision";
 import OurCoreValue from "./OurCoreValue/OurCoreValue";
 import { useNavigate } from "react-router-dom";
 import SEO from "../SEO";
-
+import { motion } from "framer-motion";
 function About() {
   const navigate=useNavigate()
-  
+ 
+  const scrollVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <div className="d-flex flex-column min-vh-100">
       <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
@@ -28,6 +32,7 @@ function About() {
       <div className="carousel-container about position-relative text-center">
         <img src={about} className="img-fluid w-100 about-img" alt="Slide 1" />
         <div className="position-absolute translate-middle p-3 header-content w-100">
+        <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
           <p className="text-white text">About</p>
           <h1 className="text-white fw-bold my-4 h1">
             Building Brands, Shaping Tech
@@ -39,6 +44,7 @@ function About() {
           <Button variant="" className="mt-4 blue-btn text-white" onClick={()=>navigate('/contact')}>
             Contact Us <MdArrowForwardIos />
           </Button>
+          </motion.div>
         </div>
       </div>
 

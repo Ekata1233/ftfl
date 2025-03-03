@@ -4,7 +4,7 @@ import newsletter from '../../assets/newletter.png';
 import Form from 'react-bootstrap/Form';
 import '../Blog/OurBLog/OurBlog.css';
 import SEO from '../SEO';
-
+import { motion } from "framer-motion";
 function NewsLetter() {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -39,7 +39,10 @@ function NewsLetter() {
             setIsLoading(false); // Set loading to false
         }
     };
-
+    const scrollVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      };
     return (
         <div className="pt-5 mt-lg-5">
             <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
@@ -52,6 +55,7 @@ function NewsLetter() {
                     </Col>
                     <Col>
                         <div>
+                        <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                             <p className="fw-bold" style={{ fontSize: '30px' }}>Get our weekly</p>
                             <h1 style={{ color: " #298CF3", fontWeight: "700" }}>NEWSLETTER</h1>
                             <p className="mt-4 text">
@@ -59,6 +63,7 @@ function NewsLetter() {
                                 Stay informed with the latest stories, trends, and insights from around the globe—straight to your inbox.
                                 <br /> <span className="fw-bold">Subscribe now!</span>
                             </p>
+                            </motion.div>
                         </div>
                     </Col>
                     <Col xs={12} sm={12} md={12} lg={12} xl={12}>

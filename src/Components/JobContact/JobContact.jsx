@@ -5,7 +5,7 @@ import { Button, Col, Container, Form, Row, Spinner } from "react-bootstrap";
 import '../../Components/CarreerOpportunities/CarreersOpportunities.css';
 import '../JobContact/JobContact.css';
 import SEO from "../SEO";
-
+import { motion } from "framer-motion";
 function JobContact() {
   const [file, setFile] = useState(null);
   const [formData, setFormData] = useState({
@@ -175,21 +175,30 @@ function JobContact() {
       }
     }
   };
-
+  const scrollVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <div className="carrer-div">
       <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
       <div className="text-center mt-5 pt-5 mb-5 pb-5 pt-5">
+      <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
         <p>
           <span style={{ fontWeight: "400", fontSize: "45px" }}>Take the </span>
           <span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Next Step in Your Career</span>
         </p>
+        </motion.div>
       </div>
       <div className="contact-form-container rounded rounded-5 mt-5">
+      <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
         <img src={contactbg} alt="Background" className="contact-form-bg con-bg" />
+        </motion.div>
         <Container className="contact-form-content">
+        <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
           <Form className="contact-form-box" onSubmit={handleSubmit}>
             <Row className="pt-4 my-5">
+              
             <Col xs={12} lg={3} className="text">
                   <p style={{ fontSize: "25px", fontWeight: "500" }} className="pp">Join Us</p>
                   <li className="py-3">Join our team of innovators and make an impact in the world of technology.</li>
@@ -303,6 +312,7 @@ function JobContact() {
               </Col>
             </Row>
           </Form>
+          </motion.div>
           {successMessage && <p style={{ color: "#28a745", fontWeight: "bold" }} className="text-center">{successMessage}</p>}
         </Container>
       </div>

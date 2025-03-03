@@ -13,9 +13,13 @@ import itSale from '../../../assets/mobile-app.png'
 import itConsulting from '../../../assets/itconsulting.png'
 import SEO from '../../SEO'
 
-
+import { motion } from "framer-motion";
 
 function OurServices() {
+    const scrollVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      };
     return (
         <div>
             <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
@@ -27,10 +31,12 @@ function OurServices() {
                             <OurServices1 />
 
                           <div className='py-5'>
+                          <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                           <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-2'>
                                 <Row className='px-5 ' >
                                     
                                     <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6}>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                         <div className=''>
                                             <h3>Web Application Development</h3>
                                             <p className='text-secondary text text'>
@@ -44,18 +50,23 @@ function OurServices() {
                                                 <p> CMS & eCommerce platforms</p>
                                             </div>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                     <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6}>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                         <div className='text-end'>
                                             <img src={webApp} className='img-fluid'/>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                    
                                 </Row>
                                 
                             </div>
+                            </motion.div>
                           </div>
                           <div className='py-lg-5'>
+                          <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                             <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-2'>
                                 <Row className='px-5 ' >
                                 <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6} className='hide-col1 '>
@@ -64,6 +75,7 @@ function OurServices() {
                                         </div>
                                     </Col>
                                     <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6}>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                         <div className=''>
                                             <h3>Mobile Application Development</h3>
                                             <p className='text-secondary text'>
@@ -77,22 +89,28 @@ function OurServices() {
                                                 <p>App store deployment & optimization</p>
                                             </div>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                     
                                     <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6}className='hide-col'>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                         <div className='text-end'>
                                             <img src={mobileApp} className='img-fluid'/>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                 </Row>
                                 
                             </div>
+                            </motion.div>
                             </div>
                             <div className=' pt-5 py-lg-5'>
+                            <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                             <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-2'>
                                 <Row className='px-5 ' >
                                     
                                     <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6}>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                         <div className=''>
                                             <h3>UX/UI Design</h3>
                                             <p className='text-secondary text text'>
@@ -106,18 +124,23 @@ function OurServices() {
                                                 <p>Brand identity & visual consistency</p>
                                             </div>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                     <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6}>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                         <div className='text-end'>
                                             <img src={uiux} className='img-fluid'/>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                    
                                 </Row>
                                 
                             </div>
+                            </motion.div>
                             </div>
                             <div className='pt-5 py-lg-5'>
+                            <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                             <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-2'>
                                 <Row className='px-5 ' >
                                 <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6} className='hide-col1'>
@@ -126,6 +149,7 @@ function OurServices() {
                                         </div>
                                     </Col>
                                     <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6}>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                         <div className=''>
                                             <h3>Graphic Design</h3>
                                             <p className='text-secondary text'>
@@ -139,22 +163,28 @@ function OurServices() {
                                                 <p>Motion graphics & animations</p>
                                             </div>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                     
                                     <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6}className='hide-col'>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                         <div className='text-end'>
                                             <img src={graphic} className='img-fluid'/>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                 </Row>
                                 
                             </div>
+                            </motion.div>
                             </div>
                             <div className='pt-5 py-lg-5'>
+                            <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                             <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-2'>
                                 <Row className='px-5 ' >
                                     
                                     <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6}>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                         <div className=''>
                                             <h3> IT Sales & Support</h3>
                                             <p className='text-secondary text text'>
@@ -168,18 +198,23 @@ function OurServices() {
                                                 <p>Managed IT services</p>
                                             </div>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                     <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6}>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                         <div className='text-end'>
                                             <img src={itSale} className='img-fluid'/>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                    
                                 </Row>
                                 
                             </div>
+                            </motion.div>
                             </div>
                             <div className='pt-5 py-lg-5'>
+                            <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                             <div style={{ border: "1px solid #67EEFF", boxShadow: "0px 0px 14.4px #529FEFD6" }} className='rounded rounded-5 px-lg-5 py-5 my-2'>
                                 <Row className='px-5 ' >
                                 <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6} className='hide-col1'>
@@ -188,6 +223,7 @@ function OurServices() {
                                         </div>
                                     </Col>
                                     <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6}>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                         <div className=''>
                                             <h3>IT Consulting</h3>
                                             <p className='text-secondary text'>
@@ -201,16 +237,20 @@ function OurServices() {
                                                 <p>Cost optimization & risk management</p>
                                             </div>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                     
                                     <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6}className='hide-col'>
+                                    <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                                         <div className='text-end'>
                                             <img src={itConsulting} className='img-fluid'/>
                                         </div>
+                                        </motion.div>
                                     </Col>
                                 </Row>
                                 
                             </div>
+                            </motion.div>
                         </div>
                         </div>
                     </Container>

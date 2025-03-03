@@ -34,14 +34,17 @@ function Carreers() {
   }, [location]);
 
   const content = [
-    { img: why1, title: "Innovative", p: 'Join FTFL Technology and innovate with us to shape the future of IT.' },
+    { img: why1, title: "Innovative", p: 'Join FTFL Technology and boldly innovate with us to shape the future of IT.' },
     { img: why2, title: "Expertise", p: "FTFL Technology – Unmatched expertise that transforms ideas into reality." },
     { img: why3, title: "Partnership", p: "FTFL Technology – Building strong partnerships for a smarter future together." },
     { img: why4, title: "Scalability", p: "Technology that grows as fast as your vision—powered by FTFL Technology." },
-    { img: why5, title: "Success", p: "Success isn’t a destination; with FTFL Technology, it’s a journey of growth." },
-    { img: why6, title: "Support", p: "Reliable solutions, dedicated support—FTFL Technology has your back." },
+    { img: why5, title: "Success", p: "Success isn’t a destination; with FTFL Technology, it’s a continuous journey of growth." },
+    { img: why6, title: "Support", p: "Reliable solutions, dedicated support—FTFL Technology always has your back." },
   ];
-
+  const scrollVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <div>
       <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
@@ -54,6 +57,7 @@ function Carreers() {
           <div className="carousel-container about position-relative text-center">
             <img src={carrers} className="img-fluid w-100 about-img" alt="Slide 1" />
             <div className="position-absolute translate-middle py-4 my-4  header-content w-100 px-3">
+            <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
               <p className="text-white text">Carreers</p>
               <h1 className="text-white fw-bold my-4 mx-3 h1">
                 Shape the Future With Us
@@ -70,6 +74,7 @@ function Carreers() {
               >
                 Apply Now <MdArrowForwardIos />
               </Button>
+              </motion.div>
             </div>
           </div>
 
@@ -111,7 +116,7 @@ function Carreers() {
                       >
                         <motion.div
                           ref={ref}
-                          className="col-content py-lg-4 my-lg-4 mx-3 shadow-box p-3"
+                          className="col-content py-lg-4 my-lg-4 mx-lg-3 shadow-box w-100 p-3"
                           initial={{ opacity: 0, y: 50 }}
                           animate={controls}
                           transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
@@ -146,21 +151,27 @@ function Carreers() {
                   })}
                 </Row>
                 <div className="text-center my-lg-5 pt-5" >
+                <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                   <p className="">
                     <span className='text-dark' style={{ fontWeight: "400", fontSize: "40px" }}>Open</span>
                     <span className="blue" style={{ fontWeight: "600", fontSize: "40px" }}> Positions</span>
                   </p>
+                  </motion.div>
+                  <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                   <p className="text text-center text-secondary pt-5 pb-5">FTFL Technology is looking for skilled professionals to join our growing team. Exciting opportunities await in a dynamic and innovative environment. Take the next step in your career and apply today! 🚀</p>
+                  </motion.div>
                 </div>
                 <div>
                   <Positions />
                 </div>
                 <div className="my-lg-5 py-lg-5">
                   <div className="text-start my-lg-5 py-5" >
+                  <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                     <p>
                       <span className='text-dark' style={{ fontWeight: "400", fontSize: "40px" }}>Explore</span>
                       <span className="blue" style={{ fontWeight: "600", fontSize: "40px" }}> Career Opportunities</span>
                     </p>
+                    </motion.div>
                   </div>
 
                   {/* Scroll Target Section */}

@@ -6,7 +6,12 @@ import Whychoose1 from '../../assets/Group 1000001776.png'
 import '../WhyChooseUs/WhyChhoseUS.css'
 import Testimonial from '../Testimonial/Testimonial'
 import SEO from '../SEO'
+import { motion } from "framer-motion";
 function WhyChooseUS() {
+  const scrollVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <div>
 
@@ -17,22 +22,29 @@ function WhyChooseUS() {
         <Container>
           <div className='whychoose-Container'>
             <div className="d-flex justify-content-center text-center  ">
+            <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
               <p className="mt-lg-5 pt-lg-5">
                 <span className="text-dark " style={{ fontWeight: "400", fontSize: "45px" }}>Why</span>
                 <span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Choose Us?</span>
               </p>
+              </motion.div>
             </div>
 
             <div className='my-lg-5 pt-5'>
+            <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
               <img src={Whychoose} className='img-fluid whychoose1 ' />
+              </motion.div>
+              <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
               <img src={Whychoose1} className='img-fluid whychoose2 ' />
-
+</motion.div>
             </div>
             <div className=' text-center pt-5'>
+            <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
               <p className="mt-5 pt-5 ">
                 <span className="text-dark " style={{ fontWeight: "400", fontSize: "45px" }}>Hear From Your</span>
                 <span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}>  Happy clients</span>
               </p>
+              </motion.div>
 
             </div>
             <div>
@@ -54,6 +66,7 @@ function WhyChooseUS() {
         className="d-flex flex-column  align-items-center text-center p-2 w-100 h-100"
         style={{ minHeight: "180px" }} // Decreased height
       >
+        <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
         <div
           className="rounded-circle d-flex align-items-center justify-content-center"
           style={{
@@ -64,6 +77,8 @@ function WhyChooseUS() {
         >
           <h1 className="text-white m-0">{item.number}</h1>
         </div>
+        </motion.div>
+        <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
         <p
           style={{
             fontSize: "28px", // Reduced text size
@@ -74,8 +89,12 @@ function WhyChooseUS() {
         >
           {item.title}
         </p>
+        </motion.div>
+        <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
         <p className="text m-0" >{item.subtitle}</p>
+        </motion.div>
       </div>
+
     </Col>
   ))}
 </Row>

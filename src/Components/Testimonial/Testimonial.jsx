@@ -35,13 +35,13 @@ const CardSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const cards = [
-    { id: 1, title: "Card 1", name: "Name Name", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", rating: 4.5 },
-    { id: 2, title: "Card 2", name: "Name Name", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", rating: 3.8 },
-    { id: 3, title: "Card 3", name: "Name Name", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", rating: 5 },
-    { id: 4, title: "Card 4", name: "Name Name", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", rating: 3.5 },
-    { id: 5, title: "Card 5", name: "Name Name", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", rating: 4 },
+    { id: 1, title: "Manish (Dubai)", name: "Cleaning Services App", description: "Effortless, professional cleaning services—book anytime with our easy-to-use app!", rating: 4.5 },
+    { id: 2, title: "Neeraj (Delhi)", name: " Social Media App", description: "Stay connected, share your moments, and engage with a vibrant community effortlessly.", rating: 3.8 },
+    { id: 3, title: "Mayur (USA)", name: "Learning Management System", description: "An all-in-one platform for seamless learning, collaboration, and skill development.", rating: 5 },
+    { id: 4, title: "Anwar (Usa)", name: "Auto Parts Management System", description: "Efficiently manage, track, and optimize auto parts inventory with our all-in-one system.", rating: 3.5 },
+  
   ];
-  const scrollVariants = {
+ const scrollVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
   };

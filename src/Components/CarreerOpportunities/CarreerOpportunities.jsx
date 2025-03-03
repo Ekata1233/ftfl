@@ -5,7 +5,7 @@ import { MdLocationOn } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import JobContact from "../JobContact/JobContact";
 import SEO from "../SEO";
-
+import { motion } from "framer-motion";
 function CareerOpportunities() {
   const navigate = useNavigate();
   const [selectedDepartment, setSelectedDepartment] = useState("Department");
@@ -76,12 +76,16 @@ function CareerOpportunities() {
         return matchesDepartment && matchesLocation && matchesSearchQuery && matchesOpeningType;
       })
     : [];
-
+    const scrollVariants = {
+      hidden: { opacity: 0, y: 50 },
+      visible: { opacity: 1, y: 0 },
+    };
   return (
     <div>
         <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
       <Row className="mb-5 mt-5 pb-5">
         <Col xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
+        <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
           <p style={{ fontSize: "24px", fontWeight: "400" }}>Job/Intern Role</p>
           <Form.Control
             type="text"
@@ -89,8 +93,10 @@ function CareerOpportunities() {
             value={searchQuery}
             onChange={handleSearchChange}
           />
+          </motion.div>
         </Col>
         <Col xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
+        <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
           <p style={{ fontSize: "24px", fontWeight: "400" }}>Department</p>
           <Dropdown>
             <Dropdown.Toggle
@@ -110,8 +116,10 @@ function CareerOpportunities() {
               ))}
             </Dropdown.Menu>
           </Dropdown>
+          </motion.div>
         </Col>
         <Col xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
+        <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
           <p style={{ fontSize: "24px", fontWeight: "400" }}>Location</p>
           <Dropdown>
             <Dropdown.Toggle
@@ -130,16 +138,19 @@ function CareerOpportunities() {
               ))}
             </Dropdown.Menu>
           </Dropdown>
+          </motion.div>
         </Col>
       </Row>
       <div>
         <Row>
           {filteredJobs.map((job, index) => (
             <Col key={index} xs={12} sm={12} md={6} lg={4} xl={4} xxl={4}>
+              <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
               <div
                 className="job-div text-dark rounded rounded-4 py-5 px-3 my-5"
                 style={{ border: "1px solid #298CF3" }}
               >
+                <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
                 <p className="" style={{ fontSize: "23px", fontWeight: "600" }}>
                   {job.jobTitle}
                 </p>
@@ -165,7 +176,9 @@ function CareerOpportunities() {
                     See More
                   </a>
                 </div>
+                </motion.div>
               </div>
+              </motion.div>
             </Col>
           ))}
         </Row>

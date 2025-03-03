@@ -3,9 +3,13 @@ import ServicesHeader from '../../assets/Services Hero Section.png'
 import OurServices from "../Services/OurServices/OurServices.jsx"
 import WhyChooseUS from "../WhyChooseUs/WhyChooseUS.jsx"
 import SEO from "../SEO.jsx"
-
+import { motion } from "framer-motion";
 
 function Services() {
+  const scrollVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <div className="d-flex flex-column min-vh-100">
       <SEO title="FTFL Technology" description="FTFL Technology specializes in software development, web applications, and IT consulting services." />
@@ -16,6 +20,7 @@ function Services() {
     <div className="carousel-container about position-relative text-center">
         <img src={ServicesHeader} className="img-fluid w-100 about-img" alt="Slide 1" />
         <div className="position-absolute translate-middle p-3 header-content w-100">
+        <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
           <p className="text-white text">Services</p>
           <h1 className="text-white fw-bold my-4 h1 pb-3">
            Empowering Businesses With  Cutting Edge Technology
@@ -28,6 +33,7 @@ function Services() {
           {/* <Button variant="" className="mt-4 blue-btn text-white">
             Join Our Team <MdArrowForwardIos />
           </Button> */}
+          </motion.div>
         </div>
       </div>
       <OurServices/>
