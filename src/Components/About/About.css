@@ -57,7 +57,7 @@ html, body {
   @media only screen and (min-width: 321px) and (max-width: 375px){
     .vector-image{
       margin-top: 300px;
-      margin-bottom: 750px !important;
+      margin-bottom: 800px !important;
   }
   .vision-row{
     margin-top: 50px;
