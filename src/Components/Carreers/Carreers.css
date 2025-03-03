@@ -45,33 +45,33 @@
       @media only screen and (max-width: 320px){
         .bg-carreer{
           height: 6500px !important;
-          margin-bottom: 2600px !important;
+          margin-bottom: 2100px !important;
          }
       }
       @media only screen and (min-width: 321px) and (max-width: 375px){
         .bg-carreer{
           height: 6500px !important;
-          margin-bottom: 2400px !important;
+          margin-bottom: 1800px !important;
          }
      }
       @media only screen and (min-width: 376px) and (max-width: 425px){
         .bg-carreer{
           height: 4750px !important;
-          margin-bottom: 4000px !important;
+          margin-bottom: 3400px !important;
          }
      }
      @media only screen and (min-width: 426px) and (max-width: 768px){
       .bg-carreer{
         height: 2800px !important;
-        /* margin-bottom: 2000px !important; */
+        margin-bottom: 2550px !important;
 
        }
      }
       @media only screen and (min-width: 769px) and (max-width: 1024px) {
-         /* .bg-carreer{
+         .bg-carreer{
           height: 5550px !important;
           margin-bottom: 100px !important;
-         } */
+         }
       }
       @media only screen and (min-width: 1024px) and (max-width:1440px){
         .bg-carreer{
