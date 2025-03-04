@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IoMdStar, IoMdStarHalf, IoMdStarOutline } from "react-icons/io";
-import Image from "../../assets/Ellipse 159.png";
+import Image from "../../assets/profile 1.png";
 import SEO from "../SEO";
 import { motion } from "framer-motion";
 
