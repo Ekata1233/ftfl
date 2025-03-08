@@ -123,31 +123,36 @@ function Footer() {
                             </Col>
                             <p className="w-100 text-center copy-hide1">Copyright © 2025 FTFL Technology Pvt.Ltd | All rights reserved</p>
                             <Row className="text-start social2">
-                                <Col>
-                                    <p>Our Socials</p>
-                                    <div className="d-flex">
-                                        <div className="touch rounded rounded-circle me-3" style={{ width: "40px", height: "40px" }}>
-                                            <a href="#" className="text-white text-decoration-none">
-                                                <FaFacebookF className="p-2" style={{ width: "40px", height: "40px", color: "#1877F2" }} />
-                                            </a>
+                            <Col>
+                                        <p>Our Socials</p>
+                                        <div className="d-flex">
+                                            <div className="touch rounded rounded-circle me-3" style={{ width: "40px", height: "40px" }}>
+                                                <a href="https://x.com/" className="text-white text-decoration-none">
+                                                    <FaXTwitter className="p-2" style={{ width: "40px", height: "40px", color: "black" }} />
+                                                </a>
+                                            </div>
+                                            <div className="touch rounded rounded-circle me-3" style={{ width: "40px", height: "40px" }}>
+                                                <a href="https://www.facebook.com/FTFLTechnology" className="text-white text-decoration-none">
+                                                    <FaFacebookF className="p-2" style={{ width: "40px", height: "40px", color: "#1877F2" }} />
+                                                </a>
+                                            </div>
+                                            <div className="touch rounded rounded-circle me-3" style={{ width: "40px", height: "40px" }}>
+                                                <a href="https://www.instagram.com/ftfltechnology?igsh=cG82ajFmeTE3aWZk" className="text-white text-decoration-none">
+                                                    <GrInstagram className="p-2" style={{ width: "40px", height: "40px", color: "#E4405F" }} />
+                                                </a>
+                                            </div>
+                                            <div className="touch rounded rounded-circle me-3" style={{ width: "40px", height: "40px" }}>
+                                                <a href="https://www.linkedin.com/company/ftfl-technology-pvt-ltd/" className="text-white text-decoration-none">
+                                                    <FaLinkedinIn className="p-2" style={{ width: "40px", height: "40px", color: "#0077B5" }} />
+                                                </a>
+                                            </div>
+                                            <div className="touch rounded rounded-circle me-3" style={{ width: "40px", height: "40px" }}>
+                                                <a href="https://wa.me/919272003735" className="text-white text-decoration-none">
+                                                    <ImWhatsapp className="p-2" style={{ width: "40px", height: "40px", color: "#25D366" }} />
+                                                </a>
+                                            </div>
                                         </div>
-                                        <div className="touch rounded rounded-circle me-3" style={{ width: "40px", height: "40px" }}>
-                                            <a href="#" className="text-white text-decoration-none">
-                                                <GrInstagram className="p-2" style={{ width: "40px", height: "40px", color: "#E4405F" }} />
-                                            </a>
-                                        </div>
-                                        <div className="touch rounded rounded-circle me-3" style={{ width: "40px", height: "40px" }}>
-                                            <a href="#" className="text-white text-decoration-none">
-                                                <FaLinkedinIn className="p-2" style={{ width: "40px", height: "40px", color: "#0077B5" }} />
-                                            </a>
-                                        </div>
-                                        <div className="touch rounded rounded-circle me-3" style={{ width: "40px", height: "40px" }}>
-                                            <a href="#" className="text-white text-decoration-none">
-                                                <ImWhatsapp className="p-2" style={{ width: "40px", height: "40px", color: "#25D366" }} />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </Col>
+                                    </Col>
                                 <p className="w-100 text-center mt-3 copy-hide">Copyright © 2025 FTFL Technology Pvt.Ltd | All rights reserved</p>
                             </Row>
                         </Row>

@@ -192,9 +192,9 @@ function JobDescContact() {
             <Form className="contact-form-box" onSubmit={handleSubmit}>
                <Row className="pt-4 ">
                 <Col xs={12} lg={3} className="text">
-                  <p style={{ fontSize: "25px", fontWeight: "500" }} className="pp">Join Us</p>
-                  <li className="py-3">Join our team of innovators and make an impact in the world of technology.</li>
-                  <li>Apply now and be part of something great!</li>
+                  <p style={{ fontSize: "25px", fontWeight: "500" }} className="pp ps-2">Join Us</p>
+                  <li className="py-3 ps-2">Join our team of innovators and make an impact in the world of technology.</li>
+                  <li className="ps-2">Apply now and be part of something great!</li>
                 </Col>
                 <Col xs={12} lg={9}>
                   <Row>
