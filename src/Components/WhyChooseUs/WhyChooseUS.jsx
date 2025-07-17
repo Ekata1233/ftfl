@@ -23,14 +23,14 @@ function WhyChooseUS() {
           <div className='whychoose-Container'>
             <div className="d-flex justify-content-center text-center  ">
             <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
-              <p className="mt-lg-5 pt-lg-5">
+              <p className="mt-lg-4 pt-lg-5">
                 <span className="text-dark " style={{ fontWeight: "400", fontSize: "45px" }}>Why</span>
                 <span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}> Choose Us?</span>
               </p>
               </motion.div>
             </div>
 
-            <div className='my-lg-5 pt-5'>
+            <div className='my-lg-3 pt-5'>
             <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
               <img src={Whychoose} className='img-fluid whychoose1 ' />
               </motion.div>
@@ -40,7 +40,7 @@ function WhyChooseUS() {
             </div>
             <div className=' text-center pt-5'>
             <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
-              <p className="mt-5 pt-5 ">
+              <p className=" pt-5 ">
                 <span className="text-dark " style={{ fontWeight: "400", fontSize: "45px" }}>Hear From Your</span>
                 <span className="blue" style={{ fontWeight: "600", fontSize: "45px" }}>  Happy clients</span>
               </p>
@@ -100,7 +100,7 @@ function WhyChooseUS() {
 </Row>
   
 
-<div className='pt-lg-5'>
+<div className=''>
 <h4 className="colorBlue pt-5 mt-5 pb-2 text-center">----- Testimonial -----</h4>
 <h1 className="text-center">Our Client Say!!!</h1>
 </div>

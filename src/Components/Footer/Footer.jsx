@@ -116,7 +116,7 @@ function Footer() {
                                             <FaRegClock className="dark-blue" /> Mon – Sat: 9:00 am – 7:00 pm, Sunday: CLOSED
                                         </p>
                                         <p>
-                                            <IoLocationSharp className="dark-blue" /> 3rd Floor, C307, Amanora Chamber, Mall, Amanora Park Town, Hadapsar, Pune, Maharashtra 411002
+                                            <IoLocationSharp className="dark-blue" /> 3rd Floor, C307, Amanora Mall, Amanora Chamber, Hadapsar, Pune, Maharashtra 411002
                                         </p>
                                     </div>
                                 </div>
