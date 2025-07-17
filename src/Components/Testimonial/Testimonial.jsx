@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { IoMdStar, IoMdStarHalf, IoMdStarOutline } from "react-icons/io";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
@@ -67,8 +67,25 @@ const CardSlider = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 3;
-  const totalPages = Math.ceil(testimonials.length / itemsPerPage);
+  const [itemsPerPage, setItemsPerPage] = useState(3);
+
+  // Responsive logic
+  const updateItemsPerPage = () => {
+    const width = window.innerWidth;
+    if (width < 768) {
+      setItemsPerPage(1);
+    } else if (width < 992) {
+      setItemsPerPage(2);
+    } else {
+      setItemsPerPage(3);
+    }
+  };
+
+  useEffect(() => {
+    updateItemsPerPage();
+    window.addEventListener("resize", updateItemsPerPage);
+    return () => window.removeEventListener("resize", updateItemsPerPage);
+  }, []);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev - itemsPerPage + testimonials.length) % testimonials.length);
@@ -78,9 +95,7 @@ const CardSlider = () => {
     setCurrentIndex((prev) => (prev + itemsPerPage) % testimonials.length);
   };
 
-  // Slice the current 3 testimonials
   const currentItems = testimonials.slice(currentIndex, currentIndex + itemsPerPage);
-  // If at the end, wrap around
   const visibleItems =
     currentItems.length < itemsPerPage
       ? [...currentItems, ...testimonials.slice(0, itemsPerPage - currentItems.length)]
@@ -91,7 +106,7 @@ const CardSlider = () => {
       <Container>
         <Row>
           {visibleItems.map((item) => (
-            <Col key={item.id} md={4} className="mb-4 d-flex">
+            <Col key={item.id} md={12 / itemsPerPage} className="mb-4 d-flex">
               <Card className="w-100 text-start shadow-sm border" style={{ borderColor: "#298CF3" }}>
                 <Card.Body>
                   <div className="d-flex align-items-center mb-3">
