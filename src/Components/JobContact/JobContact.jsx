@@ -1,11 +1,12 @@
 import contactbg from "../../assets/image 40.png";
 import { FiUpload } from "react-icons/fi";
 import { useState, useEffect } from "react";
-import { Button, Col, Container, Form, Row, Spinner } from "react-bootstrap";
+import { Button, Card, Col, Container, Form, Row, Spinner } from "react-bootstrap";
 import '../../Components/CarreerOpportunities/CarreersOpportunities.css';
 import '../JobContact/JobContact.css';
 import SEO from "../SEO";
 import { motion } from "framer-motion";
+import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 function JobContact() {
   const [file, setFile] = useState(null);
   const [formData, setFormData] = useState({
@@ -190,6 +191,77 @@ function JobContact() {
         </p>
         </motion.div>
       </div>
+       <div
+      style={{
+        backgroundColor: '#E5F2FF',
+        padding: '60px 20px',
+        borderRadius: '20px',
+        width: '100%',
+        border: '1px solid rgb(41, 140, 243)',
+      }}
+    >
+      <Container>
+        <Row className="justify-content-center">
+          <Col xs={12} md={10} lg={8}>
+            <Card
+              style={{
+                border: 'none',
+                borderRadius: '20px',
+                overflow: 'hidden',
+                background: '#ffffff',
+                boxShadow: '0 12px 30px rgba(0, 0, 0, 0.1)',
+              }}
+            >
+              <Row>
+                <Col
+                  xs={12}
+                  md={6}
+                  style={{
+                    backgroundColor: '#529FEF',
+                    color: '#fff',
+                    padding: '40px 20px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
+                  <h3 style={{ fontWeight: 'bold', marginBottom: '20px' }}>
+                    Get In Touch
+                  </h3>
+                  <FaPhoneAlt size={30} style={{ marginBottom: '10px' }} />
+                  <p style={{ fontSize: '1.1rem', marginBottom: '20px' }}>
+                    +91 9272003735
+                  </p>
+                  <FaEnvelope size={30} style={{ marginBottom: '10px' }} />
+                  <p style={{ fontSize: '1.1rem' }}>hr@ftfltechnology.com</p>
+                </Col>
+
+                <Col
+                  xs={12}
+                  md={6}
+                  style={{
+                    padding: '40px 30px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <h4 style={{ marginBottom: '15px', color: '#333' }}>
+                    We're here to help!
+                  </h4>
+                  <p style={{ fontSize: '1rem', color: '#555' }}>
+                    Reach out to us anytime and we’ll happily answer your
+                    questions. We’re available by phone or email and always
+                    happy to assist!
+                  </p>
+                </Col>
+              </Row>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </div>
       <div className="contact-form-container rounded rounded-5 mt-5">
       <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
         <img src={contactbg} alt="Background" className="contact-form-bg con-bg" />
@@ -203,6 +275,7 @@ function JobContact() {
                   <p style={{ fontSize: "25px", fontWeight: "500" }} className="pp">Join Us</p>
                   <li className="py-3">Join our team of innovators and make an impact in the world of technology.</li>
                   <li>Apply now and be part of something great!</li>
+                  
                 </Col>
               <Col xs={12} lg={9}>
                 <Row>
