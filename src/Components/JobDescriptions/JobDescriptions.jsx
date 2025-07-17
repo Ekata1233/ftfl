@@ -246,8 +246,8 @@ function JobDescriptions() {
                                     <Reveal keyframes={customAnimation} triggerOnce>
                                         <div className="mt-4">
                                             <p className="" style={{ fontSize: "22px", fontWeight: "500" }}>Website</p>
-                                            <a href="https://ftfntechnology.com/" className="text blue" target="_blank" rel="noopener noreferrer">
-                                                <span> <TbWorld className="blue me-2" style={{ height: "25px", width: "25px" }} />https://ftfntechnology.com/</span>
+                                            <a href="https://ftfltechnology.com/" className="text blue" target="_blank" rel="noopener noreferrer">
+                                                <span> <TbWorld className="blue me-2" style={{ height: "25px", width: "25px" }} />https://ftfltechnology.com/</span>
                                             </a>
                                         </div>
                                     </Reveal>

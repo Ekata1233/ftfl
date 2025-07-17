@@ -108,7 +108,7 @@ function ContactUS() {
                                                 <p className="contact-title pt-4 ">Contact Information</p>
                                                 <p className="text pb-4" style={{ lineHeight: "10px" }}>Get in touch with us!</p>
                                                 <p className="text">
-                                                    <FaPhoneAlt className="icon" /> +91930995 17500
+                                                    <FaPhoneAlt className="icon" /> +91 9309517500
                                                 </p>
                                                 <p className="text">
                                                     <FiMail className="icon" /> info@ftfltechnology.com

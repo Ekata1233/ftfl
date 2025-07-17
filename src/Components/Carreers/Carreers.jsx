@@ -58,7 +58,7 @@ function Carreers() {
             <img src={carrers} className="img-fluid w-100 about-img" alt="Slide 1" />
             <div className="position-absolute translate-middle py-4 my-4  header-content w-100 px-3">
             <motion.div initial="hidden" whileInView="visible" variants={scrollVariants} transition={{ duration: 1 }} viewport={{ once: false }}>
-              <p className="text-white text">Carreers</p>
+              <p className="text-white text">Careers</p>
               <h1 className="text-white fw-bold my-4 mx-3 h1">
                 Shape the Future With Us
               </h1>
